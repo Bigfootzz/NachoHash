@@ -1,0 +1,26 @@
+# /etc/conf.d/nachohashd: config file for /etc/init.d/nachohashd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/nachohash/NachoHash.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/nachohashd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/NachoHashd.pid"
+
+# Where to write nachohashd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/nachohashd"
+
+# User and group to own nachohashd process
+#BITCOIND_USER="nachohash"
+#BITCOIND_GROUP="nachohash"
+
+# Path to nachohashd executable
+#BITCOIND_BIN="/usr/bin/nachohashd"
+
+# Nice value to run nachohashd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

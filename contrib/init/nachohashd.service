@@ -1,0 +1,26 @@
+[Unit]
+Description=NachoHash's distributed currency daemon
+After=network.target
+
+[Service]
+User=nachohash
+Group=nachohash
+
+Type=forking
+PIDFile=/var/lib/nachohashd/NachoHashd.pid
+
+ExecStart=/usr/bin/nachohashd -daemon -pid=/var/lib/nachohashd/NachoHashd.pid \
+          -conf=/etc/nachohash/NachoHash.conf -datadir=/var/lib/nachohashd
+
+ExecStop=-/usr/bin/nachohash-cli -conf=/etc/nachohash/NachoHash.conf \
+         -datadir=/var/lib/nachohashd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
