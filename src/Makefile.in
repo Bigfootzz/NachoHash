@@ -529,11 +529,13 @@ am__qt_libbitcoinqt_a_SOURCES_DIST = qt/bantablemodel.cpp \
 	qt/res/icons/transaction_conflicted.png \
 	qt/res/icons/tx_inout.png qt/res/icons/tx_input.png \
 	qt/res/icons/tx_output.png qt/res/icons/tx_mined.png \
-	qt/res/icons/unit_nachohash.png qt/res/icons/unit_mnachohash.png \
-	qt/res/icons/unit_unachohash.png qt/res/icons/unit_tnachohash.png \
-	qt/res/icons/unit_tmnachohash.png qt/res/icons/unit_tunachohash.png \
-	qt/res/images/about.png qt/res/images/splash.png \
-	qt/res/images/splash_testnet.png \
+	qt/res/icons/unit_nachohash.png \
+	qt/res/icons/unit_mnachohash.png \
+	qt/res/icons/unit_unachohash.png \
+	qt/res/icons/unit_tnachohash.png \
+	qt/res/icons/unit_tmnachohash.png \
+	qt/res/icons/unit_tunachohash.png qt/res/images/about.png \
+	qt/res/images/splash.png qt/res/images/splash_testnet.png \
 	qt/res/images/nachohash_logo_horizontal.png \
 	qt/res/images/downArrow_dark.png \
 	qt/res/images/downArrow_small_dark.png \
@@ -754,9 +756,11 @@ libbitcoinconsensus_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 @BUILD_BITCOIN_UTILS_TRUE@	nachohash-tx$(EXEEXT)
 @ENABLE_TESTS_TRUE@am__EXEEXT_3 = test/test_nachohash$(EXEEXT)
 @ENABLE_QT_TRUE@am__EXEEXT_4 = qt/nachohash-qt$(EXEEXT)
-@ENABLE_QT_TESTS_TRUE@am__EXEEXT_5 = qt/test/test_nachohash-qt$(EXEEXT)
+@ENABLE_QT_TESTS_TRUE@am__EXEEXT_5 =  \
+@ENABLE_QT_TESTS_TRUE@	qt/test/test_nachohash-qt$(EXEEXT)
 PROGRAMS = $(bin_PROGRAMS)
-am__nachohash_cli_SOURCES_DIST = nachohash-cli.cpp nachohash-cli-res.rc
+am__nachohash_cli_SOURCES_DIST = nachohash-cli.cpp \
+	nachohash-cli-res.rc
 @TARGET_WINDOWS_TRUE@am__objects_11 = nachohash-cli-res.$(OBJEXT)
 am_nachohash_cli_OBJECTS = nachohash_cli-nachohash-cli.$(OBJEXT) \
 	$(am__objects_11)
@@ -766,9 +770,10 @@ nachohash_cli_OBJECTS = $(am_nachohash_cli_OBJECTS)
 nachohash_cli_DEPENDENCIES = $(LIBBITCOIN_CLI) $(am__DEPENDENCIES_2) \
 	$(LIBBITCOIN_UTIL) $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
-nachohash_cli_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(AM_CXXFLAGS) \
-	$(CXXFLAGS) $(nachohash_cli_LDFLAGS) $(LDFLAGS) -o $@
+nachohash_cli_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
+	$(AM_CXXFLAGS) $(CXXFLAGS) $(nachohash_cli_LDFLAGS) $(LDFLAGS) \
+	-o $@
 am_nachohash_tx_OBJECTS = nachohash_tx-nachohash-tx.$(OBJEXT)
 nachohash_tx_OBJECTS = $(am_nachohash_tx_OBJECTS)
 nachohash_tx_DEPENDENCIES = $(am__DEPENDENCIES_2) $(LIBBITCOIN_COMMON) \
@@ -779,7 +784,8 @@ nachohash_tx_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
 	$(CXXFLAGS) $(nachohash_tx_LDFLAGS) $(LDFLAGS) -o $@
 am__nachohashd_SOURCES_DIST = nachohashd.cpp nachohashd-res.rc
 @TARGET_WINDOWS_TRUE@am__objects_12 = nachohashd-res.$(OBJEXT)
-am_nachohashd_OBJECTS = nachohashd-nachohashd.$(OBJEXT) $(am__objects_12)
+am_nachohashd_OBJECTS = nachohashd-nachohashd.$(OBJEXT) \
+	$(am__objects_12)
 nachohashd_OBJECTS = $(am_nachohashd_OBJECTS)
 am__DEPENDENCIES_3 = $(am__append_2)
 am__DEPENDENCIES_4 = $(am__append_3)
@@ -796,10 +802,10 @@ nachohashd_DEPENDENCIES = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
 nachohashd_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(AM_CXXFLAGS) \
 	$(CXXFLAGS) $(nachohashd_LDFLAGS) $(LDFLAGS) -o $@
-am__qt_nachohash_qt_SOURCES_DIST = qt/nachohash.cpp qt/macdockiconhandler.mm \
-	qt/macnotificationhandler.mm qt/res/nachohash-qt-res.rc
-@ENABLE_QT_TRUE@am__objects_13 =  \
-@ENABLE_QT_TRUE@	qt/qt_nachohash_qt-macdockiconhandler.$(OBJEXT) \
+am__qt_nachohash_qt_SOURCES_DIST = qt/nachohash.cpp \
+	qt/macdockiconhandler.mm qt/macnotificationhandler.mm \
+	qt/res/nachohash-qt-res.rc
+@ENABLE_QT_TRUE@am__objects_13 = qt/qt_nachohash_qt-macdockiconhandler.$(OBJEXT) \
 @ENABLE_QT_TRUE@	qt/qt_nachohash_qt-macnotificationhandler.$(OBJEXT)
 @ENABLE_QT_TRUE@@TARGET_DARWIN_TRUE@am__objects_14 =  \
 @ENABLE_QT_TRUE@@TARGET_DARWIN_TRUE@	$(am__objects_13)
@@ -826,9 +832,10 @@ qt_nachohash_qt_OBJECTS = $(am_qt_nachohash_qt_OBJECTS)
 @ENABLE_QT_TRUE@	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 @ENABLE_QT_TRUE@	$(LIBSECP256K1) $(am__DEPENDENCIES_1) \
 @ENABLE_QT_TRUE@	$(am__DEPENDENCIES_1)
-qt_nachohash_qt_LINK = $(LIBTOOL) $(AM_V_lt) $(qt_nachohash_qt_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(OBJCXXLD) $(AM_OBJCXXFLAGS) \
-	$(OBJCXXFLAGS) $(qt_nachohash_qt_LDFLAGS) $(LDFLAGS) -o $@
+qt_nachohash_qt_LINK = $(LIBTOOL) $(AM_V_lt) \
+	$(qt_nachohash_qt_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link \
+	$(OBJCXXLD) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) \
+	$(qt_nachohash_qt_LDFLAGS) $(LDFLAGS) -o $@
 am__qt_test_test_nachohash_qt_SOURCES_DIST = qt/test/test_main.cpp \
 	qt/test/uritests.cpp qt/test/uritests.h \
 	qt/test/paymentrequestdata.h qt/test/paymentservertests.h \
@@ -842,7 +849,8 @@ am__qt_test_test_nachohash_qt_SOURCES_DIST = qt/test/test_main.cpp \
 @ENABLE_QT_TESTS_TRUE@	$(am__objects_18)
 @ENABLE_QT_TESTS_TRUE@nodist_qt_test_test_nachohash_qt_OBJECTS =  \
 @ENABLE_QT_TESTS_TRUE@	$(am__objects_19)
-qt_test_test_nachohash_qt_OBJECTS = $(am_qt_test_test_nachohash_qt_OBJECTS) \
+qt_test_test_nachohash_qt_OBJECTS =  \
+	$(am_qt_test_test_nachohash_qt_OBJECTS) \
 	$(nodist_qt_test_test_nachohash_qt_OBJECTS)
 @ENABLE_QT_TESTS_TRUE@@ENABLE_ZMQ_TRUE@am__DEPENDENCIES_7 =  \
 @ENABLE_QT_TESTS_TRUE@@ENABLE_ZMQ_TRUE@	$(LIBBITCOIN_ZMQ) \
@@ -870,8 +878,8 @@ qt_test_test_nachohash_qt_OBJECTS = $(am_qt_test_test_nachohash_qt_OBJECTS) \
 @ENABLE_QT_TESTS_TRUE@	$(am__DEPENDENCIES_1)
 qt_test_test_nachohash_qt_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
-	$(AM_CXXFLAGS) $(CXXFLAGS) $(qt_test_test_nachohash_qt_LDFLAGS) \
-	$(LDFLAGS) -o $@
+	$(AM_CXXFLAGS) $(CXXFLAGS) \
+	$(qt_test_test_nachohash_qt_LDFLAGS) $(LDFLAGS) -o $@
 am__test_test_nachohash_SOURCES_DIST =  \
 	test/zerocoin_implementation_tests.cpp \
 	test/zerocoin_denomination_tests.cpp \
@@ -1058,9 +1066,11 @@ SOURCES = $(crypto_libbitcoin_crypto_a_SOURCES) \
 	$(nodist_qt_libbitcoinqt_a_SOURCES) \
 	$(libbitcoinconsensus_la_SOURCES) $(nachohash_cli_SOURCES) \
 	$(nachohash_tx_SOURCES) $(nachohashd_SOURCES) \
-	$(qt_nachohash_qt_SOURCES) $(qt_test_test_nachohash_qt_SOURCES) \
+	$(qt_nachohash_qt_SOURCES) \
+	$(qt_test_test_nachohash_qt_SOURCES) \
 	$(nodist_qt_test_test_nachohash_qt_SOURCES) \
-	$(test_test_nachohash_SOURCES) $(nodist_test_test_nachohash_SOURCES)
+	$(test_test_nachohash_SOURCES) \
+	$(nodist_test_test_nachohash_SOURCES)
 DIST_SOURCES = $(crypto_libbitcoin_crypto_a_SOURCES) \
 	$(libbitcoin_cli_a_SOURCES) $(libbitcoin_common_a_SOURCES) \
 	$(libbitcoin_server_a_SOURCES) \
@@ -1071,7 +1081,8 @@ DIST_SOURCES = $(crypto_libbitcoin_crypto_a_SOURCES) \
 	$(am__qt_libbitcoinqt_a_SOURCES_DIST) \
 	$(am__libbitcoinconsensus_la_SOURCES_DIST) \
 	$(am__nachohash_cli_SOURCES_DIST) $(nachohash_tx_SOURCES) \
-	$(am__nachohashd_SOURCES_DIST) $(am__qt_nachohash_qt_SOURCES_DIST) \
+	$(am__nachohashd_SOURCES_DIST) \
+	$(am__qt_nachohash_qt_SOURCES_DIST) \
 	$(am__qt_test_test_nachohash_qt_SOURCES_DIST) \
 	$(am__test_test_nachohash_SOURCES_DIST)
 RECURSIVE_TARGETS = all-recursive check-recursive cscopelist-recursive \
@@ -2329,8 +2340,8 @@ EXTRA_DIST = leveldb $(am__append_18)
 @ENABLE_QT_TRUE@qt_nachohash_qt_CPPFLAGS = $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
 @ENABLE_QT_TRUE@  $(QT_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS)
 
-@ENABLE_QT_TRUE@qt_nachohash_qt_SOURCES = qt/nachohash.cpp $(am__append_27) \
-@ENABLE_QT_TRUE@	$(am__append_28)
+@ENABLE_QT_TRUE@qt_nachohash_qt_SOURCES = qt/nachohash.cpp \
+@ENABLE_QT_TRUE@	$(am__append_27) $(am__append_28)
 @ENABLE_QT_TRUE@qt_nachohash_qt_LDADD = qt/libbitcoinqt.a \
 @ENABLE_QT_TRUE@	$(LIBBITCOIN_SERVER) $(am__append_29) \
 @ENABLE_QT_TRUE@	$(am__append_30) $(LIBBITCOIN_CLI) \
@@ -2363,13 +2374,13 @@ EXTRA_DIST = leveldb $(am__append_18)
 @ENABLE_QT_TESTS_TRUE@	qt/test/uritests.cpp $(TEST_QT_H) \
 @ENABLE_QT_TESTS_TRUE@	$(am__append_35)
 @ENABLE_QT_TESTS_TRUE@nodist_qt_test_test_nachohash_qt_SOURCES = $(TEST_QT_MOC_CPP)
-@ENABLE_QT_TESTS_TRUE@qt_test_test_nachohash_qt_LDADD = $(LIBBITCOINQT) \
-@ENABLE_QT_TESTS_TRUE@	$(LIBBITCOIN_SERVER) $(am__append_36) \
-@ENABLE_QT_TESTS_TRUE@	$(am__append_37) $(LIBBITCOIN_CLI) \
-@ENABLE_QT_TESTS_TRUE@	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
-@ENABLE_QT_TESTS_TRUE@	$(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) \
-@ENABLE_QT_TESTS_TRUE@	$(LIBBITCOIN_ZEROCOIN) $(LIBLEVELDB) \
-@ENABLE_QT_TESTS_TRUE@	$(LIBMEMENV) $(BOOST_LIBS) \
+@ENABLE_QT_TESTS_TRUE@qt_test_test_nachohash_qt_LDADD =  \
+@ENABLE_QT_TESTS_TRUE@	$(LIBBITCOINQT) $(LIBBITCOIN_SERVER) \
+@ENABLE_QT_TESTS_TRUE@	$(am__append_36) $(am__append_37) \
+@ENABLE_QT_TESTS_TRUE@	$(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) \
+@ENABLE_QT_TESTS_TRUE@	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
+@ENABLE_QT_TESTS_TRUE@	$(LIBUNIVALUE) $(LIBBITCOIN_ZEROCOIN) \
+@ENABLE_QT_TESTS_TRUE@	$(LIBLEVELDB) $(LIBMEMENV) $(BOOST_LIBS) \
 @ENABLE_QT_TESTS_TRUE@	$(QT_DBUS_LIBS) $(QT_TEST_LIBS) \
 @ENABLE_QT_TESTS_TRUE@	$(QT_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) \
 @ENABLE_QT_TESTS_TRUE@	$(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) \
@@ -2803,8 +2814,8 @@ qt/qt_libbitcoinqt_a-paymentrequest.pb.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
 qt/qt_libbitcoinqt_a-qrc_nachohash.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
-qt/qt_libbitcoinqt_a-qrc_nachohash_locale.$(OBJEXT): qt/$(am__dirstamp) \
-	qt/$(DEPDIR)/$(am__dirstamp)
+qt/qt_libbitcoinqt_a-qrc_nachohash_locale.$(OBJEXT):  \
+	qt/$(am__dirstamp) qt/$(DEPDIR)/$(am__dirstamp)
 
 qt/libbitcoinqt.a: $(qt_libbitcoinqt_a_OBJECTS) $(qt_libbitcoinqt_a_DEPENDENCIES) $(EXTRA_qt_libbitcoinqt_a_DEPENDENCIES) qt/$(am__dirstamp)
 	$(AM_V_at)-rm -f qt/libbitcoinqt.a
@@ -2938,8 +2949,8 @@ qt/qt_nachohash_qt-nachohash.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
 qt/qt_nachohash_qt-macdockiconhandler.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
-qt/qt_nachohash_qt-macnotificationhandler.$(OBJEXT): qt/$(am__dirstamp) \
-	qt/$(DEPDIR)/$(am__dirstamp)
+qt/qt_nachohash_qt-macnotificationhandler.$(OBJEXT):  \
+	qt/$(am__dirstamp) qt/$(DEPDIR)/$(am__dirstamp)
 qt/res/$(am__dirstamp):
 	@$(MKDIR_P) qt/res
 	@: > qt/res/$(am__dirstamp)
@@ -2990,8 +3001,8 @@ test/test_test_nachohash-tutorial_zerocoin.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_nachohash-libzerocoin_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nachohash-allocator_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-allocator_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_nachohash-base32_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_nachohash-base58_tests.$(OBJEXT): test/$(am__dirstamp) \
@@ -3004,8 +3015,8 @@ test/test_test_nachohash-Checkpoints_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_nachohash-coins_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nachohash-compress_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-compress_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_nachohash-crypto_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_nachohash-DoS_tests.$(OBJEXT): test/$(am__dirstamp) \
@@ -3018,14 +3029,14 @@ test/test_test_nachohash-key_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_nachohash-main_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nachohash-mempool_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-mempool_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_nachohash-mruset_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nachohash-multisig_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nachohash-netbase_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-multisig_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-netbase_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_nachohash-pmt_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_nachohash-reverselock_tests.$(OBJEXT):  \
@@ -3034,34 +3045,34 @@ test/test_test_nachohash-rpc_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_nachohash-sanity_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nachohash-scheduler_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-scheduler_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_nachohash-script_P2SH_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_nachohash-script_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nachohash-scriptnum_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nachohash-serialize_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nachohash-sighash_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-scriptnum_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-serialize_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-sighash_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_nachohash-sigopcount_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nachohash-skiplist_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nachohash-test_nachohash.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nachohash-timedata_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-skiplist_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-test_nachohash.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-timedata_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_nachohash-torcontrol_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_nachohash-transaction_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nachohash-uint256_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nachohash-univalue_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-uint256_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-univalue_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_nachohash-util_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_nachohash-accounting_tests.$(OBJEXT):  \

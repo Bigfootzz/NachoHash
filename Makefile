@@ -75,10 +75,10 @@ am__make_running_with_option = \
   test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
-pkgdatadir = $(datadir)/nullex
-pkgincludedir = $(includedir)/nullex
-pkglibdir = $(libdir)/nullex
-pkglibexecdir = $(libexecdir)/nullex
+pkgdatadir = $(datadir)/nachohash
+pkgincludedir = $(includedir)/nachohash
+pkglibdir = $(libdir)/nachohash
+pkglibexecdir = $(libexecdir)/nachohash
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 install_sh_DATA = $(install_sh) -c -m 644
 install_sh_PROGRAM = $(install_sh) -c
@@ -125,7 +125,7 @@ DIST_COMMON = $(srcdir)/Makefile.am $(top_srcdir)/configure \
 am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \
  configure.lineno config.status.lineno
 mkinstalldirs = $(install_sh) -d
-CONFIG_HEADER = $(top_builddir)/src/config/nullex-config.h
+CONFIG_HEADER = $(top_builddir)/src/config/nachohash-config.h
 CONFIG_CLEAN_FILES = share/setup.nsi share/qt/Info.plist \
 	src/test/buildenv.py qa/pull-tester/run-bitcoind-for-test.sh \
 	qa/pull-tester/tests-config.sh contrib/devtools/split-debug.sh
@@ -199,7 +199,7 @@ am__DIST_COMMON = $(srcdir)/Makefile.in \
 	$(top_srcdir)/qa/pull-tester/tests-config.sh.in \
 	$(top_srcdir)/share/qt/Info.plist.in \
 	$(top_srcdir)/share/setup.nsi.in \
-	$(top_srcdir)/src/config/nullex-config.h.in \
+	$(top_srcdir)/src/config/nachohash-config.h.in \
 	$(top_srcdir)/src/test/buildenv.py.in COPYING INSTALL \
 	build-aux/compile build-aux/config.guess build-aux/config.sub \
 	build-aux/depcomp build-aux/install-sh build-aux/ltmain.sh \
@@ -255,10 +255,10 @@ AUTOMAKE = ${SHELL} /home/oem/Desktop/nachohash/build-aux/missing automake-1.15
 AWK = gawk
 BDB_CPPFLAGS = 
 BDB_LIBS = -ldb_cxx-4.8
-BITCOIN_CLI_NAME = nullex-cli
-BITCOIN_DAEMON_NAME = nullexd
-BITCOIN_GUI_NAME = nullex-qt
-BITCOIN_TX_NAME = nullex-tx
+BITCOIN_CLI_NAME = nachohash-cli
+BITCOIN_DAEMON_NAME = nachohashd
+BITCOIN_GUI_NAME = nachohash-qt
+BITCOIN_TX_NAME = nachohash-tx
 BOOST_CHRONO_LIB = -lboost_chrono
 BOOST_CPPFLAGS = -pthread -I/usr/include
 BOOST_FILESYSTEM_LIB = -lboost_filesystem
@@ -360,11 +360,11 @@ OBJDUMP = objdump
 OBJEXT = o
 OTOOL = 
 OTOOL64 = 
-PACKAGE = nullex
-PACKAGE_BUGREPORT = www.nullex.io
+PACKAGE = nachohash
+PACKAGE_BUGREPORT = www.nachohash.io
 PACKAGE_NAME = NachoHash Core
 PACKAGE_STRING = NachoHash Core 2.0.0
-PACKAGE_TARNAME = nullex
+PACKAGE_TARNAME = nachohash
 PACKAGE_URL = 
 PACKAGE_VERSION = 2.0.0
 PATH_SEPARATOR = :
@@ -426,7 +426,7 @@ X11XCB_CFLAGS =
 X11XCB_LIBS = 
 XGETTEXT = /usr/bin/xgettext
 ZMQ_CFLAGS = 
-ZMQ_LIBS = -lzmq
+ZMQ_LIBS = 
 abs_builddir = /home/oem/Desktop/nachohash
 abs_srcdir = /home/oem/Desktop/nachohash
 abs_top_builddir = /home/oem/Desktop/nachohash
@@ -569,20 +569,20 @@ $(ACLOCAL_M4):  $(am__aclocal_m4_deps)
 	$(am__cd) $(srcdir) && $(ACLOCAL) $(ACLOCAL_AMFLAGS)
 $(am__aclocal_m4_deps):
 
-src/config/nullex-config.h: src/config/stamp-h1
+src/config/nachohash-config.h: src/config/stamp-h1
 	@test -f $@ || rm -f src/config/stamp-h1
 	@test -f $@ || $(MAKE) $(AM_MAKEFLAGS) src/config/stamp-h1
 
-src/config/stamp-h1: $(top_srcdir)/src/config/nullex-config.h.in $(top_builddir)/config.status
+src/config/stamp-h1: $(top_srcdir)/src/config/nachohash-config.h.in $(top_builddir)/config.status
 	@rm -f src/config/stamp-h1
-	cd $(top_builddir) && $(SHELL) ./config.status src/config/nullex-config.h
-$(top_srcdir)/src/config/nullex-config.h.in:  $(am__configure_deps) 
+	cd $(top_builddir) && $(SHELL) ./config.status src/config/nachohash-config.h
+$(top_srcdir)/src/config/nachohash-config.h.in:  $(am__configure_deps) 
 	($(am__cd) $(top_srcdir) && $(AUTOHEADER))
 	rm -f src/config/stamp-h1
 	touch $@
 
 distclean-hdr:
-	-rm -f src/config/nullex-config.h src/config/stamp-h1
+	-rm -f src/config/nachohash-config.h src/config/stamp-h1
 share/setup.nsi: $(top_builddir)/config.status $(top_srcdir)/share/setup.nsi.in
 	cd $(top_builddir) && $(SHELL) ./config.status $@
 share/qt/Info.plist: $(top_builddir)/config.status $(top_srcdir)/share/qt/Info.plist.in

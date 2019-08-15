@@ -1304,13 +1304,13 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
     BOOST_FOREACH (string strDest, mapMultiArgs["-seednode"])
         AddOneShot(strDest);
 
-//#if ENABLE_ZMQ
-   // pzmqNotificationInterface = CZMQNotificationInterface::CreateWithArguments(mapArgs);
+#if ENABLE_ZMQ
+   pzmqNotificationInterface = CZMQNotificationInterface::CreateWithArguments(mapArgs);
 
-    //if (pzmqNotificationInterface) {
-      //  RegisterValidationInterface(pzmqNotificationInterface);
-    //}
-//#endif
+    if (pzmqNotificationInterface) {
+        RegisterValidationInterface(pzmqNotificationInterface);
+    }
+#endif
 
     // ********************************************************* Step 7: load block chain
 

@@ -72,10 +72,10 @@ am__make_running_with_option = \
   test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
-pkgdatadir = $(datadir)/nullex
-pkgincludedir = $(includedir)/nullex
-pkglibdir = $(libdir)/nullex
-pkglibexecdir = $(libexecdir)/nullex
+pkgdatadir = $(datadir)/nachohash
+pkgincludedir = $(includedir)/nachohash
+pkglibdir = $(libdir)/nachohash
+pkglibexecdir = $(libexecdir)/nachohash
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 install_sh_DATA = $(install_sh) -c -m 644
 install_sh_PROGRAM = $(install_sh) -c
@@ -96,24 +96,24 @@ am__append_2 = $(builddir)/leveldb/libleveldb.a
 am__append_3 = $(builddir)/leveldb/libmemenv.a
 am__append_4 = $(BDB_CPPFLAGS)
 am__append_5 = libbitcoin_wallet.a
-am__append_6 = libbitcoin_zmq.a
+#am__append_6 = libbitcoin_zmq.a
 bin_PROGRAMS = $(am__EXEEXT_1) $(am__EXEEXT_2) $(am__EXEEXT_3) \
 	$(am__EXEEXT_4) $(am__EXEEXT_5)
 TESTS = $(am__EXEEXT_6) $(am__EXEEXT_5)
-am__append_7 = nullexd
-am__append_8 = nullex-cli nullex-tx
+am__append_7 = nachohashd
+am__append_8 = nachohash-cli nachohash-tx
 #am__append_9 = compat/glibc_compat.cpp \
 #	compat/glibcxx_compat.cpp
-am__append_10 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+#am__append_10 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 am__append_11 = libbitcoin_wallet.a
 #
-#am__append_12 = nullexd-res.rc
-#am__append_13 = nullex-cli-res.rc
+#am__append_12 = nachohashd-res.rc
+#am__append_13 = nachohash-cli-res.rc
 ##am__append_14 = compat/glibc_compat.cpp \
 ##	compat/glibcxx_compat.cpp
 ##am__append_15 = secp256k1/libsecp256k1.la
-#am__append_16 = test/test_nullex test/bitcoin-util-test.py
-#am__append_17 = test/test_nullex
+#am__append_16 = test/test_nachohash test/bitcoin-util-test.py
+#am__append_17 = test/test_nachohash
 #am__append_18 = \
 #	test/bctest.py \
 #	test/bitcoin-util-test.py \
@@ -134,9 +134,9 @@ am__append_11 = libbitcoin_wallet.a
 #  test/miner_tests.cpp
 
 #am__append_20 = $(LIBBITCOIN_WALLET)
-#am__append_21 = $(ZMQ_LIBS)
+##am__append_21 = $(ZMQ_LIBS)
 #am__append_22 = $(CLEAN_BITCOIN_TEST)
-am__append_23 = qt/nullex-qt
+am__append_23 = qt/nachohash-qt
 am__append_24 = qt/libbitcoinqt.a
 #am__append_25 = qt/winshutdownmonitor.cpp
 am__append_26 = \
@@ -178,16 +178,16 @@ am__append_26 = \
 #am__append_27 = $(BITCOIN_MM)
 #am__append_28 = $(BITCOIN_RC)
 am__append_29 = $(LIBBITCOIN_WALLET)
-am__append_30 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+#am__append_30 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 am__append_31 = $(CLEAN_QT)
-#am__append_32 = qt/test/test_nullex-qt
-#am__append_33 = qt/test/test_nullex-qt
+#am__append_32 = qt/test/test_nachohash-qt
+#am__append_33 = qt/test/test_nachohash-qt
 #am__append_34 = qt/test/moc_paymentservertests.cpp
 #am__append_35 = \
 #  qt/test/paymentservertests.cpp
 
 #am__append_36 = $(LIBBITCOIN_WALLET)
-#am__append_37 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+##am__append_37 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 #am__append_38 = $(CLEAN_BITCOIN_QT_TEST)
 subdir = src
 SUBDIRS =
@@ -219,7 +219,7 @@ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 DIST_COMMON = $(srcdir)/Makefile.am $(am__include_HEADERS_DIST) \
 	$(am__DIST_COMMON)
 mkinstalldirs = $(install_sh) -d
-CONFIG_HEADER = $(top_builddir)/src/config/nullex-config.h
+CONFIG_HEADER = $(top_builddir)/src/config/nachohash-config.h
 CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 ARFLAGS = cru
@@ -406,9 +406,9 @@ libbitcoin_zmq_a_AR = $(AR) $(ARFLAGS)
 libbitcoin_zmq_a_LIBADD =
 am__libbitcoin_zmq_a_SOURCES_DIST = zmq/zmqabstractnotifier.cpp \
 	zmq/zmqnotificationinterface.cpp zmq/zmqpublishnotifier.cpp
-am_libbitcoin_zmq_a_OBJECTS = zmq/libbitcoin_zmq_a-zmqabstractnotifier.$(OBJEXT) \
-	zmq/libbitcoin_zmq_a-zmqnotificationinterface.$(OBJEXT) \
-	zmq/libbitcoin_zmq_a-zmqpublishnotifier.$(OBJEXT)
+#am_libbitcoin_zmq_a_OBJECTS = zmq/libbitcoin_zmq_a-zmqabstractnotifier.$(OBJEXT) \
+#	zmq/libbitcoin_zmq_a-zmqnotificationinterface.$(OBJEXT) \
+#	zmq/libbitcoin_zmq_a-zmqpublishnotifier.$(OBJEXT)
 libbitcoin_zmq_a_OBJECTS = $(am_libbitcoin_zmq_a_OBJECTS)
 libzerocoin_libbitcoin_zerocoin_a_AR = $(AR) $(ARFLAGS)
 libzerocoin_libbitcoin_zerocoin_a_LIBADD =
@@ -487,20 +487,20 @@ am__qt_libbitcoinqt_a_SOURCES_DIST = qt/bantablemodel.cpp \
 	qt/forms/rpcconsole.ui qt/forms/sendcoinsdialog.ui \
 	qt/forms/sendcoinsentry.ui qt/forms/signverifymessagedialog.ui \
 	qt/forms/transactiondescdialog.ui \
-	qt/forms/zichcontroldialog.ui qt/nullex.qrc \
-	qt/nullex_locale.qrc qt/locale/nullex_bg.ts \
-	qt/locale/nullex_ca.ts qt/locale/nullex_cs.ts \
-	qt/locale/nullex_da.ts qt/locale/nullex_de.ts \
-	qt/locale/nullex_en.ts qt/locale/nullex_en_US.ts \
-	qt/locale/nullex_es.ts qt/locale/nullex_fi.ts \
-	qt/locale/nullex_fr_FR.ts qt/locale/nullex_it.ts \
-	qt/locale/nullex_ja.ts qt/locale/nullex_ko_KR.ts \
-	qt/locale/nullex_nl.ts qt/locale/nullex_pl.ts \
-	qt/locale/nullex_pt.ts qt/locale/nullex_pt_BR.ts \
-	qt/locale/nullex_ro_RO.ts qt/locale/nullex_ru.ts \
-	qt/locale/nullex_sk.ts qt/locale/nullex_sv.ts \
-	qt/locale/nullex_tr.ts qt/locale/nullex_uk.ts \
-	qt/locale/nullex_zh_CN.ts qt/locale/nullex_zh_TW.ts \
+	qt/forms/zichcontroldialog.ui qt/nachohash.qrc \
+	qt/nachohash_locale.qrc qt/locale/nachohash_bg.ts \
+	qt/locale/nachohash_ca.ts qt/locale/nachohash_cs.ts \
+	qt/locale/nachohash_da.ts qt/locale/nachohash_de.ts \
+	qt/locale/nachohash_en.ts qt/locale/nachohash_en_US.ts \
+	qt/locale/nachohash_es.ts qt/locale/nachohash_fi.ts \
+	qt/locale/nachohash_fr_FR.ts qt/locale/nachohash_it.ts \
+	qt/locale/nachohash_ja.ts qt/locale/nachohash_ko_KR.ts \
+	qt/locale/nachohash_nl.ts qt/locale/nachohash_pl.ts \
+	qt/locale/nachohash_pt.ts qt/locale/nachohash_pt_BR.ts \
+	qt/locale/nachohash_ro_RO.ts qt/locale/nachohash_ru.ts \
+	qt/locale/nachohash_sk.ts qt/locale/nachohash_sv.ts \
+	qt/locale/nachohash_tr.ts qt/locale/nachohash_uk.ts \
+	qt/locale/nachohash_zh_CN.ts qt/locale/nachohash_zh_TW.ts \
 	qt/paymentrequest.proto qt/res/icons/add.png \
 	qt/res/icons/address-book.png qt/res/icons/bitcoin.ico \
 	qt/res/icons/bitcoin.png qt/res/icons/bitcoin_testnet.ico \
@@ -529,12 +529,14 @@ am__qt_libbitcoinqt_a_SOURCES_DIST = qt/bantablemodel.cpp \
 	qt/res/icons/transaction_conflicted.png \
 	qt/res/icons/tx_inout.png qt/res/icons/tx_input.png \
 	qt/res/icons/tx_output.png qt/res/icons/tx_mined.png \
-	qt/res/icons/unit_nullex.png qt/res/icons/unit_mnullex.png \
-	qt/res/icons/unit_unullex.png qt/res/icons/unit_tnullex.png \
-	qt/res/icons/unit_tmnullex.png qt/res/icons/unit_tunullex.png \
-	qt/res/images/about.png qt/res/images/splash.png \
-	qt/res/images/splash_testnet.png \
-	qt/res/images/nullex_logo_horizontal.png \
+	qt/res/icons/unit_nachohash.png \
+	qt/res/icons/unit_mnachohash.png \
+	qt/res/icons/unit_unachohash.png \
+	qt/res/icons/unit_tnachohash.png \
+	qt/res/icons/unit_tmnachohash.png \
+	qt/res/icons/unit_tunachohash.png qt/res/images/about.png \
+	qt/res/images/splash.png qt/res/images/splash_testnet.png \
+	qt/res/images/nachohash_logo_horizontal.png \
 	qt/res/images/downArrow_dark.png \
 	qt/res/images/downArrow_small_dark.png \
 	qt/res/images/downArrow_small.png \
@@ -666,8 +668,8 @@ am__objects_6 = qt/qt_libbitcoinqt_a-moc_addressbookpage.$(OBJEXT) \
 	qt/qt_libbitcoinqt_a-moc_zichcontroldialog.$(OBJEXT)
 am__objects_7 = qt/qt_libbitcoinqt_a-paymentrequest.pb.$(OBJEXT)
 am__objects_8 =  \
-	qt/qt_libbitcoinqt_a-qrc_nullex.$(OBJEXT)
-am__objects_9 = qt/qt_libbitcoinqt_a-qrc_nullex_locale.$(OBJEXT)
+	qt/qt_libbitcoinqt_a-qrc_nachohash.$(OBJEXT)
+am__objects_9 = qt/qt_libbitcoinqt_a-qrc_nachohash_locale.$(OBJEXT)
 nodist_qt_libbitcoinqt_a_OBJECTS = $(am__objects_6) \
 	$(am__objects_1) $(am__objects_7) \
 	$(am__objects_1) $(am__objects_8) \
@@ -749,43 +751,47 @@ libbitcoinconsensus_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(LDFLAGS) -o $@
 #am_libbitcoinconsensus_la_rpath = -rpath \
 #	$(libdir)
-am__EXEEXT_1 = nullexd$(EXEEXT)
-am__EXEEXT_2 = nullex-cli$(EXEEXT) \
-	nullex-tx$(EXEEXT)
-#am__EXEEXT_3 = test/test_nullex$(EXEEXT)
-am__EXEEXT_4 = qt/nullex-qt$(EXEEXT)
-#am__EXEEXT_5 = qt/test/test_nullex-qt$(EXEEXT)
+am__EXEEXT_1 = nachohashd$(EXEEXT)
+am__EXEEXT_2 = nachohash-cli$(EXEEXT) \
+	nachohash-tx$(EXEEXT)
+#am__EXEEXT_3 = test/test_nachohash$(EXEEXT)
+am__EXEEXT_4 = qt/nachohash-qt$(EXEEXT)
+#am__EXEEXT_5 =  \
+#	qt/test/test_nachohash-qt$(EXEEXT)
 PROGRAMS = $(bin_PROGRAMS)
-am__nullex_cli_SOURCES_DIST = nullex-cli.cpp nullex-cli-res.rc
-#am__objects_11 = nullex-cli-res.$(OBJEXT)
-am_nullex_cli_OBJECTS = nullex_cli-nullex-cli.$(OBJEXT) \
+am__nachohash_cli_SOURCES_DIST = nachohash-cli.cpp \
+	nachohash-cli-res.rc
+#am__objects_11 = nachohash-cli-res.$(OBJEXT)
+am_nachohash_cli_OBJECTS = nachohash_cli-nachohash-cli.$(OBJEXT) \
 	$(am__objects_11)
-nullex_cli_OBJECTS = $(am_nullex_cli_OBJECTS)
+nachohash_cli_OBJECTS = $(am_nachohash_cli_OBJECTS)
 #am__DEPENDENCIES_2 = $(am__DEPENDENCIES_1)
 am__DEPENDENCIES_2 = univalue/libunivalue.la
-nullex_cli_DEPENDENCIES = $(LIBBITCOIN_CLI) $(am__DEPENDENCIES_2) \
+nachohash_cli_DEPENDENCIES = $(LIBBITCOIN_CLI) $(am__DEPENDENCIES_2) \
 	$(LIBBITCOIN_UTIL) $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
-nullex_cli_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(AM_CXXFLAGS) \
-	$(CXXFLAGS) $(nullex_cli_LDFLAGS) $(LDFLAGS) -o $@
-am_nullex_tx_OBJECTS = nullex_tx-nullex-tx.$(OBJEXT)
-nullex_tx_OBJECTS = $(am_nullex_tx_OBJECTS)
-nullex_tx_DEPENDENCIES = $(am__DEPENDENCIES_2) $(LIBBITCOIN_COMMON) \
+nachohash_cli_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
+	$(AM_CXXFLAGS) $(CXXFLAGS) $(nachohash_cli_LDFLAGS) $(LDFLAGS) \
+	-o $@
+am_nachohash_tx_OBJECTS = nachohash_tx-nachohash-tx.$(OBJEXT)
+nachohash_tx_OBJECTS = $(am_nachohash_tx_OBJECTS)
+nachohash_tx_DEPENDENCIES = $(am__DEPENDENCIES_2) $(LIBBITCOIN_COMMON) \
 	$(LIBBITCOIN_ZEROCOIN) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
 	$(LIBSECP256K1) $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
-nullex_tx_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
+nachohash_tx_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(AM_CXXFLAGS) \
-	$(CXXFLAGS) $(nullex_tx_LDFLAGS) $(LDFLAGS) -o $@
-am__nullexd_SOURCES_DIST = nullexd.cpp nullexd-res.rc
-#am__objects_12 = nullexd-res.$(OBJEXT)
-am_nullexd_OBJECTS = nullexd-nullexd.$(OBJEXT) $(am__objects_12)
-nullexd_OBJECTS = $(am_nullexd_OBJECTS)
+	$(CXXFLAGS) $(nachohash_tx_LDFLAGS) $(LDFLAGS) -o $@
+am__nachohashd_SOURCES_DIST = nachohashd.cpp nachohashd-res.rc
+#am__objects_12 = nachohashd-res.$(OBJEXT)
+am_nachohashd_OBJECTS = nachohashd-nachohashd.$(OBJEXT) \
+	$(am__objects_12)
+nachohashd_OBJECTS = $(am_nachohashd_OBJECTS)
 am__DEPENDENCIES_3 = $(am__append_2)
 am__DEPENDENCIES_4 = $(am__append_3)
-am__DEPENDENCIES_5 = $(LIBBITCOIN_ZMQ) \
-	$(am__DEPENDENCIES_1)
-nullexd_DEPENDENCIES = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
+#am__DEPENDENCIES_5 = $(LIBBITCOIN_ZMQ) \
+#	$(am__DEPENDENCIES_1)
+nachohashd_DEPENDENCIES = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
 	$(am__DEPENDENCIES_2) $(LIBBITCOIN_ZEROCOIN) \
 	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(am__DEPENDENCIES_3) \
 	$(am__DEPENDENCIES_4) $(LIBSECP256K1) $(am__DEPENDENCIES_5) \
@@ -793,27 +799,27 @@ nullexd_DEPENDENCIES = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1)
-nullexd_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
+nachohashd_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(AM_CXXFLAGS) \
-	$(CXXFLAGS) $(nullexd_LDFLAGS) $(LDFLAGS) -o $@
-am__qt_nullex_qt_SOURCES_DIST = qt/nullex.cpp qt/macdockiconhandler.mm \
-	qt/macnotificationhandler.mm qt/res/nullex-qt-res.rc
-am__objects_13 =  \
-	qt/qt_nullex_qt-macdockiconhandler.$(OBJEXT) \
-	qt/qt_nullex_qt-macnotificationhandler.$(OBJEXT)
+	$(CXXFLAGS) $(nachohashd_LDFLAGS) $(LDFLAGS) -o $@
+am__qt_nachohash_qt_SOURCES_DIST = qt/nachohash.cpp \
+	qt/macdockiconhandler.mm qt/macnotificationhandler.mm \
+	qt/res/nachohash-qt-res.rc
+am__objects_13 = qt/qt_nachohash_qt-macdockiconhandler.$(OBJEXT) \
+	qt/qt_nachohash_qt-macnotificationhandler.$(OBJEXT)
 #am__objects_14 =  \
 #	$(am__objects_13)
-am__objects_15 = qt/res/nullex-qt-res.$(OBJEXT)
+am__objects_15 = qt/res/nachohash-qt-res.$(OBJEXT)
 #am__objects_16 =  \
 #	$(am__objects_15)
-am_qt_nullex_qt_OBJECTS =  \
-	qt/qt_nullex_qt-nullex.$(OBJEXT) \
+am_qt_nachohash_qt_OBJECTS =  \
+	qt/qt_nachohash_qt-nachohash.$(OBJEXT) \
 	$(am__objects_14) $(am__objects_16)
-qt_nullex_qt_OBJECTS = $(am_qt_nullex_qt_OBJECTS)
-am__DEPENDENCIES_6 =  \
-	$(LIBBITCOIN_ZMQ) \
-	$(am__DEPENDENCIES_1)
-qt_nullex_qt_DEPENDENCIES = qt/libbitcoinqt.a \
+qt_nachohash_qt_OBJECTS = $(am_qt_nachohash_qt_OBJECTS)
+#am__DEPENDENCIES_6 =  \
+#	$(LIBBITCOIN_ZMQ) \
+#	$(am__DEPENDENCIES_1)
+qt_nachohash_qt_DEPENDENCIES = qt/libbitcoinqt.a \
 	$(LIBBITCOIN_SERVER) $(am__append_29) \
 	$(am__DEPENDENCIES_6) $(LIBBITCOIN_CLI) \
 	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
@@ -826,28 +832,30 @@ qt_nullex_qt_DEPENDENCIES = qt/libbitcoinqt.a \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(LIBSECP256K1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1)
-qt_nullex_qt_LINK = $(LIBTOOL) $(AM_V_lt) $(qt_nullex_qt_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(OBJCXXLD) $(AM_OBJCXXFLAGS) \
-	$(OBJCXXFLAGS) $(qt_nullex_qt_LDFLAGS) $(LDFLAGS) -o $@
-am__qt_test_test_nullex_qt_SOURCES_DIST = qt/test/test_main.cpp \
+qt_nachohash_qt_LINK = $(LIBTOOL) $(AM_V_lt) \
+	$(qt_nachohash_qt_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link \
+	$(OBJCXXLD) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) \
+	$(qt_nachohash_qt_LDFLAGS) $(LDFLAGS) -o $@
+am__qt_test_test_nachohash_qt_SOURCES_DIST = qt/test/test_main.cpp \
 	qt/test/uritests.cpp qt/test/uritests.h \
 	qt/test/paymentrequestdata.h qt/test/paymentservertests.h \
 	qt/test/paymentservertests.cpp
-#am__objects_17 = qt/test/qt_test_test_nullex_qt-paymentservertests.$(OBJEXT)
-#am_qt_test_test_nullex_qt_OBJECTS = qt/test/qt_test_test_nullex_qt-test_main.$(OBJEXT) \
-#	qt/test/qt_test_test_nullex_qt-uritests.$(OBJEXT) \
+#am__objects_17 = qt/test/qt_test_test_nachohash_qt-paymentservertests.$(OBJEXT)
+#am_qt_test_test_nachohash_qt_OBJECTS = qt/test/qt_test_test_nachohash_qt-test_main.$(OBJEXT) \
+#	qt/test/qt_test_test_nachohash_qt-uritests.$(OBJEXT) \
 #	$(am__objects_1) $(am__objects_17)
-#am__objects_18 = qt/test/qt_test_test_nullex_qt-moc_paymentservertests.$(OBJEXT)
-#am__objects_19 = qt/test/qt_test_test_nullex_qt-moc_uritests.$(OBJEXT) \
+#am__objects_18 = qt/test/qt_test_test_nachohash_qt-moc_paymentservertests.$(OBJEXT)
+#am__objects_19 = qt/test/qt_test_test_nachohash_qt-moc_uritests.$(OBJEXT) \
 #	$(am__objects_18)
-#nodist_qt_test_test_nullex_qt_OBJECTS =  \
+#nodist_qt_test_test_nachohash_qt_OBJECTS =  \
 #	$(am__objects_19)
-qt_test_test_nullex_qt_OBJECTS = $(am_qt_test_test_nullex_qt_OBJECTS) \
-	$(nodist_qt_test_test_nullex_qt_OBJECTS)
-#am__DEPENDENCIES_7 =  \
-#	$(LIBBITCOIN_ZMQ) \
-#	$(am__DEPENDENCIES_1)
-#qt_test_test_nullex_qt_DEPENDENCIES =  \
+qt_test_test_nachohash_qt_OBJECTS =  \
+	$(am_qt_test_test_nachohash_qt_OBJECTS) \
+	$(nodist_qt_test_test_nachohash_qt_OBJECTS)
+##am__DEPENDENCIES_7 =  \
+##	$(LIBBITCOIN_ZMQ) \
+##	$(am__DEPENDENCIES_1)
+#qt_test_test_nachohash_qt_DEPENDENCIES =  \
 #	$(LIBBITCOINQT) $(LIBBITCOIN_SERVER) \
 #	$(am__append_36) $(am__DEPENDENCIES_7) \
 #	$(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) \
@@ -868,11 +876,11 @@ qt_test_test_nullex_qt_OBJECTS = $(am_qt_test_test_nullex_qt_OBJECTS) \
 #	$(am__DEPENDENCIES_1) $(LIBSECP256K1) \
 #	$(am__DEPENDENCIES_1) \
 #	$(am__DEPENDENCIES_1)
-qt_test_test_nullex_qt_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+qt_test_test_nachohash_qt_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
-	$(AM_CXXFLAGS) $(CXXFLAGS) $(qt_test_test_nullex_qt_LDFLAGS) \
-	$(LDFLAGS) -o $@
-am__test_test_nullex_SOURCES_DIST =  \
+	$(AM_CXXFLAGS) $(CXXFLAGS) \
+	$(qt_test_test_nachohash_qt_LDFLAGS) $(LDFLAGS) -o $@
+am__test_test_nachohash_SOURCES_DIST =  \
 	test/zerocoin_implementation_tests.cpp \
 	test/zerocoin_denomination_tests.cpp \
 	test/zerocoin_transactions_tests.cpp \
@@ -891,7 +899,7 @@ am__test_test_nullex_SOURCES_DIST =  \
 	test/script_P2SH_tests.cpp test/script_tests.cpp \
 	test/scriptnum_tests.cpp test/serialize_tests.cpp \
 	test/sighash_tests.cpp test/sigopcount_tests.cpp \
-	test/skiplist_tests.cpp test/test_nullex.cpp \
+	test/skiplist_tests.cpp test/test_nachohash.cpp \
 	test/timedata_tests.cpp test/torcontrol_tests.cpp \
 	test/transaction_tests.cpp test/uint256_tests.cpp \
 	test/univalue_tests.cpp test/util_tests.cpp \
@@ -904,65 +912,65 @@ am__test_test_nullex_SOURCES_DIST =  \
 	test/data/script_invalid.json test/data/tx_invalid.json \
 	test/data/tx_valid.json test/data/sighash.json \
 	test/data/alertTests.raw
-#am__objects_20 = test/test_test_nullex-accounting_tests.$(OBJEXT) \
-#	test/test_test_nullex-wallet_tests.$(OBJEXT) \
-#	test/test_test_nullex-rpc_wallet_tests.$(OBJEXT) \
-#	test/test_test_nullex-miner_tests.$(OBJEXT)
-#am__objects_21 = test/test_test_nullex-zerocoin_implementation_tests.$(OBJEXT) \
-#	test/test_test_nullex-zerocoin_denomination_tests.$(OBJEXT) \
-#	test/test_test_nullex-zerocoin_transactions_tests.$(OBJEXT) \
-#	test/test_test_nullex-benchmark_zerocoin.$(OBJEXT) \
-#	test/test_test_nullex-tutorial_zerocoin.$(OBJEXT) \
-#	test/test_test_nullex-libzerocoin_tests.$(OBJEXT) \
-#	test/test_test_nullex-allocator_tests.$(OBJEXT) \
-#	test/test_test_nullex-base32_tests.$(OBJEXT) \
-#	test/test_test_nullex-base58_tests.$(OBJEXT) \
-#	test/test_test_nullex-base64_tests.$(OBJEXT) \
-#	test/test_test_nullex-checkblock_tests.$(OBJEXT) \
-#	test/test_test_nullex-Checkpoints_tests.$(OBJEXT) \
-#	test/test_test_nullex-coins_tests.$(OBJEXT) \
-#	test/test_test_nullex-compress_tests.$(OBJEXT) \
-#	test/test_test_nullex-crypto_tests.$(OBJEXT) \
-#	test/test_test_nullex-DoS_tests.$(OBJEXT) \
-#	test/test_test_nullex-getarg_tests.$(OBJEXT) \
-#	test/test_test_nullex-hash_tests.$(OBJEXT) \
-#	test/test_test_nullex-key_tests.$(OBJEXT) \
-#	test/test_test_nullex-main_tests.$(OBJEXT) \
-#	test/test_test_nullex-mempool_tests.$(OBJEXT) \
-#	test/test_test_nullex-mruset_tests.$(OBJEXT) \
-#	test/test_test_nullex-multisig_tests.$(OBJEXT) \
-#	test/test_test_nullex-netbase_tests.$(OBJEXT) \
-#	test/test_test_nullex-pmt_tests.$(OBJEXT) \
-#	test/test_test_nullex-reverselock_tests.$(OBJEXT) \
-#	test/test_test_nullex-rpc_tests.$(OBJEXT) \
-#	test/test_test_nullex-sanity_tests.$(OBJEXT) \
-#	test/test_test_nullex-scheduler_tests.$(OBJEXT) \
-#	test/test_test_nullex-script_P2SH_tests.$(OBJEXT) \
-#	test/test_test_nullex-script_tests.$(OBJEXT) \
-#	test/test_test_nullex-scriptnum_tests.$(OBJEXT) \
-#	test/test_test_nullex-serialize_tests.$(OBJEXT) \
-#	test/test_test_nullex-sighash_tests.$(OBJEXT) \
-#	test/test_test_nullex-sigopcount_tests.$(OBJEXT) \
-#	test/test_test_nullex-skiplist_tests.$(OBJEXT) \
-#	test/test_test_nullex-test_nullex.$(OBJEXT) \
-#	test/test_test_nullex-timedata_tests.$(OBJEXT) \
-#	test/test_test_nullex-torcontrol_tests.$(OBJEXT) \
-#	test/test_test_nullex-transaction_tests.$(OBJEXT) \
-#	test/test_test_nullex-uint256_tests.$(OBJEXT) \
-#	test/test_test_nullex-univalue_tests.$(OBJEXT) \
-#	test/test_test_nullex-util_tests.$(OBJEXT) \
+#am__objects_20 = test/test_test_nachohash-accounting_tests.$(OBJEXT) \
+#	test/test_test_nachohash-wallet_tests.$(OBJEXT) \
+#	test/test_test_nachohash-rpc_wallet_tests.$(OBJEXT) \
+#	test/test_test_nachohash-miner_tests.$(OBJEXT)
+#am__objects_21 = test/test_test_nachohash-zerocoin_implementation_tests.$(OBJEXT) \
+#	test/test_test_nachohash-zerocoin_denomination_tests.$(OBJEXT) \
+#	test/test_test_nachohash-zerocoin_transactions_tests.$(OBJEXT) \
+#	test/test_test_nachohash-benchmark_zerocoin.$(OBJEXT) \
+#	test/test_test_nachohash-tutorial_zerocoin.$(OBJEXT) \
+#	test/test_test_nachohash-libzerocoin_tests.$(OBJEXT) \
+#	test/test_test_nachohash-allocator_tests.$(OBJEXT) \
+#	test/test_test_nachohash-base32_tests.$(OBJEXT) \
+#	test/test_test_nachohash-base58_tests.$(OBJEXT) \
+#	test/test_test_nachohash-base64_tests.$(OBJEXT) \
+#	test/test_test_nachohash-checkblock_tests.$(OBJEXT) \
+#	test/test_test_nachohash-Checkpoints_tests.$(OBJEXT) \
+#	test/test_test_nachohash-coins_tests.$(OBJEXT) \
+#	test/test_test_nachohash-compress_tests.$(OBJEXT) \
+#	test/test_test_nachohash-crypto_tests.$(OBJEXT) \
+#	test/test_test_nachohash-DoS_tests.$(OBJEXT) \
+#	test/test_test_nachohash-getarg_tests.$(OBJEXT) \
+#	test/test_test_nachohash-hash_tests.$(OBJEXT) \
+#	test/test_test_nachohash-key_tests.$(OBJEXT) \
+#	test/test_test_nachohash-main_tests.$(OBJEXT) \
+#	test/test_test_nachohash-mempool_tests.$(OBJEXT) \
+#	test/test_test_nachohash-mruset_tests.$(OBJEXT) \
+#	test/test_test_nachohash-multisig_tests.$(OBJEXT) \
+#	test/test_test_nachohash-netbase_tests.$(OBJEXT) \
+#	test/test_test_nachohash-pmt_tests.$(OBJEXT) \
+#	test/test_test_nachohash-reverselock_tests.$(OBJEXT) \
+#	test/test_test_nachohash-rpc_tests.$(OBJEXT) \
+#	test/test_test_nachohash-sanity_tests.$(OBJEXT) \
+#	test/test_test_nachohash-scheduler_tests.$(OBJEXT) \
+#	test/test_test_nachohash-script_P2SH_tests.$(OBJEXT) \
+#	test/test_test_nachohash-script_tests.$(OBJEXT) \
+#	test/test_test_nachohash-scriptnum_tests.$(OBJEXT) \
+#	test/test_test_nachohash-serialize_tests.$(OBJEXT) \
+#	test/test_test_nachohash-sighash_tests.$(OBJEXT) \
+#	test/test_test_nachohash-sigopcount_tests.$(OBJEXT) \
+#	test/test_test_nachohash-skiplist_tests.$(OBJEXT) \
+#	test/test_test_nachohash-test_nachohash.$(OBJEXT) \
+#	test/test_test_nachohash-timedata_tests.$(OBJEXT) \
+#	test/test_test_nachohash-torcontrol_tests.$(OBJEXT) \
+#	test/test_test_nachohash-transaction_tests.$(OBJEXT) \
+#	test/test_test_nachohash-uint256_tests.$(OBJEXT) \
+#	test/test_test_nachohash-univalue_tests.$(OBJEXT) \
+#	test/test_test_nachohash-util_tests.$(OBJEXT) \
 #	$(am__objects_20)
-#am_test_test_nullex_OBJECTS = $(am__objects_21) \
+#am_test_test_nachohash_OBJECTS = $(am__objects_21) \
 #	$(am__objects_1) $(am__objects_1)
 #am__objects_22 = $(am__objects_1) $(am__objects_1)
-#nodist_test_test_nullex_OBJECTS =  \
+#nodist_test_test_nachohash_OBJECTS =  \
 #	$(am__objects_22)
-test_test_nullex_OBJECTS = $(am_test_test_nullex_OBJECTS) \
-	$(nodist_test_test_nullex_OBJECTS)
+test_test_nachohash_OBJECTS = $(am_test_test_nachohash_OBJECTS) \
+	$(nodist_test_test_nachohash_OBJECTS)
 #am__DEPENDENCIES_8 = libbitcoinconsensus.la
-#am__DEPENDENCIES_9 =  \
-#	$(am__DEPENDENCIES_1)
-#test_test_nullex_DEPENDENCIES =  \
+##am__DEPENDENCIES_9 =  \
+##	$(am__DEPENDENCIES_1)
+#test_test_nachohash_DEPENDENCIES =  \
 #	$(LIBBITCOIN_SERVER) $(LIBBITCOIN_CLI) \
 #	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
 #	$(LIBBITCOIN_CRYPTO) $(am__DEPENDENCIES_2) \
@@ -974,9 +982,9 @@ test_test_nullex_OBJECTS = $(am_test_test_nullex_OBJECTS) \
 #	$(am__DEPENDENCIES_8) $(am__DEPENDENCIES_1) \
 #	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 #	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_9)
-test_test_nullex_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+test_test_nachohash_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
-	$(AM_CXXFLAGS) $(CXXFLAGS) $(test_test_nullex_LDFLAGS) \
+	$(AM_CXXFLAGS) $(CXXFLAGS) $(test_test_nachohash_LDFLAGS) \
 	$(LDFLAGS) -o $@
 AM_V_P = $(am__v_P_$(V))
 am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
@@ -1056,11 +1064,13 @@ SOURCES = $(crypto_libbitcoin_crypto_a_SOURCES) \
 	$(libzerocoin_libbitcoin_zerocoin_a_SOURCES) \
 	$(qt_libbitcoinqt_a_SOURCES) \
 	$(nodist_qt_libbitcoinqt_a_SOURCES) \
-	$(libbitcoinconsensus_la_SOURCES) $(nullex_cli_SOURCES) \
-	$(nullex_tx_SOURCES) $(nullexd_SOURCES) \
-	$(qt_nullex_qt_SOURCES) $(qt_test_test_nullex_qt_SOURCES) \
-	$(nodist_qt_test_test_nullex_qt_SOURCES) \
-	$(test_test_nullex_SOURCES) $(nodist_test_test_nullex_SOURCES)
+	$(libbitcoinconsensus_la_SOURCES) $(nachohash_cli_SOURCES) \
+	$(nachohash_tx_SOURCES) $(nachohashd_SOURCES) \
+	$(qt_nachohash_qt_SOURCES) \
+	$(qt_test_test_nachohash_qt_SOURCES) \
+	$(nodist_qt_test_test_nachohash_qt_SOURCES) \
+	$(test_test_nachohash_SOURCES) \
+	$(nodist_test_test_nachohash_SOURCES)
 DIST_SOURCES = $(crypto_libbitcoin_crypto_a_SOURCES) \
 	$(libbitcoin_cli_a_SOURCES) $(libbitcoin_common_a_SOURCES) \
 	$(libbitcoin_server_a_SOURCES) \
@@ -1070,10 +1080,11 @@ DIST_SOURCES = $(crypto_libbitcoin_crypto_a_SOURCES) \
 	$(libzerocoin_libbitcoin_zerocoin_a_SOURCES) \
 	$(am__qt_libbitcoinqt_a_SOURCES_DIST) \
 	$(am__libbitcoinconsensus_la_SOURCES_DIST) \
-	$(am__nullex_cli_SOURCES_DIST) $(nullex_tx_SOURCES) \
-	$(am__nullexd_SOURCES_DIST) $(am__qt_nullex_qt_SOURCES_DIST) \
-	$(am__qt_test_test_nullex_qt_SOURCES_DIST) \
-	$(am__test_test_nullex_SOURCES_DIST)
+	$(am__nachohash_cli_SOURCES_DIST) $(nachohash_tx_SOURCES) \
+	$(am__nachohashd_SOURCES_DIST) \
+	$(am__qt_nachohash_qt_SOURCES_DIST) \
+	$(am__qt_test_test_nachohash_qt_SOURCES_DIST) \
+	$(am__test_test_nachohash_SOURCES_DIST)
 RECURSIVE_TARGETS = all-recursive check-recursive cscopelist-recursive \
 	ctags-recursive dvi-recursive html-recursive info-recursive \
 	install-data-recursive install-dvi-recursive \
@@ -1272,7 +1283,7 @@ am__set_TESTS_bases = \
   bases=`for i in $$bases; do echo $$i; done | sed 's/\.log$$//'`; \
   bases=`echo $$bases`
 RECHECK_LOGS = $(TEST_LOGS)
-#am__EXEEXT_6 = test/test_nullex$(EXEEXT) \
+#am__EXEEXT_6 = test/test_nachohash$(EXEEXT) \
 #	test/bitcoin-util-test.py
 TEST_SUITE_LOG = test-suite.log
 TEST_EXTENSIONS =  .test
@@ -1335,10 +1346,10 @@ AUTOMAKE = ${SHELL} /home/oem/Desktop/nachohash/build-aux/missing automake-1.15
 AWK = gawk
 BDB_CPPFLAGS = 
 BDB_LIBS = -ldb_cxx-4.8
-BITCOIN_CLI_NAME = nullex-cli
-BITCOIN_DAEMON_NAME = nullexd
-BITCOIN_GUI_NAME = nullex-qt
-BITCOIN_TX_NAME = nullex-tx
+BITCOIN_CLI_NAME = nachohash-cli
+BITCOIN_DAEMON_NAME = nachohashd
+BITCOIN_GUI_NAME = nachohash-qt
+BITCOIN_TX_NAME = nachohash-tx
 BOOST_CHRONO_LIB = -lboost_chrono
 BOOST_CPPFLAGS = -pthread -I/usr/include
 BOOST_FILESYSTEM_LIB = -lboost_filesystem
@@ -1440,11 +1451,11 @@ OBJDUMP = objdump
 OBJEXT = o
 OTOOL = 
 OTOOL64 = 
-PACKAGE = nullex
-PACKAGE_BUGREPORT = www.nullex.io
+PACKAGE = nachohash
+PACKAGE_BUGREPORT = www.nachohash.io
 PACKAGE_NAME = NachoHash Core
 PACKAGE_STRING = NachoHash Core 2.0.0
-PACKAGE_TARNAME = nullex
+PACKAGE_TARNAME = nachohash
 PACKAGE_URL = 
 PACKAGE_VERSION = 2.0.0
 PATH_SEPARATOR = :
@@ -1506,7 +1517,7 @@ X11XCB_CFLAGS =
 X11XCB_LIBS = 
 XGETTEXT = /usr/bin/xgettext
 ZMQ_CFLAGS = 
-ZMQ_LIBS = -lzmq
+ZMQ_LIBS = 
 abs_builddir = /home/oem/Desktop/nachohash/src
 abs_srcdir = /home/oem/Desktop/nachohash/src
 abs_top_builddir = /home/oem/Desktop/nachohash
@@ -1592,7 +1603,7 @@ EXTRA_LIBRARIES = crypto/libbitcoin_crypto.a libbitcoin_util.a \
 #lib_LTLIBRARIES = libbitcoinconsensus.la
 LIBBITCOIN_CONSENSUS = 
 #LIBBITCOIN_CONSENSUS = libbitcoinconsensus.la
-# nullex core #
+# nachohash core #
 BITCOIN_CORE_H = \
   activemasternode.h \
   accumulators.h \
@@ -1696,7 +1707,7 @@ BITCOIN_CORE_H = \
   compat/sanity.h
 
 
-# server: shared between nullexd and nullex-qt
+# server: shared between nachohashd and nachohash-qt
 libbitcoin_server_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 libbitcoin_server_a_SOURCES = \
   addrman.cpp \
@@ -1732,16 +1743,16 @@ libbitcoin_server_a_SOURCES = \
   validationinterface.cpp \
   $(BITCOIN_CORE_H)
 
-LIBBITCOIN_ZMQ = libbitcoin_zmq.a
-libbitcoin_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
-libbitcoin_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoin_zmq_a_SOURCES = \
-  zmq/zmqabstractnotifier.cpp \
-  zmq/zmqnotificationinterface.cpp \
-  zmq/zmqpublishnotifier.cpp
+#LIBBITCOIN_ZMQ = libbitcoin_zmq.a
+#libbitcoin_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
+#libbitcoin_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+#libbitcoin_zmq_a_SOURCES = \
+#  zmq/zmqabstractnotifier.cpp \
+#  zmq/zmqnotificationinterface.cpp \
+#  zmq/zmqpublishnotifier.cpp
 
 
-# wallet: shared between nullexd and nullex-qt, but only linked
+# wallet: shared between nachohashd and nachohash-qt, but only linked
 # when wallet enabled
 libbitcoin_wallet_a_CFLAGS = -fPIC
 libbitcoin_wallet_a_CPPFLAGS = $(BITCOIN_INCLUDES)
@@ -1831,7 +1842,7 @@ libzerocoin_libbitcoin_zerocoin_a_SOURCES = \
   libzerocoin/SerialNumberSignatureOfKnowledge.cpp
 
 
-# common: shared between nullexd, and nullex-qt and non-server tools
+# common: shared between nachohashd, and nachohash-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(BITCOIN_INCLUDES)
 libbitcoin_common_a_SOURCES = \
   accumulators.cpp \
@@ -1878,7 +1889,7 @@ libbitcoin_util_a_SOURCES = allocators.cpp compat/strnlen.cpp \
 	utilstrencodings.cpp utilmoneystr.cpp utiltime.cpp \
 	$(BITCOIN_CORE_H) $(am__append_9)
 
-# cli: shared between nullex-cli and nullex-qt
+# cli: shared between nachohash-cli and nachohash-qt
 libbitcoin_cli_a_CPPFLAGS = $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_SOURCES = \
   rpcclient.cpp \
@@ -1888,18 +1899,18 @@ nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # bitcoind binary #
-nullexd_LDADD = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
+nachohashd_LDADD = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
 	$(LIBUNIVALUE) $(LIBBITCOIN_ZEROCOIN) $(LIBBITCOIN_UTIL) \
 	$(LIBBITCOIN_CRYPTO) $(LIBLEVELDB) $(LIBMEMENV) \
 	$(LIBSECP256K1) $(am__append_10) $(am__append_11) \
 	$(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) \
 	$(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
-nullexd_SOURCES = nullexd.cpp $(am__append_12)
-nullexd_CPPFLAGS = $(BITCOIN_INCLUDES)
-nullexd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+nachohashd_SOURCES = nachohashd.cpp $(am__append_12)
+nachohashd_CPPFLAGS = $(BITCOIN_INCLUDES)
+nachohashd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
-# nullex-cli binary #
-nullex_cli_LDADD = \
+# nachohash-cli binary #
+nachohash_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
@@ -1908,12 +1919,12 @@ nullex_cli_LDADD = \
   $(CRYPTO_LIBS) \
   $(EVENT_LIBS)
 
-nullex_cli_SOURCES = nullex-cli.cpp $(am__append_13)
-nullex_cli_CPPFLAGS = $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+nachohash_cli_SOURCES = nachohash-cli.cpp $(am__append_13)
+nachohash_cli_CPPFLAGS = $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
 #
 
-# nullex-tx binary #
-nullex_tx_LDADD = \
+# nachohash-tx binary #
+nachohash_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_ZEROCOIN) \
@@ -1923,11 +1934,11 @@ nullex_tx_LDADD = \
   $(BOOST_LIBS) \
   $(CRYPTO_LIBS)
 
-nullex_tx_SOURCES = nullex-tx.cpp
-nullex_tx_CPPFLAGS = $(BITCOIN_INCLUDES)
+nachohash_tx_SOURCES = nachohash-tx.cpp
+nachohash_tx_CPPFLAGS = $(BITCOIN_INCLUDES)
 #
-nullex_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-nullex_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+nachohash_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+nachohash_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 #include_HEADERS = script/bitcoinconsensus.h
 #libbitcoinconsensus_la_SOURCES =  \
 #	allocators.cpp \
@@ -1955,7 +1966,7 @@ CLEANFILES = leveldb/libleveldb.a leveldb/libmemenv.a *.gcda *.gcno \
 DISTCLEANFILES = obj/build.h
 EXTRA_DIST = leveldb $(am__append_18)
 #TEST_SRCDIR = test
-#TEST_BINARY = test/test_nullex$(EXEEXT)
+#TEST_BINARY = test/test_nachohash$(EXEEXT)
 #JSON_TEST_FILES = \
 #  test/data/script_valid.json \
 #  test/data/base58_keys_valid.json \
@@ -2001,16 +2012,16 @@ EXTRA_DIST = leveldb $(am__append_18)
 #	test/sighash_tests.cpp \
 #	test/sigopcount_tests.cpp \
 #	test/skiplist_tests.cpp \
-#	test/test_nullex.cpp \
+#	test/test_nachohash.cpp \
 #	test/timedata_tests.cpp \
 #	test/torcontrol_tests.cpp \
 #	test/transaction_tests.cpp \
 #	test/uint256_tests.cpp \
 #	test/univalue_tests.cpp test/util_tests.cpp \
 #	$(am__append_19)
-#test_test_nullex_SOURCES = $(BITCOIN_TESTS) $(JSON_TEST_FILES) $(RAW_TEST_FILES)
-#test_test_nullex_CPPFLAGS = $(BITCOIN_INCLUDES) -I$(builddir)/test/ $(TESTDEFS)
-#test_test_nullex_LDADD = $(LIBBITCOIN_SERVER) \
+#test_test_nachohash_SOURCES = $(BITCOIN_TESTS) $(JSON_TEST_FILES) $(RAW_TEST_FILES)
+#test_test_nachohash_CPPFLAGS = $(BITCOIN_INCLUDES) -I$(builddir)/test/ $(TESTDEFS)
+#test_test_nachohash_LDADD = $(LIBBITCOIN_SERVER) \
 #	$(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) \
 #	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
 #	$(LIBUNIVALUE) $(LIBBITCOIN_ZEROCOIN) \
@@ -2021,37 +2032,37 @@ EXTRA_DIST = leveldb $(am__append_18)
 #	$(LIBBITCOIN_CONSENSUS) $(BDB_LIBS) \
 #	$(SSL_LIBS) $(CRYPTO_LIBS) \
 #	$(MINIUPNPC_LIBS) $(am__append_21)
-#test_test_nullex_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) -static
-#nodist_test_test_nullex_SOURCES = $(GENERATED_TEST_FILES)
+#test_test_nachohash_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) -static
+#nodist_test_test_nachohash_SOURCES = $(GENERATED_TEST_FILES)
 #CLEAN_BITCOIN_TEST = test/*.gcda test/*.gcno $(GENERATED_TEST_FILES)
 
-# nullex qt core #
+# nachohash qt core #
 QT_TS = \
-  qt/locale/nullex_bg.ts \
-  qt/locale/nullex_ca.ts \
-  qt/locale/nullex_cs.ts \
-  qt/locale/nullex_da.ts \
-  qt/locale/nullex_de.ts \
-  qt/locale/nullex_en.ts \
-  qt/locale/nullex_en_US.ts \
-  qt/locale/nullex_es.ts \
-  qt/locale/nullex_fi.ts \
-  qt/locale/nullex_fr_FR.ts \
-  qt/locale/nullex_it.ts \
-  qt/locale/nullex_ja.ts \
-  qt/locale/nullex_ko_KR.ts \
-  qt/locale/nullex_nl.ts \
-  qt/locale/nullex_pl.ts \
-  qt/locale/nullex_pt.ts \
-  qt/locale/nullex_pt_BR.ts \
-  qt/locale/nullex_ro_RO.ts \
-  qt/locale/nullex_ru.ts \
-  qt/locale/nullex_sk.ts \
-  qt/locale/nullex_sv.ts \
-  qt/locale/nullex_tr.ts \
-  qt/locale/nullex_uk.ts \
-  qt/locale/nullex_zh_CN.ts \
-  qt/locale/nullex_zh_TW.ts
+  qt/locale/nachohash_bg.ts \
+  qt/locale/nachohash_ca.ts \
+  qt/locale/nachohash_cs.ts \
+  qt/locale/nachohash_da.ts \
+  qt/locale/nachohash_de.ts \
+  qt/locale/nachohash_en.ts \
+  qt/locale/nachohash_en_US.ts \
+  qt/locale/nachohash_es.ts \
+  qt/locale/nachohash_fi.ts \
+  qt/locale/nachohash_fr_FR.ts \
+  qt/locale/nachohash_it.ts \
+  qt/locale/nachohash_ja.ts \
+  qt/locale/nachohash_ko_KR.ts \
+  qt/locale/nachohash_nl.ts \
+  qt/locale/nachohash_pl.ts \
+  qt/locale/nachohash_pt.ts \
+  qt/locale/nachohash_pt_BR.ts \
+  qt/locale/nachohash_ro_RO.ts \
+  qt/locale/nachohash_ru.ts \
+  qt/locale/nachohash_sk.ts \
+  qt/locale/nachohash_sv.ts \
+  qt/locale/nachohash_tr.ts \
+  qt/locale/nachohash_uk.ts \
+  qt/locale/nachohash_zh_CN.ts \
+  qt/locale/nachohash_zh_TW.ts
 
 QT_FORMS_UI = \
   qt/forms/addressbookpage.ui \
@@ -2138,16 +2149,16 @@ BITCOIN_MM = \
   qt/macnotificationhandler.mm
 
 QT_MOC = \
-  qt/nullex.moc \
+  qt/nachohash.moc \
   qt/bitcoinamountfield.moc \
   qt/intro.moc \
   qt/overviewpage.moc \
   qt/rpcconsole.moc
 
-QT_QRC_CPP = qt/qrc_nullex.cpp
-QT_QRC = qt/nullex.qrc
-QT_QRC_LOCALE_CPP = qt/qrc_nullex_locale.cpp
-QT_QRC_LOCALE = qt/nullex_locale.qrc
+QT_QRC_CPP = qt/qrc_nachohash.cpp
+QT_QRC = qt/nachohash.qrc
+QT_QRC_LOCALE_CPP = qt/qrc_nachohash_locale.cpp
+QT_QRC_LOCALE = qt/nachohash_locale.qrc
 PROTOBUF_CC = qt/paymentrequest.pb.cc
 PROTOBUF_H = qt/paymentrequest.pb.h
 PROTOBUF_PROTO = qt/paymentrequest.proto
@@ -2266,12 +2277,12 @@ RES_ICONS = \
   qt/res/icons/tx_input.png \
   qt/res/icons/tx_output.png \
   qt/res/icons/tx_mined.png \
-  qt/res/icons/unit_nullex.png \
-  qt/res/icons/unit_mnullex.png \
-  qt/res/icons/unit_unullex.png \
-  qt/res/icons/unit_tnullex.png \
-  qt/res/icons/unit_tmnullex.png \
-  qt/res/icons/unit_tunullex.png
+  qt/res/icons/unit_nachohash.png \
+  qt/res/icons/unit_mnachohash.png \
+  qt/res/icons/unit_unachohash.png \
+  qt/res/icons/unit_tnachohash.png \
+  qt/res/icons/unit_tmnachohash.png \
+  qt/res/icons/unit_tunachohash.png
 
 BITCOIN_QT_CPP = qt/bantablemodel.cpp \
 	qt/bitcoinaddressvalidator.cpp \
@@ -2291,7 +2302,7 @@ RES_IMAGES = \
   qt/res/images/about.png \
   qt/res/images/splash.png \
   qt/res/images/splash_testnet.png \
-  qt/res/images/nullex_logo_horizontal.png \
+  qt/res/images/nachohash_logo_horizontal.png \
   qt/res/images/downArrow_dark.png \
   qt/res/images/downArrow_small_dark.png \
   qt/res/images/downArrow_small.png \
@@ -2308,7 +2319,7 @@ RES_CSS = \
   qt/res/css/default.css
 
 RES_MOVIES = $(wildcard $(srcdir)/qt/res/movies/spinner-*.png)
-BITCOIN_RC = qt/res/nullex-qt-res.rc
+BITCOIN_RC = qt/res/nachohash-qt-res.rc
 BITCOIN_QT_INCLUDES = -I$(builddir)/qt -I$(srcdir)/qt -I$(srcdir)/qt/forms \
   -I$(builddir)/qt/forms
 
@@ -2325,13 +2336,13 @@ nodist_qt_libbitcoinqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
 # forms/foo.h -> forms/ui_foo.h
 QT_FORMS_H = $(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:.ui=.h))))
 
-# nullex-qt binary #
-qt_nullex_qt_CPPFLAGS = $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+# nachohash-qt binary #
+qt_nachohash_qt_CPPFLAGS = $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
   $(QT_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS)
 
-qt_nullex_qt_SOURCES = qt/nullex.cpp $(am__append_27) \
-	$(am__append_28)
-qt_nullex_qt_LDADD = qt/libbitcoinqt.a \
+qt_nachohash_qt_SOURCES = qt/nachohash.cpp \
+	$(am__append_27) $(am__append_28)
+qt_nachohash_qt_LDADD = qt/libbitcoinqt.a \
 	$(LIBBITCOIN_SERVER) $(am__append_29) \
 	$(am__append_30) $(LIBBITCOIN_CLI) \
 	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
@@ -2342,8 +2353,8 @@ qt_nullex_qt_LDADD = qt/libbitcoinqt.a \
 	$(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) \
 	$(MINIUPNPC_LIBS) $(LIBSECP256K1) \
 	$(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
-qt_nullex_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-qt_nullex_qt_LIBTOOLFLAGS = --tag CXX
+qt_nachohash_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+qt_nachohash_qt_LIBTOOLFLAGS = --tag CXX
 
 #locale/foo.ts -> locale/foo.qm
 QT_QM = $(QT_TS:.ts=.qm)
@@ -2355,27 +2366,27 @@ CLEAN_QT = $(nodist_qt_libbitcoinqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda 
 #  qt/test/paymentrequestdata.h \
 #  qt/test/paymentservertests.h
 
-#qt_test_test_nullex_qt_CPPFLAGS = $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+#qt_test_test_nachohash_qt_CPPFLAGS = $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
 #  $(QT_INCLUDES) $(QT_TEST_INCLUDES) $(PROTOBUF_CFLAGS)
 
-#qt_test_test_nullex_qt_SOURCES =  \
+#qt_test_test_nachohash_qt_SOURCES =  \
 #	qt/test/test_main.cpp \
 #	qt/test/uritests.cpp $(TEST_QT_H) \
 #	$(am__append_35)
-#nodist_qt_test_test_nullex_qt_SOURCES = $(TEST_QT_MOC_CPP)
-#qt_test_test_nullex_qt_LDADD = $(LIBBITCOINQT) \
-#	$(LIBBITCOIN_SERVER) $(am__append_36) \
-#	$(am__append_37) $(LIBBITCOIN_CLI) \
-#	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
-#	$(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) \
-#	$(LIBBITCOIN_ZEROCOIN) $(LIBLEVELDB) \
-#	$(LIBMEMENV) $(BOOST_LIBS) \
+#nodist_qt_test_test_nachohash_qt_SOURCES = $(TEST_QT_MOC_CPP)
+#qt_test_test_nachohash_qt_LDADD =  \
+#	$(LIBBITCOINQT) $(LIBBITCOIN_SERVER) \
+#	$(am__append_36) $(am__append_37) \
+#	$(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) \
+#	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
+#	$(LIBUNIVALUE) $(LIBBITCOIN_ZEROCOIN) \
+#	$(LIBLEVELDB) $(LIBMEMENV) $(BOOST_LIBS) \
 #	$(QT_DBUS_LIBS) $(QT_TEST_LIBS) \
 #	$(QT_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) \
 #	$(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) \
 #	$(MINIUPNPC_LIBS) $(LIBSECP256K1) \
 #	$(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
-#qt_test_test_nullex_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+#qt_test_test_nachohash_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 #CLEAN_BITCOIN_QT_TEST = $(TEST_QT_MOC_CPP) qt/test/*.gcda qt/test/*.gcno
 all: all-recursive
 
@@ -2801,10 +2812,10 @@ qt/qt_libbitcoinqt_a-moc_zichcontroldialog.$(OBJEXT):  \
 	qt/$(am__dirstamp) qt/$(DEPDIR)/$(am__dirstamp)
 qt/qt_libbitcoinqt_a-paymentrequest.pb.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
-qt/qt_libbitcoinqt_a-qrc_nullex.$(OBJEXT): qt/$(am__dirstamp) \
+qt/qt_libbitcoinqt_a-qrc_nachohash.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
-qt/qt_libbitcoinqt_a-qrc_nullex_locale.$(OBJEXT): qt/$(am__dirstamp) \
-	qt/$(DEPDIR)/$(am__dirstamp)
+qt/qt_libbitcoinqt_a-qrc_nachohash_locale.$(OBJEXT):  \
+	qt/$(am__dirstamp) qt/$(DEPDIR)/$(am__dirstamp)
 
 qt/libbitcoinqt.a: $(qt_libbitcoinqt_a_OBJECTS) $(qt_libbitcoinqt_a_DEPENDENCIES) $(EXTRA_qt_libbitcoinqt_a_DEPENDENCIES) qt/$(am__dirstamp)
 	$(AM_V_at)-rm -f qt/libbitcoinqt.a
@@ -2923,159 +2934,159 @@ clean-binPROGRAMS:
 	echo " rm -f" $$list; \
 	rm -f $$list
 
-nullex-cli$(EXEEXT): $(nullex_cli_OBJECTS) $(nullex_cli_DEPENDENCIES) $(EXTRA_nullex_cli_DEPENDENCIES) 
-	@rm -f nullex-cli$(EXEEXT)
-	$(AM_V_CXXLD)$(nullex_cli_LINK) $(nullex_cli_OBJECTS) $(nullex_cli_LDADD) $(LIBS)
+nachohash-cli$(EXEEXT): $(nachohash_cli_OBJECTS) $(nachohash_cli_DEPENDENCIES) $(EXTRA_nachohash_cli_DEPENDENCIES) 
+	@rm -f nachohash-cli$(EXEEXT)
+	$(AM_V_CXXLD)$(nachohash_cli_LINK) $(nachohash_cli_OBJECTS) $(nachohash_cli_LDADD) $(LIBS)
 
-nullex-tx$(EXEEXT): $(nullex_tx_OBJECTS) $(nullex_tx_DEPENDENCIES) $(EXTRA_nullex_tx_DEPENDENCIES) 
-	@rm -f nullex-tx$(EXEEXT)
-	$(AM_V_CXXLD)$(nullex_tx_LINK) $(nullex_tx_OBJECTS) $(nullex_tx_LDADD) $(LIBS)
+nachohash-tx$(EXEEXT): $(nachohash_tx_OBJECTS) $(nachohash_tx_DEPENDENCIES) $(EXTRA_nachohash_tx_DEPENDENCIES) 
+	@rm -f nachohash-tx$(EXEEXT)
+	$(AM_V_CXXLD)$(nachohash_tx_LINK) $(nachohash_tx_OBJECTS) $(nachohash_tx_LDADD) $(LIBS)
 
-nullexd$(EXEEXT): $(nullexd_OBJECTS) $(nullexd_DEPENDENCIES) $(EXTRA_nullexd_DEPENDENCIES) 
-	@rm -f nullexd$(EXEEXT)
-	$(AM_V_CXXLD)$(nullexd_LINK) $(nullexd_OBJECTS) $(nullexd_LDADD) $(LIBS)
-qt/qt_nullex_qt-nullex.$(OBJEXT): qt/$(am__dirstamp) \
+nachohashd$(EXEEXT): $(nachohashd_OBJECTS) $(nachohashd_DEPENDENCIES) $(EXTRA_nachohashd_DEPENDENCIES) 
+	@rm -f nachohashd$(EXEEXT)
+	$(AM_V_CXXLD)$(nachohashd_LINK) $(nachohashd_OBJECTS) $(nachohashd_LDADD) $(LIBS)
+qt/qt_nachohash_qt-nachohash.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
-qt/qt_nullex_qt-macdockiconhandler.$(OBJEXT): qt/$(am__dirstamp) \
+qt/qt_nachohash_qt-macdockiconhandler.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
-qt/qt_nullex_qt-macnotificationhandler.$(OBJEXT): qt/$(am__dirstamp) \
-	qt/$(DEPDIR)/$(am__dirstamp)
+qt/qt_nachohash_qt-macnotificationhandler.$(OBJEXT):  \
+	qt/$(am__dirstamp) qt/$(DEPDIR)/$(am__dirstamp)
 qt/res/$(am__dirstamp):
 	@$(MKDIR_P) qt/res
 	@: > qt/res/$(am__dirstamp)
 qt/res/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) qt/res/$(DEPDIR)
 	@: > qt/res/$(DEPDIR)/$(am__dirstamp)
-qt/res/nullex-qt-res.$(OBJEXT): qt/res/$(am__dirstamp) \
+qt/res/nachohash-qt-res.$(OBJEXT): qt/res/$(am__dirstamp) \
 	qt/res/$(DEPDIR)/$(am__dirstamp)
 
-qt/nullex-qt$(EXEEXT): $(qt_nullex_qt_OBJECTS) $(qt_nullex_qt_DEPENDENCIES) $(EXTRA_qt_nullex_qt_DEPENDENCIES) qt/$(am__dirstamp)
-	@rm -f qt/nullex-qt$(EXEEXT)
-	$(AM_V_OBJCXXLD)$(qt_nullex_qt_LINK) $(qt_nullex_qt_OBJECTS) $(qt_nullex_qt_LDADD) $(LIBS)
+qt/nachohash-qt$(EXEEXT): $(qt_nachohash_qt_OBJECTS) $(qt_nachohash_qt_DEPENDENCIES) $(EXTRA_qt_nachohash_qt_DEPENDENCIES) qt/$(am__dirstamp)
+	@rm -f qt/nachohash-qt$(EXEEXT)
+	$(AM_V_OBJCXXLD)$(qt_nachohash_qt_LINK) $(qt_nachohash_qt_OBJECTS) $(qt_nachohash_qt_LDADD) $(LIBS)
 qt/test/$(am__dirstamp):
 	@$(MKDIR_P) qt/test
 	@: > qt/test/$(am__dirstamp)
 qt/test/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) qt/test/$(DEPDIR)
 	@: > qt/test/$(DEPDIR)/$(am__dirstamp)
-qt/test/qt_test_test_nullex_qt-test_main.$(OBJEXT):  \
+qt/test/qt_test_test_nachohash_qt-test_main.$(OBJEXT):  \
 	qt/test/$(am__dirstamp) qt/test/$(DEPDIR)/$(am__dirstamp)
-qt/test/qt_test_test_nullex_qt-uritests.$(OBJEXT):  \
+qt/test/qt_test_test_nachohash_qt-uritests.$(OBJEXT):  \
 	qt/test/$(am__dirstamp) qt/test/$(DEPDIR)/$(am__dirstamp)
-qt/test/qt_test_test_nullex_qt-paymentservertests.$(OBJEXT):  \
+qt/test/qt_test_test_nachohash_qt-paymentservertests.$(OBJEXT):  \
 	qt/test/$(am__dirstamp) qt/test/$(DEPDIR)/$(am__dirstamp)
-qt/test/qt_test_test_nullex_qt-moc_uritests.$(OBJEXT):  \
+qt/test/qt_test_test_nachohash_qt-moc_uritests.$(OBJEXT):  \
 	qt/test/$(am__dirstamp) qt/test/$(DEPDIR)/$(am__dirstamp)
-qt/test/qt_test_test_nullex_qt-moc_paymentservertests.$(OBJEXT):  \
+qt/test/qt_test_test_nachohash_qt-moc_paymentservertests.$(OBJEXT):  \
 	qt/test/$(am__dirstamp) qt/test/$(DEPDIR)/$(am__dirstamp)
 
-qt/test/test_nullex-qt$(EXEEXT): $(qt_test_test_nullex_qt_OBJECTS) $(qt_test_test_nullex_qt_DEPENDENCIES) $(EXTRA_qt_test_test_nullex_qt_DEPENDENCIES) qt/test/$(am__dirstamp)
-	@rm -f qt/test/test_nullex-qt$(EXEEXT)
-	$(AM_V_CXXLD)$(qt_test_test_nullex_qt_LINK) $(qt_test_test_nullex_qt_OBJECTS) $(qt_test_test_nullex_qt_LDADD) $(LIBS)
+qt/test/test_nachohash-qt$(EXEEXT): $(qt_test_test_nachohash_qt_OBJECTS) $(qt_test_test_nachohash_qt_DEPENDENCIES) $(EXTRA_qt_test_test_nachohash_qt_DEPENDENCIES) qt/test/$(am__dirstamp)
+	@rm -f qt/test/test_nachohash-qt$(EXEEXT)
+	$(AM_V_CXXLD)$(qt_test_test_nachohash_qt_LINK) $(qt_test_test_nachohash_qt_OBJECTS) $(qt_test_test_nachohash_qt_LDADD) $(LIBS)
 test/$(am__dirstamp):
 	@$(MKDIR_P) test
 	@: > test/$(am__dirstamp)
 test/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) test/$(DEPDIR)
 	@: > test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-zerocoin_implementation_tests.$(OBJEXT):  \
+test/test_test_nachohash-zerocoin_implementation_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-zerocoin_denomination_tests.$(OBJEXT):  \
+test/test_test_nachohash-zerocoin_denomination_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-zerocoin_transactions_tests.$(OBJEXT):  \
+test/test_test_nachohash-zerocoin_transactions_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-benchmark_zerocoin.$(OBJEXT):  \
+test/test_test_nachohash-benchmark_zerocoin.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-tutorial_zerocoin.$(OBJEXT):  \
+test/test_test_nachohash-tutorial_zerocoin.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-libzerocoin_tests.$(OBJEXT):  \
+test/test_test_nachohash-libzerocoin_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-allocator_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-base32_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-base58_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-base64_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-checkblock_tests.$(OBJEXT):  \
+test/test_test_nachohash-allocator_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-Checkpoints_tests.$(OBJEXT):  \
+test/test_test_nachohash-base32_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-base58_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-base64_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-checkblock_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-coins_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-compress_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-crypto_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-DoS_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-getarg_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-hash_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-key_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-main_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-mempool_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-mruset_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-multisig_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-netbase_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-pmt_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-reverselock_tests.$(OBJEXT):  \
+test/test_test_nachohash-Checkpoints_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-rpc_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_nachohash-coins_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-sanity_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-scheduler_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-script_P2SH_tests.$(OBJEXT):  \
+test/test_test_nachohash-compress_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-script_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_nachohash-crypto_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-scriptnum_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_nachohash-DoS_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-serialize_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_nachohash-getarg_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-sighash_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_nachohash-hash_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-sigopcount_tests.$(OBJEXT):  \
+test/test_test_nachohash-key_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-main_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-mempool_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-skiplist_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_nachohash-mruset_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-test_nullex.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-timedata_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-torcontrol_tests.$(OBJEXT):  \
+test/test_test_nachohash-multisig_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-transaction_tests.$(OBJEXT):  \
+test/test_test_nachohash-netbase_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-uint256_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_nachohash-pmt_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-univalue_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-util_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-accounting_tests.$(OBJEXT):  \
+test/test_test_nachohash-reverselock_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-wallet_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_nachohash-rpc_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-rpc_wallet_tests.$(OBJEXT):  \
+test/test_test_nachohash-sanity_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-scheduler_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_nullex-miner_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_nachohash-script_P2SH_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-script_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-scriptnum_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-serialize_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-sighash_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-sigopcount_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-skiplist_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-test_nachohash.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-timedata_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-torcontrol_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-transaction_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-uint256_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-univalue_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-util_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-accounting_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-wallet_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-rpc_wallet_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_nachohash-miner_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
 
-test/test_nullex$(EXEEXT): $(test_test_nullex_OBJECTS) $(test_test_nullex_DEPENDENCIES) $(EXTRA_test_test_nullex_DEPENDENCIES) test/$(am__dirstamp)
-	@rm -f test/test_nullex$(EXEEXT)
-	$(AM_V_CXXLD)$(test_test_nullex_LINK) $(test_test_nullex_OBJECTS) $(test_test_nullex_LDADD) $(LIBS)
+test/test_nachohash$(EXEEXT): $(test_test_nachohash_OBJECTS) $(test_test_nachohash_DEPENDENCIES) $(EXTRA_test_test_nachohash_DEPENDENCIES) test/$(am__dirstamp)
+	@rm -f test/test_nachohash$(EXEEXT)
+	$(AM_V_CXXLD)$(test_test_nachohash_LINK) $(test_test_nachohash_OBJECTS) $(test_test_nachohash_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -3188,9 +3199,9 @@ include ./$(DEPDIR)/libbitcoinconsensus_la-hash.Plo
 include ./$(DEPDIR)/libbitcoinconsensus_la-pubkey.Plo
 include ./$(DEPDIR)/libbitcoinconsensus_la-uint256.Plo
 include ./$(DEPDIR)/libbitcoinconsensus_la-utilstrencodings.Plo
-include ./$(DEPDIR)/nullex_cli-nullex-cli.Po
-include ./$(DEPDIR)/nullex_tx-nullex-tx.Po
-include ./$(DEPDIR)/nullexd-nullexd.Po
+include ./$(DEPDIR)/nachohash_cli-nachohash-cli.Po
+include ./$(DEPDIR)/nachohash_tx-nachohash-tx.Po
+include ./$(DEPDIR)/nachohashd-nachohashd.Po
 include compat/$(DEPDIR)/libbitcoin_util_a-glibc_compat.Po
 include compat/$(DEPDIR)/libbitcoin_util_a-glibc_sanity.Po
 include compat/$(DEPDIR)/libbitcoin_util_a-glibcxx_compat.Po
@@ -3318,8 +3329,8 @@ include qt/$(DEPDIR)/qt_libbitcoinqt_a-paymentserver.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-peertablemodel.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-platformstyle.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-privacydialog.Po
-include qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_nullex.Po
-include qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_nullex_locale.Po
+include qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_nachohash.Po
+include qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_nachohash_locale.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-qvalidatedlineedit.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-qvaluecombobox.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-receivecoinsdialog.Po
@@ -3344,14 +3355,14 @@ include qt/$(DEPDIR)/qt_libbitcoinqt_a-walletmodeltransaction.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-walletview.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-winshutdownmonitor.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-zichcontroldialog.Po
-include qt/$(DEPDIR)/qt_nullex_qt-macdockiconhandler.Po
-include qt/$(DEPDIR)/qt_nullex_qt-macnotificationhandler.Po
-include qt/$(DEPDIR)/qt_nullex_qt-nullex.Po
-include qt/test/$(DEPDIR)/qt_test_test_nullex_qt-moc_paymentservertests.Po
-include qt/test/$(DEPDIR)/qt_test_test_nullex_qt-moc_uritests.Po
-include qt/test/$(DEPDIR)/qt_test_test_nullex_qt-paymentservertests.Po
-include qt/test/$(DEPDIR)/qt_test_test_nullex_qt-test_main.Po
-include qt/test/$(DEPDIR)/qt_test_test_nullex_qt-uritests.Po
+include qt/$(DEPDIR)/qt_nachohash_qt-macdockiconhandler.Po
+include qt/$(DEPDIR)/qt_nachohash_qt-macnotificationhandler.Po
+include qt/$(DEPDIR)/qt_nachohash_qt-nachohash.Po
+include qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-moc_paymentservertests.Po
+include qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-moc_uritests.Po
+include qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-paymentservertests.Po
+include qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-test_main.Po
+include qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-uritests.Po
 include script/$(DEPDIR)/libbitcoin_common_a-interpreter.Po
 include script/$(DEPDIR)/libbitcoin_common_a-script.Po
 include script/$(DEPDIR)/libbitcoin_common_a-script_error.Po
@@ -3361,53 +3372,53 @@ include script/$(DEPDIR)/libbitcoin_server_a-sigcache.Po
 include script/$(DEPDIR)/libbitcoinconsensus_la-bitcoinconsensus.Plo
 include script/$(DEPDIR)/libbitcoinconsensus_la-interpreter.Plo
 include script/$(DEPDIR)/libbitcoinconsensus_la-script.Plo
-include test/$(DEPDIR)/test_test_nullex-Checkpoints_tests.Po
-include test/$(DEPDIR)/test_test_nullex-DoS_tests.Po
-include test/$(DEPDIR)/test_test_nullex-accounting_tests.Po
-include test/$(DEPDIR)/test_test_nullex-allocator_tests.Po
-include test/$(DEPDIR)/test_test_nullex-base32_tests.Po
-include test/$(DEPDIR)/test_test_nullex-base58_tests.Po
-include test/$(DEPDIR)/test_test_nullex-base64_tests.Po
-include test/$(DEPDIR)/test_test_nullex-benchmark_zerocoin.Po
-include test/$(DEPDIR)/test_test_nullex-checkblock_tests.Po
-include test/$(DEPDIR)/test_test_nullex-coins_tests.Po
-include test/$(DEPDIR)/test_test_nullex-compress_tests.Po
-include test/$(DEPDIR)/test_test_nullex-crypto_tests.Po
-include test/$(DEPDIR)/test_test_nullex-getarg_tests.Po
-include test/$(DEPDIR)/test_test_nullex-hash_tests.Po
-include test/$(DEPDIR)/test_test_nullex-key_tests.Po
-include test/$(DEPDIR)/test_test_nullex-libzerocoin_tests.Po
-include test/$(DEPDIR)/test_test_nullex-main_tests.Po
-include test/$(DEPDIR)/test_test_nullex-mempool_tests.Po
-include test/$(DEPDIR)/test_test_nullex-miner_tests.Po
-include test/$(DEPDIR)/test_test_nullex-mruset_tests.Po
-include test/$(DEPDIR)/test_test_nullex-multisig_tests.Po
-include test/$(DEPDIR)/test_test_nullex-netbase_tests.Po
-include test/$(DEPDIR)/test_test_nullex-pmt_tests.Po
-include test/$(DEPDIR)/test_test_nullex-reverselock_tests.Po
-include test/$(DEPDIR)/test_test_nullex-rpc_tests.Po
-include test/$(DEPDIR)/test_test_nullex-rpc_wallet_tests.Po
-include test/$(DEPDIR)/test_test_nullex-sanity_tests.Po
-include test/$(DEPDIR)/test_test_nullex-scheduler_tests.Po
-include test/$(DEPDIR)/test_test_nullex-script_P2SH_tests.Po
-include test/$(DEPDIR)/test_test_nullex-script_tests.Po
-include test/$(DEPDIR)/test_test_nullex-scriptnum_tests.Po
-include test/$(DEPDIR)/test_test_nullex-serialize_tests.Po
-include test/$(DEPDIR)/test_test_nullex-sighash_tests.Po
-include test/$(DEPDIR)/test_test_nullex-sigopcount_tests.Po
-include test/$(DEPDIR)/test_test_nullex-skiplist_tests.Po
-include test/$(DEPDIR)/test_test_nullex-test_nullex.Po
-include test/$(DEPDIR)/test_test_nullex-timedata_tests.Po
-include test/$(DEPDIR)/test_test_nullex-torcontrol_tests.Po
-include test/$(DEPDIR)/test_test_nullex-transaction_tests.Po
-include test/$(DEPDIR)/test_test_nullex-tutorial_zerocoin.Po
-include test/$(DEPDIR)/test_test_nullex-uint256_tests.Po
-include test/$(DEPDIR)/test_test_nullex-univalue_tests.Po
-include test/$(DEPDIR)/test_test_nullex-util_tests.Po
-include test/$(DEPDIR)/test_test_nullex-wallet_tests.Po
-include test/$(DEPDIR)/test_test_nullex-zerocoin_denomination_tests.Po
-include test/$(DEPDIR)/test_test_nullex-zerocoin_implementation_tests.Po
-include test/$(DEPDIR)/test_test_nullex-zerocoin_transactions_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-Checkpoints_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-DoS_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-accounting_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-allocator_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-base32_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-base58_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-base64_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-benchmark_zerocoin.Po
+include test/$(DEPDIR)/test_test_nachohash-checkblock_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-coins_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-compress_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-crypto_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-getarg_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-hash_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-key_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-libzerocoin_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-main_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-mempool_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-miner_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-mruset_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-multisig_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-netbase_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-pmt_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-reverselock_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-rpc_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-rpc_wallet_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-sanity_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-scheduler_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-script_P2SH_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-script_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-scriptnum_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-serialize_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-sighash_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-sigopcount_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-skiplist_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-test_nachohash.Po
+include test/$(DEPDIR)/test_test_nachohash-timedata_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-torcontrol_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-transaction_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-tutorial_zerocoin.Po
+include test/$(DEPDIR)/test_test_nachohash-uint256_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-univalue_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-util_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-wallet_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-zerocoin_denomination_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-zerocoin_implementation_tests.Po
+include test/$(DEPDIR)/test_test_nachohash-zerocoin_transactions_tests.Po
 include zmq/$(DEPDIR)/libbitcoin_zmq_a-zmqabstractnotifier.Po
 include zmq/$(DEPDIR)/libbitcoin_zmq_a-zmqnotificationinterface.Po
 include zmq/$(DEPDIR)/libbitcoin_zmq_a-zmqpublishnotifier.Po
@@ -6624,33 +6635,33 @@ qt/qt_libbitcoinqt_a-paymentrequest.pb.obj: qt/paymentrequest.pb.cc
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
 #	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libbitcoinqt_a-paymentrequest.pb.obj `if test -f 'qt/paymentrequest.pb.cc'; then $(CYGPATH_W) 'qt/paymentrequest.pb.cc'; else $(CYGPATH_W) '$(srcdir)/qt/paymentrequest.pb.cc'; fi`
 
-qt/qt_libbitcoinqt_a-qrc_nullex.o: qt/qrc_nullex.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libbitcoinqt_a-qrc_nullex.o -MD -MP -MF qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_nullex.Tpo -c -o qt/qt_libbitcoinqt_a-qrc_nullex.o `test -f 'qt/qrc_nullex.cpp' || echo '$(srcdir)/'`qt/qrc_nullex.cpp
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_nullex.Tpo qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_nullex.Po
-#	$(AM_V_CXX)source='qt/qrc_nullex.cpp' object='qt/qt_libbitcoinqt_a-qrc_nullex.o' libtool=no \
+qt/qt_libbitcoinqt_a-qrc_nachohash.o: qt/qrc_nachohash.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libbitcoinqt_a-qrc_nachohash.o -MD -MP -MF qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_nachohash.Tpo -c -o qt/qt_libbitcoinqt_a-qrc_nachohash.o `test -f 'qt/qrc_nachohash.cpp' || echo '$(srcdir)/'`qt/qrc_nachohash.cpp
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_nachohash.Tpo qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_nachohash.Po
+#	$(AM_V_CXX)source='qt/qrc_nachohash.cpp' object='qt/qt_libbitcoinqt_a-qrc_nachohash.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libbitcoinqt_a-qrc_nullex.o `test -f 'qt/qrc_nullex.cpp' || echo '$(srcdir)/'`qt/qrc_nullex.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libbitcoinqt_a-qrc_nachohash.o `test -f 'qt/qrc_nachohash.cpp' || echo '$(srcdir)/'`qt/qrc_nachohash.cpp
 
-qt/qt_libbitcoinqt_a-qrc_nullex.obj: qt/qrc_nullex.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libbitcoinqt_a-qrc_nullex.obj -MD -MP -MF qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_nullex.Tpo -c -o qt/qt_libbitcoinqt_a-qrc_nullex.obj `if test -f 'qt/qrc_nullex.cpp'; then $(CYGPATH_W) 'qt/qrc_nullex.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/qrc_nullex.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_nullex.Tpo qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_nullex.Po
-#	$(AM_V_CXX)source='qt/qrc_nullex.cpp' object='qt/qt_libbitcoinqt_a-qrc_nullex.obj' libtool=no \
+qt/qt_libbitcoinqt_a-qrc_nachohash.obj: qt/qrc_nachohash.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libbitcoinqt_a-qrc_nachohash.obj -MD -MP -MF qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_nachohash.Tpo -c -o qt/qt_libbitcoinqt_a-qrc_nachohash.obj `if test -f 'qt/qrc_nachohash.cpp'; then $(CYGPATH_W) 'qt/qrc_nachohash.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/qrc_nachohash.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_nachohash.Tpo qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_nachohash.Po
+#	$(AM_V_CXX)source='qt/qrc_nachohash.cpp' object='qt/qt_libbitcoinqt_a-qrc_nachohash.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libbitcoinqt_a-qrc_nullex.obj `if test -f 'qt/qrc_nullex.cpp'; then $(CYGPATH_W) 'qt/qrc_nullex.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/qrc_nullex.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libbitcoinqt_a-qrc_nachohash.obj `if test -f 'qt/qrc_nachohash.cpp'; then $(CYGPATH_W) 'qt/qrc_nachohash.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/qrc_nachohash.cpp'; fi`
 
-qt/qt_libbitcoinqt_a-qrc_nullex_locale.o: qt/qrc_nullex_locale.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libbitcoinqt_a-qrc_nullex_locale.o -MD -MP -MF qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_nullex_locale.Tpo -c -o qt/qt_libbitcoinqt_a-qrc_nullex_locale.o `test -f 'qt/qrc_nullex_locale.cpp' || echo '$(srcdir)/'`qt/qrc_nullex_locale.cpp
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_nullex_locale.Tpo qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_nullex_locale.Po
-#	$(AM_V_CXX)source='qt/qrc_nullex_locale.cpp' object='qt/qt_libbitcoinqt_a-qrc_nullex_locale.o' libtool=no \
+qt/qt_libbitcoinqt_a-qrc_nachohash_locale.o: qt/qrc_nachohash_locale.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libbitcoinqt_a-qrc_nachohash_locale.o -MD -MP -MF qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_nachohash_locale.Tpo -c -o qt/qt_libbitcoinqt_a-qrc_nachohash_locale.o `test -f 'qt/qrc_nachohash_locale.cpp' || echo '$(srcdir)/'`qt/qrc_nachohash_locale.cpp
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_nachohash_locale.Tpo qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_nachohash_locale.Po
+#	$(AM_V_CXX)source='qt/qrc_nachohash_locale.cpp' object='qt/qt_libbitcoinqt_a-qrc_nachohash_locale.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libbitcoinqt_a-qrc_nullex_locale.o `test -f 'qt/qrc_nullex_locale.cpp' || echo '$(srcdir)/'`qt/qrc_nullex_locale.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libbitcoinqt_a-qrc_nachohash_locale.o `test -f 'qt/qrc_nachohash_locale.cpp' || echo '$(srcdir)/'`qt/qrc_nachohash_locale.cpp
 
-qt/qt_libbitcoinqt_a-qrc_nullex_locale.obj: qt/qrc_nullex_locale.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libbitcoinqt_a-qrc_nullex_locale.obj -MD -MP -MF qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_nullex_locale.Tpo -c -o qt/qt_libbitcoinqt_a-qrc_nullex_locale.obj `if test -f 'qt/qrc_nullex_locale.cpp'; then $(CYGPATH_W) 'qt/qrc_nullex_locale.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/qrc_nullex_locale.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_nullex_locale.Tpo qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_nullex_locale.Po
-#	$(AM_V_CXX)source='qt/qrc_nullex_locale.cpp' object='qt/qt_libbitcoinqt_a-qrc_nullex_locale.obj' libtool=no \
+qt/qt_libbitcoinqt_a-qrc_nachohash_locale.obj: qt/qrc_nachohash_locale.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libbitcoinqt_a-qrc_nachohash_locale.obj -MD -MP -MF qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_nachohash_locale.Tpo -c -o qt/qt_libbitcoinqt_a-qrc_nachohash_locale.obj `if test -f 'qt/qrc_nachohash_locale.cpp'; then $(CYGPATH_W) 'qt/qrc_nachohash_locale.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/qrc_nachohash_locale.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_nachohash_locale.Tpo qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_nachohash_locale.Po
+#	$(AM_V_CXX)source='qt/qrc_nachohash_locale.cpp' object='qt/qt_libbitcoinqt_a-qrc_nachohash_locale.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libbitcoinqt_a-qrc_nullex_locale.obj `if test -f 'qt/qrc_nullex_locale.cpp'; then $(CYGPATH_W) 'qt/qrc_nullex_locale.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/qrc_nullex_locale.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libbitcoinqt_a-qrc_nachohash_locale.obj `if test -f 'qt/qrc_nachohash_locale.cpp'; then $(CYGPATH_W) 'qt/qrc_nachohash_locale.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/qrc_nachohash_locale.cpp'; fi`
 
 libbitcoinconsensus_la-allocators.lo: allocators.cpp
 	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libbitcoinconsensus_la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT libbitcoinconsensus_la-allocators.lo -MD -MP -MF $(DEPDIR)/libbitcoinconsensus_la-allocators.Tpo -c -o libbitcoinconsensus_la-allocators.lo `test -f 'allocators.cpp' || echo '$(srcdir)/'`allocators.cpp
@@ -6785,789 +6796,789 @@ compat/libbitcoinconsensus_la-glibcxx_compat.lo: compat/glibcxx_compat.cpp
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
 #	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libbitcoinconsensus_la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o compat/libbitcoinconsensus_la-glibcxx_compat.lo `test -f 'compat/glibcxx_compat.cpp' || echo '$(srcdir)/'`compat/glibcxx_compat.cpp
 
-nullex_cli-nullex-cli.o: nullex-cli.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(nullex_cli_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT nullex_cli-nullex-cli.o -MD -MP -MF $(DEPDIR)/nullex_cli-nullex-cli.Tpo -c -o nullex_cli-nullex-cli.o `test -f 'nullex-cli.cpp' || echo '$(srcdir)/'`nullex-cli.cpp
-	$(AM_V_at)$(am__mv) $(DEPDIR)/nullex_cli-nullex-cli.Tpo $(DEPDIR)/nullex_cli-nullex-cli.Po
-#	$(AM_V_CXX)source='nullex-cli.cpp' object='nullex_cli-nullex-cli.o' libtool=no \
+nachohash_cli-nachohash-cli.o: nachohash-cli.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(nachohash_cli_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT nachohash_cli-nachohash-cli.o -MD -MP -MF $(DEPDIR)/nachohash_cli-nachohash-cli.Tpo -c -o nachohash_cli-nachohash-cli.o `test -f 'nachohash-cli.cpp' || echo '$(srcdir)/'`nachohash-cli.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/nachohash_cli-nachohash-cli.Tpo $(DEPDIR)/nachohash_cli-nachohash-cli.Po
+#	$(AM_V_CXX)source='nachohash-cli.cpp' object='nachohash_cli-nachohash-cli.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(nullex_cli_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o nullex_cli-nullex-cli.o `test -f 'nullex-cli.cpp' || echo '$(srcdir)/'`nullex-cli.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(nachohash_cli_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o nachohash_cli-nachohash-cli.o `test -f 'nachohash-cli.cpp' || echo '$(srcdir)/'`nachohash-cli.cpp
 
-nullex_cli-nullex-cli.obj: nullex-cli.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(nullex_cli_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT nullex_cli-nullex-cli.obj -MD -MP -MF $(DEPDIR)/nullex_cli-nullex-cli.Tpo -c -o nullex_cli-nullex-cli.obj `if test -f 'nullex-cli.cpp'; then $(CYGPATH_W) 'nullex-cli.cpp'; else $(CYGPATH_W) '$(srcdir)/nullex-cli.cpp'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/nullex_cli-nullex-cli.Tpo $(DEPDIR)/nullex_cli-nullex-cli.Po
-#	$(AM_V_CXX)source='nullex-cli.cpp' object='nullex_cli-nullex-cli.obj' libtool=no \
+nachohash_cli-nachohash-cli.obj: nachohash-cli.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(nachohash_cli_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT nachohash_cli-nachohash-cli.obj -MD -MP -MF $(DEPDIR)/nachohash_cli-nachohash-cli.Tpo -c -o nachohash_cli-nachohash-cli.obj `if test -f 'nachohash-cli.cpp'; then $(CYGPATH_W) 'nachohash-cli.cpp'; else $(CYGPATH_W) '$(srcdir)/nachohash-cli.cpp'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/nachohash_cli-nachohash-cli.Tpo $(DEPDIR)/nachohash_cli-nachohash-cli.Po
+#	$(AM_V_CXX)source='nachohash-cli.cpp' object='nachohash_cli-nachohash-cli.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(nullex_cli_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o nullex_cli-nullex-cli.obj `if test -f 'nullex-cli.cpp'; then $(CYGPATH_W) 'nullex-cli.cpp'; else $(CYGPATH_W) '$(srcdir)/nullex-cli.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(nachohash_cli_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o nachohash_cli-nachohash-cli.obj `if test -f 'nachohash-cli.cpp'; then $(CYGPATH_W) 'nachohash-cli.cpp'; else $(CYGPATH_W) '$(srcdir)/nachohash-cli.cpp'; fi`
 
-nullex_tx-nullex-tx.o: nullex-tx.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(nullex_tx_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT nullex_tx-nullex-tx.o -MD -MP -MF $(DEPDIR)/nullex_tx-nullex-tx.Tpo -c -o nullex_tx-nullex-tx.o `test -f 'nullex-tx.cpp' || echo '$(srcdir)/'`nullex-tx.cpp
-	$(AM_V_at)$(am__mv) $(DEPDIR)/nullex_tx-nullex-tx.Tpo $(DEPDIR)/nullex_tx-nullex-tx.Po
-#	$(AM_V_CXX)source='nullex-tx.cpp' object='nullex_tx-nullex-tx.o' libtool=no \
+nachohash_tx-nachohash-tx.o: nachohash-tx.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(nachohash_tx_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT nachohash_tx-nachohash-tx.o -MD -MP -MF $(DEPDIR)/nachohash_tx-nachohash-tx.Tpo -c -o nachohash_tx-nachohash-tx.o `test -f 'nachohash-tx.cpp' || echo '$(srcdir)/'`nachohash-tx.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/nachohash_tx-nachohash-tx.Tpo $(DEPDIR)/nachohash_tx-nachohash-tx.Po
+#	$(AM_V_CXX)source='nachohash-tx.cpp' object='nachohash_tx-nachohash-tx.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(nullex_tx_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o nullex_tx-nullex-tx.o `test -f 'nullex-tx.cpp' || echo '$(srcdir)/'`nullex-tx.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(nachohash_tx_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o nachohash_tx-nachohash-tx.o `test -f 'nachohash-tx.cpp' || echo '$(srcdir)/'`nachohash-tx.cpp
 
-nullex_tx-nullex-tx.obj: nullex-tx.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(nullex_tx_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT nullex_tx-nullex-tx.obj -MD -MP -MF $(DEPDIR)/nullex_tx-nullex-tx.Tpo -c -o nullex_tx-nullex-tx.obj `if test -f 'nullex-tx.cpp'; then $(CYGPATH_W) 'nullex-tx.cpp'; else $(CYGPATH_W) '$(srcdir)/nullex-tx.cpp'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/nullex_tx-nullex-tx.Tpo $(DEPDIR)/nullex_tx-nullex-tx.Po
-#	$(AM_V_CXX)source='nullex-tx.cpp' object='nullex_tx-nullex-tx.obj' libtool=no \
+nachohash_tx-nachohash-tx.obj: nachohash-tx.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(nachohash_tx_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT nachohash_tx-nachohash-tx.obj -MD -MP -MF $(DEPDIR)/nachohash_tx-nachohash-tx.Tpo -c -o nachohash_tx-nachohash-tx.obj `if test -f 'nachohash-tx.cpp'; then $(CYGPATH_W) 'nachohash-tx.cpp'; else $(CYGPATH_W) '$(srcdir)/nachohash-tx.cpp'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/nachohash_tx-nachohash-tx.Tpo $(DEPDIR)/nachohash_tx-nachohash-tx.Po
+#	$(AM_V_CXX)source='nachohash-tx.cpp' object='nachohash_tx-nachohash-tx.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(nullex_tx_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o nullex_tx-nullex-tx.obj `if test -f 'nullex-tx.cpp'; then $(CYGPATH_W) 'nullex-tx.cpp'; else $(CYGPATH_W) '$(srcdir)/nullex-tx.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(nachohash_tx_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o nachohash_tx-nachohash-tx.obj `if test -f 'nachohash-tx.cpp'; then $(CYGPATH_W) 'nachohash-tx.cpp'; else $(CYGPATH_W) '$(srcdir)/nachohash-tx.cpp'; fi`
 
-nullexd-nullexd.o: nullexd.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(nullexd_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT nullexd-nullexd.o -MD -MP -MF $(DEPDIR)/nullexd-nullexd.Tpo -c -o nullexd-nullexd.o `test -f 'nullexd.cpp' || echo '$(srcdir)/'`nullexd.cpp
-	$(AM_V_at)$(am__mv) $(DEPDIR)/nullexd-nullexd.Tpo $(DEPDIR)/nullexd-nullexd.Po
-#	$(AM_V_CXX)source='nullexd.cpp' object='nullexd-nullexd.o' libtool=no \
+nachohashd-nachohashd.o: nachohashd.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(nachohashd_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT nachohashd-nachohashd.o -MD -MP -MF $(DEPDIR)/nachohashd-nachohashd.Tpo -c -o nachohashd-nachohashd.o `test -f 'nachohashd.cpp' || echo '$(srcdir)/'`nachohashd.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/nachohashd-nachohashd.Tpo $(DEPDIR)/nachohashd-nachohashd.Po
+#	$(AM_V_CXX)source='nachohashd.cpp' object='nachohashd-nachohashd.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(nullexd_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o nullexd-nullexd.o `test -f 'nullexd.cpp' || echo '$(srcdir)/'`nullexd.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(nachohashd_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o nachohashd-nachohashd.o `test -f 'nachohashd.cpp' || echo '$(srcdir)/'`nachohashd.cpp
 
-nullexd-nullexd.obj: nullexd.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(nullexd_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT nullexd-nullexd.obj -MD -MP -MF $(DEPDIR)/nullexd-nullexd.Tpo -c -o nullexd-nullexd.obj `if test -f 'nullexd.cpp'; then $(CYGPATH_W) 'nullexd.cpp'; else $(CYGPATH_W) '$(srcdir)/nullexd.cpp'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/nullexd-nullexd.Tpo $(DEPDIR)/nullexd-nullexd.Po
-#	$(AM_V_CXX)source='nullexd.cpp' object='nullexd-nullexd.obj' libtool=no \
+nachohashd-nachohashd.obj: nachohashd.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(nachohashd_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT nachohashd-nachohashd.obj -MD -MP -MF $(DEPDIR)/nachohashd-nachohashd.Tpo -c -o nachohashd-nachohashd.obj `if test -f 'nachohashd.cpp'; then $(CYGPATH_W) 'nachohashd.cpp'; else $(CYGPATH_W) '$(srcdir)/nachohashd.cpp'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/nachohashd-nachohashd.Tpo $(DEPDIR)/nachohashd-nachohashd.Po
+#	$(AM_V_CXX)source='nachohashd.cpp' object='nachohashd-nachohashd.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(nullexd_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o nullexd-nullexd.obj `if test -f 'nullexd.cpp'; then $(CYGPATH_W) 'nullexd.cpp'; else $(CYGPATH_W) '$(srcdir)/nullexd.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(nachohashd_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o nachohashd-nachohashd.obj `if test -f 'nachohashd.cpp'; then $(CYGPATH_W) 'nachohashd.cpp'; else $(CYGPATH_W) '$(srcdir)/nachohashd.cpp'; fi`
 
-qt/qt_nullex_qt-nullex.o: qt/nullex.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_nullex_qt-nullex.o -MD -MP -MF qt/$(DEPDIR)/qt_nullex_qt-nullex.Tpo -c -o qt/qt_nullex_qt-nullex.o `test -f 'qt/nullex.cpp' || echo '$(srcdir)/'`qt/nullex.cpp
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_nullex_qt-nullex.Tpo qt/$(DEPDIR)/qt_nullex_qt-nullex.Po
-#	$(AM_V_CXX)source='qt/nullex.cpp' object='qt/qt_nullex_qt-nullex.o' libtool=no \
+qt/qt_nachohash_qt-nachohash.o: qt/nachohash.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_nachohash_qt-nachohash.o -MD -MP -MF qt/$(DEPDIR)/qt_nachohash_qt-nachohash.Tpo -c -o qt/qt_nachohash_qt-nachohash.o `test -f 'qt/nachohash.cpp' || echo '$(srcdir)/'`qt/nachohash.cpp
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_nachohash_qt-nachohash.Tpo qt/$(DEPDIR)/qt_nachohash_qt-nachohash.Po
+#	$(AM_V_CXX)source='qt/nachohash.cpp' object='qt/qt_nachohash_qt-nachohash.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_nullex_qt-nullex.o `test -f 'qt/nullex.cpp' || echo '$(srcdir)/'`qt/nullex.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_nachohash_qt-nachohash.o `test -f 'qt/nachohash.cpp' || echo '$(srcdir)/'`qt/nachohash.cpp
 
-qt/qt_nullex_qt-nullex.obj: qt/nullex.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_nullex_qt-nullex.obj -MD -MP -MF qt/$(DEPDIR)/qt_nullex_qt-nullex.Tpo -c -o qt/qt_nullex_qt-nullex.obj `if test -f 'qt/nullex.cpp'; then $(CYGPATH_W) 'qt/nullex.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/nullex.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_nullex_qt-nullex.Tpo qt/$(DEPDIR)/qt_nullex_qt-nullex.Po
-#	$(AM_V_CXX)source='qt/nullex.cpp' object='qt/qt_nullex_qt-nullex.obj' libtool=no \
+qt/qt_nachohash_qt-nachohash.obj: qt/nachohash.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_nachohash_qt-nachohash.obj -MD -MP -MF qt/$(DEPDIR)/qt_nachohash_qt-nachohash.Tpo -c -o qt/qt_nachohash_qt-nachohash.obj `if test -f 'qt/nachohash.cpp'; then $(CYGPATH_W) 'qt/nachohash.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/nachohash.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_nachohash_qt-nachohash.Tpo qt/$(DEPDIR)/qt_nachohash_qt-nachohash.Po
+#	$(AM_V_CXX)source='qt/nachohash.cpp' object='qt/qt_nachohash_qt-nachohash.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_nullex_qt-nullex.obj `if test -f 'qt/nullex.cpp'; then $(CYGPATH_W) 'qt/nullex.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/nullex.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_nachohash_qt-nachohash.obj `if test -f 'qt/nachohash.cpp'; then $(CYGPATH_W) 'qt/nachohash.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/nachohash.cpp'; fi`
 
-qt/test/qt_test_test_nullex_qt-test_main.o: qt/test/test_main.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_nullex_qt-test_main.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_nullex_qt-test_main.Tpo -c -o qt/test/qt_test_test_nullex_qt-test_main.o `test -f 'qt/test/test_main.cpp' || echo '$(srcdir)/'`qt/test/test_main.cpp
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_nullex_qt-test_main.Tpo qt/test/$(DEPDIR)/qt_test_test_nullex_qt-test_main.Po
-#	$(AM_V_CXX)source='qt/test/test_main.cpp' object='qt/test/qt_test_test_nullex_qt-test_main.o' libtool=no \
+qt/test/qt_test_test_nachohash_qt-test_main.o: qt/test/test_main.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_nachohash_qt-test_main.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-test_main.Tpo -c -o qt/test/qt_test_test_nachohash_qt-test_main.o `test -f 'qt/test/test_main.cpp' || echo '$(srcdir)/'`qt/test/test_main.cpp
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-test_main.Tpo qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-test_main.Po
+#	$(AM_V_CXX)source='qt/test/test_main.cpp' object='qt/test/qt_test_test_nachohash_qt-test_main.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_nullex_qt-test_main.o `test -f 'qt/test/test_main.cpp' || echo '$(srcdir)/'`qt/test/test_main.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_nachohash_qt-test_main.o `test -f 'qt/test/test_main.cpp' || echo '$(srcdir)/'`qt/test/test_main.cpp
 
-qt/test/qt_test_test_nullex_qt-test_main.obj: qt/test/test_main.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_nullex_qt-test_main.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_nullex_qt-test_main.Tpo -c -o qt/test/qt_test_test_nullex_qt-test_main.obj `if test -f 'qt/test/test_main.cpp'; then $(CYGPATH_W) 'qt/test/test_main.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/test_main.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_nullex_qt-test_main.Tpo qt/test/$(DEPDIR)/qt_test_test_nullex_qt-test_main.Po
-#	$(AM_V_CXX)source='qt/test/test_main.cpp' object='qt/test/qt_test_test_nullex_qt-test_main.obj' libtool=no \
+qt/test/qt_test_test_nachohash_qt-test_main.obj: qt/test/test_main.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_nachohash_qt-test_main.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-test_main.Tpo -c -o qt/test/qt_test_test_nachohash_qt-test_main.obj `if test -f 'qt/test/test_main.cpp'; then $(CYGPATH_W) 'qt/test/test_main.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/test_main.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-test_main.Tpo qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-test_main.Po
+#	$(AM_V_CXX)source='qt/test/test_main.cpp' object='qt/test/qt_test_test_nachohash_qt-test_main.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_nullex_qt-test_main.obj `if test -f 'qt/test/test_main.cpp'; then $(CYGPATH_W) 'qt/test/test_main.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/test_main.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_nachohash_qt-test_main.obj `if test -f 'qt/test/test_main.cpp'; then $(CYGPATH_W) 'qt/test/test_main.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/test_main.cpp'; fi`
 
-qt/test/qt_test_test_nullex_qt-uritests.o: qt/test/uritests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_nullex_qt-uritests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_nullex_qt-uritests.Tpo -c -o qt/test/qt_test_test_nullex_qt-uritests.o `test -f 'qt/test/uritests.cpp' || echo '$(srcdir)/'`qt/test/uritests.cpp
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_nullex_qt-uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_nullex_qt-uritests.Po
-#	$(AM_V_CXX)source='qt/test/uritests.cpp' object='qt/test/qt_test_test_nullex_qt-uritests.o' libtool=no \
+qt/test/qt_test_test_nachohash_qt-uritests.o: qt/test/uritests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_nachohash_qt-uritests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-uritests.Tpo -c -o qt/test/qt_test_test_nachohash_qt-uritests.o `test -f 'qt/test/uritests.cpp' || echo '$(srcdir)/'`qt/test/uritests.cpp
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-uritests.Po
+#	$(AM_V_CXX)source='qt/test/uritests.cpp' object='qt/test/qt_test_test_nachohash_qt-uritests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_nullex_qt-uritests.o `test -f 'qt/test/uritests.cpp' || echo '$(srcdir)/'`qt/test/uritests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_nachohash_qt-uritests.o `test -f 'qt/test/uritests.cpp' || echo '$(srcdir)/'`qt/test/uritests.cpp
 
-qt/test/qt_test_test_nullex_qt-uritests.obj: qt/test/uritests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_nullex_qt-uritests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_nullex_qt-uritests.Tpo -c -o qt/test/qt_test_test_nullex_qt-uritests.obj `if test -f 'qt/test/uritests.cpp'; then $(CYGPATH_W) 'qt/test/uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/uritests.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_nullex_qt-uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_nullex_qt-uritests.Po
-#	$(AM_V_CXX)source='qt/test/uritests.cpp' object='qt/test/qt_test_test_nullex_qt-uritests.obj' libtool=no \
+qt/test/qt_test_test_nachohash_qt-uritests.obj: qt/test/uritests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_nachohash_qt-uritests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-uritests.Tpo -c -o qt/test/qt_test_test_nachohash_qt-uritests.obj `if test -f 'qt/test/uritests.cpp'; then $(CYGPATH_W) 'qt/test/uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/uritests.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-uritests.Po
+#	$(AM_V_CXX)source='qt/test/uritests.cpp' object='qt/test/qt_test_test_nachohash_qt-uritests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_nullex_qt-uritests.obj `if test -f 'qt/test/uritests.cpp'; then $(CYGPATH_W) 'qt/test/uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/uritests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_nachohash_qt-uritests.obj `if test -f 'qt/test/uritests.cpp'; then $(CYGPATH_W) 'qt/test/uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/uritests.cpp'; fi`
 
-qt/test/qt_test_test_nullex_qt-paymentservertests.o: qt/test/paymentservertests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_nullex_qt-paymentservertests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_nullex_qt-paymentservertests.Tpo -c -o qt/test/qt_test_test_nullex_qt-paymentservertests.o `test -f 'qt/test/paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/paymentservertests.cpp
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_nullex_qt-paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_nullex_qt-paymentservertests.Po
-#	$(AM_V_CXX)source='qt/test/paymentservertests.cpp' object='qt/test/qt_test_test_nullex_qt-paymentservertests.o' libtool=no \
+qt/test/qt_test_test_nachohash_qt-paymentservertests.o: qt/test/paymentservertests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_nachohash_qt-paymentservertests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-paymentservertests.Tpo -c -o qt/test/qt_test_test_nachohash_qt-paymentservertests.o `test -f 'qt/test/paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/paymentservertests.cpp
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-paymentservertests.Po
+#	$(AM_V_CXX)source='qt/test/paymentservertests.cpp' object='qt/test/qt_test_test_nachohash_qt-paymentservertests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_nullex_qt-paymentservertests.o `test -f 'qt/test/paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/paymentservertests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_nachohash_qt-paymentservertests.o `test -f 'qt/test/paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/paymentservertests.cpp
 
-qt/test/qt_test_test_nullex_qt-paymentservertests.obj: qt/test/paymentservertests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_nullex_qt-paymentservertests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_nullex_qt-paymentservertests.Tpo -c -o qt/test/qt_test_test_nullex_qt-paymentservertests.obj `if test -f 'qt/test/paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/paymentservertests.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_nullex_qt-paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_nullex_qt-paymentservertests.Po
-#	$(AM_V_CXX)source='qt/test/paymentservertests.cpp' object='qt/test/qt_test_test_nullex_qt-paymentservertests.obj' libtool=no \
+qt/test/qt_test_test_nachohash_qt-paymentservertests.obj: qt/test/paymentservertests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_nachohash_qt-paymentservertests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-paymentservertests.Tpo -c -o qt/test/qt_test_test_nachohash_qt-paymentservertests.obj `if test -f 'qt/test/paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/paymentservertests.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-paymentservertests.Po
+#	$(AM_V_CXX)source='qt/test/paymentservertests.cpp' object='qt/test/qt_test_test_nachohash_qt-paymentservertests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_nullex_qt-paymentservertests.obj `if test -f 'qt/test/paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/paymentservertests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_nachohash_qt-paymentservertests.obj `if test -f 'qt/test/paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/paymentservertests.cpp'; fi`
 
-qt/test/qt_test_test_nullex_qt-moc_uritests.o: qt/test/moc_uritests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_nullex_qt-moc_uritests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_nullex_qt-moc_uritests.Tpo -c -o qt/test/qt_test_test_nullex_qt-moc_uritests.o `test -f 'qt/test/moc_uritests.cpp' || echo '$(srcdir)/'`qt/test/moc_uritests.cpp
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_nullex_qt-moc_uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_nullex_qt-moc_uritests.Po
-#	$(AM_V_CXX)source='qt/test/moc_uritests.cpp' object='qt/test/qt_test_test_nullex_qt-moc_uritests.o' libtool=no \
+qt/test/qt_test_test_nachohash_qt-moc_uritests.o: qt/test/moc_uritests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_nachohash_qt-moc_uritests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-moc_uritests.Tpo -c -o qt/test/qt_test_test_nachohash_qt-moc_uritests.o `test -f 'qt/test/moc_uritests.cpp' || echo '$(srcdir)/'`qt/test/moc_uritests.cpp
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-moc_uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-moc_uritests.Po
+#	$(AM_V_CXX)source='qt/test/moc_uritests.cpp' object='qt/test/qt_test_test_nachohash_qt-moc_uritests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_nullex_qt-moc_uritests.o `test -f 'qt/test/moc_uritests.cpp' || echo '$(srcdir)/'`qt/test/moc_uritests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_nachohash_qt-moc_uritests.o `test -f 'qt/test/moc_uritests.cpp' || echo '$(srcdir)/'`qt/test/moc_uritests.cpp
 
-qt/test/qt_test_test_nullex_qt-moc_uritests.obj: qt/test/moc_uritests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_nullex_qt-moc_uritests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_nullex_qt-moc_uritests.Tpo -c -o qt/test/qt_test_test_nullex_qt-moc_uritests.obj `if test -f 'qt/test/moc_uritests.cpp'; then $(CYGPATH_W) 'qt/test/moc_uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_uritests.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_nullex_qt-moc_uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_nullex_qt-moc_uritests.Po
-#	$(AM_V_CXX)source='qt/test/moc_uritests.cpp' object='qt/test/qt_test_test_nullex_qt-moc_uritests.obj' libtool=no \
+qt/test/qt_test_test_nachohash_qt-moc_uritests.obj: qt/test/moc_uritests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_nachohash_qt-moc_uritests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-moc_uritests.Tpo -c -o qt/test/qt_test_test_nachohash_qt-moc_uritests.obj `if test -f 'qt/test/moc_uritests.cpp'; then $(CYGPATH_W) 'qt/test/moc_uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_uritests.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-moc_uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-moc_uritests.Po
+#	$(AM_V_CXX)source='qt/test/moc_uritests.cpp' object='qt/test/qt_test_test_nachohash_qt-moc_uritests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_nullex_qt-moc_uritests.obj `if test -f 'qt/test/moc_uritests.cpp'; then $(CYGPATH_W) 'qt/test/moc_uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_uritests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_nachohash_qt-moc_uritests.obj `if test -f 'qt/test/moc_uritests.cpp'; then $(CYGPATH_W) 'qt/test/moc_uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_uritests.cpp'; fi`
 
-qt/test/qt_test_test_nullex_qt-moc_paymentservertests.o: qt/test/moc_paymentservertests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_nullex_qt-moc_paymentservertests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_nullex_qt-moc_paymentservertests.Tpo -c -o qt/test/qt_test_test_nullex_qt-moc_paymentservertests.o `test -f 'qt/test/moc_paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/moc_paymentservertests.cpp
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_nullex_qt-moc_paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_nullex_qt-moc_paymentservertests.Po
-#	$(AM_V_CXX)source='qt/test/moc_paymentservertests.cpp' object='qt/test/qt_test_test_nullex_qt-moc_paymentservertests.o' libtool=no \
+qt/test/qt_test_test_nachohash_qt-moc_paymentservertests.o: qt/test/moc_paymentservertests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_nachohash_qt-moc_paymentservertests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-moc_paymentservertests.Tpo -c -o qt/test/qt_test_test_nachohash_qt-moc_paymentservertests.o `test -f 'qt/test/moc_paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/moc_paymentservertests.cpp
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-moc_paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-moc_paymentservertests.Po
+#	$(AM_V_CXX)source='qt/test/moc_paymentservertests.cpp' object='qt/test/qt_test_test_nachohash_qt-moc_paymentservertests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_nullex_qt-moc_paymentservertests.o `test -f 'qt/test/moc_paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/moc_paymentservertests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_nachohash_qt-moc_paymentservertests.o `test -f 'qt/test/moc_paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/moc_paymentservertests.cpp
 
-qt/test/qt_test_test_nullex_qt-moc_paymentservertests.obj: qt/test/moc_paymentservertests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_nullex_qt-moc_paymentservertests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_nullex_qt-moc_paymentservertests.Tpo -c -o qt/test/qt_test_test_nullex_qt-moc_paymentservertests.obj `if test -f 'qt/test/moc_paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/moc_paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_paymentservertests.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_nullex_qt-moc_paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_nullex_qt-moc_paymentservertests.Po
-#	$(AM_V_CXX)source='qt/test/moc_paymentservertests.cpp' object='qt/test/qt_test_test_nullex_qt-moc_paymentservertests.obj' libtool=no \
+qt/test/qt_test_test_nachohash_qt-moc_paymentservertests.obj: qt/test/moc_paymentservertests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_nachohash_qt-moc_paymentservertests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-moc_paymentservertests.Tpo -c -o qt/test/qt_test_test_nachohash_qt-moc_paymentservertests.obj `if test -f 'qt/test/moc_paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/moc_paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_paymentservertests.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-moc_paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_nachohash_qt-moc_paymentservertests.Po
+#	$(AM_V_CXX)source='qt/test/moc_paymentservertests.cpp' object='qt/test/qt_test_test_nachohash_qt-moc_paymentservertests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_nullex_qt-moc_paymentservertests.obj `if test -f 'qt/test/moc_paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/moc_paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_paymentservertests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_nachohash_qt-moc_paymentservertests.obj `if test -f 'qt/test/moc_paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/moc_paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_paymentservertests.cpp'; fi`
 
-test/test_test_nullex-zerocoin_implementation_tests.o: test/zerocoin_implementation_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-zerocoin_implementation_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-zerocoin_implementation_tests.Tpo -c -o test/test_test_nullex-zerocoin_implementation_tests.o `test -f 'test/zerocoin_implementation_tests.cpp' || echo '$(srcdir)/'`test/zerocoin_implementation_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-zerocoin_implementation_tests.Tpo test/$(DEPDIR)/test_test_nullex-zerocoin_implementation_tests.Po
-#	$(AM_V_CXX)source='test/zerocoin_implementation_tests.cpp' object='test/test_test_nullex-zerocoin_implementation_tests.o' libtool=no \
+test/test_test_nachohash-zerocoin_implementation_tests.o: test/zerocoin_implementation_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-zerocoin_implementation_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-zerocoin_implementation_tests.Tpo -c -o test/test_test_nachohash-zerocoin_implementation_tests.o `test -f 'test/zerocoin_implementation_tests.cpp' || echo '$(srcdir)/'`test/zerocoin_implementation_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-zerocoin_implementation_tests.Tpo test/$(DEPDIR)/test_test_nachohash-zerocoin_implementation_tests.Po
+#	$(AM_V_CXX)source='test/zerocoin_implementation_tests.cpp' object='test/test_test_nachohash-zerocoin_implementation_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-zerocoin_implementation_tests.o `test -f 'test/zerocoin_implementation_tests.cpp' || echo '$(srcdir)/'`test/zerocoin_implementation_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-zerocoin_implementation_tests.o `test -f 'test/zerocoin_implementation_tests.cpp' || echo '$(srcdir)/'`test/zerocoin_implementation_tests.cpp
 
-test/test_test_nullex-zerocoin_implementation_tests.obj: test/zerocoin_implementation_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-zerocoin_implementation_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-zerocoin_implementation_tests.Tpo -c -o test/test_test_nullex-zerocoin_implementation_tests.obj `if test -f 'test/zerocoin_implementation_tests.cpp'; then $(CYGPATH_W) 'test/zerocoin_implementation_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/zerocoin_implementation_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-zerocoin_implementation_tests.Tpo test/$(DEPDIR)/test_test_nullex-zerocoin_implementation_tests.Po
-#	$(AM_V_CXX)source='test/zerocoin_implementation_tests.cpp' object='test/test_test_nullex-zerocoin_implementation_tests.obj' libtool=no \
+test/test_test_nachohash-zerocoin_implementation_tests.obj: test/zerocoin_implementation_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-zerocoin_implementation_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-zerocoin_implementation_tests.Tpo -c -o test/test_test_nachohash-zerocoin_implementation_tests.obj `if test -f 'test/zerocoin_implementation_tests.cpp'; then $(CYGPATH_W) 'test/zerocoin_implementation_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/zerocoin_implementation_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-zerocoin_implementation_tests.Tpo test/$(DEPDIR)/test_test_nachohash-zerocoin_implementation_tests.Po
+#	$(AM_V_CXX)source='test/zerocoin_implementation_tests.cpp' object='test/test_test_nachohash-zerocoin_implementation_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-zerocoin_implementation_tests.obj `if test -f 'test/zerocoin_implementation_tests.cpp'; then $(CYGPATH_W) 'test/zerocoin_implementation_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/zerocoin_implementation_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-zerocoin_implementation_tests.obj `if test -f 'test/zerocoin_implementation_tests.cpp'; then $(CYGPATH_W) 'test/zerocoin_implementation_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/zerocoin_implementation_tests.cpp'; fi`
 
-test/test_test_nullex-zerocoin_denomination_tests.o: test/zerocoin_denomination_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-zerocoin_denomination_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-zerocoin_denomination_tests.Tpo -c -o test/test_test_nullex-zerocoin_denomination_tests.o `test -f 'test/zerocoin_denomination_tests.cpp' || echo '$(srcdir)/'`test/zerocoin_denomination_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-zerocoin_denomination_tests.Tpo test/$(DEPDIR)/test_test_nullex-zerocoin_denomination_tests.Po
-#	$(AM_V_CXX)source='test/zerocoin_denomination_tests.cpp' object='test/test_test_nullex-zerocoin_denomination_tests.o' libtool=no \
+test/test_test_nachohash-zerocoin_denomination_tests.o: test/zerocoin_denomination_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-zerocoin_denomination_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-zerocoin_denomination_tests.Tpo -c -o test/test_test_nachohash-zerocoin_denomination_tests.o `test -f 'test/zerocoin_denomination_tests.cpp' || echo '$(srcdir)/'`test/zerocoin_denomination_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-zerocoin_denomination_tests.Tpo test/$(DEPDIR)/test_test_nachohash-zerocoin_denomination_tests.Po
+#	$(AM_V_CXX)source='test/zerocoin_denomination_tests.cpp' object='test/test_test_nachohash-zerocoin_denomination_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-zerocoin_denomination_tests.o `test -f 'test/zerocoin_denomination_tests.cpp' || echo '$(srcdir)/'`test/zerocoin_denomination_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-zerocoin_denomination_tests.o `test -f 'test/zerocoin_denomination_tests.cpp' || echo '$(srcdir)/'`test/zerocoin_denomination_tests.cpp
 
-test/test_test_nullex-zerocoin_denomination_tests.obj: test/zerocoin_denomination_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-zerocoin_denomination_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-zerocoin_denomination_tests.Tpo -c -o test/test_test_nullex-zerocoin_denomination_tests.obj `if test -f 'test/zerocoin_denomination_tests.cpp'; then $(CYGPATH_W) 'test/zerocoin_denomination_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/zerocoin_denomination_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-zerocoin_denomination_tests.Tpo test/$(DEPDIR)/test_test_nullex-zerocoin_denomination_tests.Po
-#	$(AM_V_CXX)source='test/zerocoin_denomination_tests.cpp' object='test/test_test_nullex-zerocoin_denomination_tests.obj' libtool=no \
+test/test_test_nachohash-zerocoin_denomination_tests.obj: test/zerocoin_denomination_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-zerocoin_denomination_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-zerocoin_denomination_tests.Tpo -c -o test/test_test_nachohash-zerocoin_denomination_tests.obj `if test -f 'test/zerocoin_denomination_tests.cpp'; then $(CYGPATH_W) 'test/zerocoin_denomination_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/zerocoin_denomination_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-zerocoin_denomination_tests.Tpo test/$(DEPDIR)/test_test_nachohash-zerocoin_denomination_tests.Po
+#	$(AM_V_CXX)source='test/zerocoin_denomination_tests.cpp' object='test/test_test_nachohash-zerocoin_denomination_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-zerocoin_denomination_tests.obj `if test -f 'test/zerocoin_denomination_tests.cpp'; then $(CYGPATH_W) 'test/zerocoin_denomination_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/zerocoin_denomination_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-zerocoin_denomination_tests.obj `if test -f 'test/zerocoin_denomination_tests.cpp'; then $(CYGPATH_W) 'test/zerocoin_denomination_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/zerocoin_denomination_tests.cpp'; fi`
 
-test/test_test_nullex-zerocoin_transactions_tests.o: test/zerocoin_transactions_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-zerocoin_transactions_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-zerocoin_transactions_tests.Tpo -c -o test/test_test_nullex-zerocoin_transactions_tests.o `test -f 'test/zerocoin_transactions_tests.cpp' || echo '$(srcdir)/'`test/zerocoin_transactions_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-zerocoin_transactions_tests.Tpo test/$(DEPDIR)/test_test_nullex-zerocoin_transactions_tests.Po
-#	$(AM_V_CXX)source='test/zerocoin_transactions_tests.cpp' object='test/test_test_nullex-zerocoin_transactions_tests.o' libtool=no \
+test/test_test_nachohash-zerocoin_transactions_tests.o: test/zerocoin_transactions_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-zerocoin_transactions_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-zerocoin_transactions_tests.Tpo -c -o test/test_test_nachohash-zerocoin_transactions_tests.o `test -f 'test/zerocoin_transactions_tests.cpp' || echo '$(srcdir)/'`test/zerocoin_transactions_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-zerocoin_transactions_tests.Tpo test/$(DEPDIR)/test_test_nachohash-zerocoin_transactions_tests.Po
+#	$(AM_V_CXX)source='test/zerocoin_transactions_tests.cpp' object='test/test_test_nachohash-zerocoin_transactions_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-zerocoin_transactions_tests.o `test -f 'test/zerocoin_transactions_tests.cpp' || echo '$(srcdir)/'`test/zerocoin_transactions_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-zerocoin_transactions_tests.o `test -f 'test/zerocoin_transactions_tests.cpp' || echo '$(srcdir)/'`test/zerocoin_transactions_tests.cpp
 
-test/test_test_nullex-zerocoin_transactions_tests.obj: test/zerocoin_transactions_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-zerocoin_transactions_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-zerocoin_transactions_tests.Tpo -c -o test/test_test_nullex-zerocoin_transactions_tests.obj `if test -f 'test/zerocoin_transactions_tests.cpp'; then $(CYGPATH_W) 'test/zerocoin_transactions_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/zerocoin_transactions_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-zerocoin_transactions_tests.Tpo test/$(DEPDIR)/test_test_nullex-zerocoin_transactions_tests.Po
-#	$(AM_V_CXX)source='test/zerocoin_transactions_tests.cpp' object='test/test_test_nullex-zerocoin_transactions_tests.obj' libtool=no \
+test/test_test_nachohash-zerocoin_transactions_tests.obj: test/zerocoin_transactions_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-zerocoin_transactions_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-zerocoin_transactions_tests.Tpo -c -o test/test_test_nachohash-zerocoin_transactions_tests.obj `if test -f 'test/zerocoin_transactions_tests.cpp'; then $(CYGPATH_W) 'test/zerocoin_transactions_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/zerocoin_transactions_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-zerocoin_transactions_tests.Tpo test/$(DEPDIR)/test_test_nachohash-zerocoin_transactions_tests.Po
+#	$(AM_V_CXX)source='test/zerocoin_transactions_tests.cpp' object='test/test_test_nachohash-zerocoin_transactions_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-zerocoin_transactions_tests.obj `if test -f 'test/zerocoin_transactions_tests.cpp'; then $(CYGPATH_W) 'test/zerocoin_transactions_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/zerocoin_transactions_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-zerocoin_transactions_tests.obj `if test -f 'test/zerocoin_transactions_tests.cpp'; then $(CYGPATH_W) 'test/zerocoin_transactions_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/zerocoin_transactions_tests.cpp'; fi`
 
-test/test_test_nullex-benchmark_zerocoin.o: test/benchmark_zerocoin.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-benchmark_zerocoin.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-benchmark_zerocoin.Tpo -c -o test/test_test_nullex-benchmark_zerocoin.o `test -f 'test/benchmark_zerocoin.cpp' || echo '$(srcdir)/'`test/benchmark_zerocoin.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-benchmark_zerocoin.Tpo test/$(DEPDIR)/test_test_nullex-benchmark_zerocoin.Po
-#	$(AM_V_CXX)source='test/benchmark_zerocoin.cpp' object='test/test_test_nullex-benchmark_zerocoin.o' libtool=no \
+test/test_test_nachohash-benchmark_zerocoin.o: test/benchmark_zerocoin.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-benchmark_zerocoin.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-benchmark_zerocoin.Tpo -c -o test/test_test_nachohash-benchmark_zerocoin.o `test -f 'test/benchmark_zerocoin.cpp' || echo '$(srcdir)/'`test/benchmark_zerocoin.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-benchmark_zerocoin.Tpo test/$(DEPDIR)/test_test_nachohash-benchmark_zerocoin.Po
+#	$(AM_V_CXX)source='test/benchmark_zerocoin.cpp' object='test/test_test_nachohash-benchmark_zerocoin.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-benchmark_zerocoin.o `test -f 'test/benchmark_zerocoin.cpp' || echo '$(srcdir)/'`test/benchmark_zerocoin.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-benchmark_zerocoin.o `test -f 'test/benchmark_zerocoin.cpp' || echo '$(srcdir)/'`test/benchmark_zerocoin.cpp
 
-test/test_test_nullex-benchmark_zerocoin.obj: test/benchmark_zerocoin.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-benchmark_zerocoin.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-benchmark_zerocoin.Tpo -c -o test/test_test_nullex-benchmark_zerocoin.obj `if test -f 'test/benchmark_zerocoin.cpp'; then $(CYGPATH_W) 'test/benchmark_zerocoin.cpp'; else $(CYGPATH_W) '$(srcdir)/test/benchmark_zerocoin.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-benchmark_zerocoin.Tpo test/$(DEPDIR)/test_test_nullex-benchmark_zerocoin.Po
-#	$(AM_V_CXX)source='test/benchmark_zerocoin.cpp' object='test/test_test_nullex-benchmark_zerocoin.obj' libtool=no \
+test/test_test_nachohash-benchmark_zerocoin.obj: test/benchmark_zerocoin.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-benchmark_zerocoin.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-benchmark_zerocoin.Tpo -c -o test/test_test_nachohash-benchmark_zerocoin.obj `if test -f 'test/benchmark_zerocoin.cpp'; then $(CYGPATH_W) 'test/benchmark_zerocoin.cpp'; else $(CYGPATH_W) '$(srcdir)/test/benchmark_zerocoin.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-benchmark_zerocoin.Tpo test/$(DEPDIR)/test_test_nachohash-benchmark_zerocoin.Po
+#	$(AM_V_CXX)source='test/benchmark_zerocoin.cpp' object='test/test_test_nachohash-benchmark_zerocoin.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-benchmark_zerocoin.obj `if test -f 'test/benchmark_zerocoin.cpp'; then $(CYGPATH_W) 'test/benchmark_zerocoin.cpp'; else $(CYGPATH_W) '$(srcdir)/test/benchmark_zerocoin.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-benchmark_zerocoin.obj `if test -f 'test/benchmark_zerocoin.cpp'; then $(CYGPATH_W) 'test/benchmark_zerocoin.cpp'; else $(CYGPATH_W) '$(srcdir)/test/benchmark_zerocoin.cpp'; fi`
 
-test/test_test_nullex-tutorial_zerocoin.o: test/tutorial_zerocoin.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-tutorial_zerocoin.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-tutorial_zerocoin.Tpo -c -o test/test_test_nullex-tutorial_zerocoin.o `test -f 'test/tutorial_zerocoin.cpp' || echo '$(srcdir)/'`test/tutorial_zerocoin.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-tutorial_zerocoin.Tpo test/$(DEPDIR)/test_test_nullex-tutorial_zerocoin.Po
-#	$(AM_V_CXX)source='test/tutorial_zerocoin.cpp' object='test/test_test_nullex-tutorial_zerocoin.o' libtool=no \
+test/test_test_nachohash-tutorial_zerocoin.o: test/tutorial_zerocoin.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-tutorial_zerocoin.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-tutorial_zerocoin.Tpo -c -o test/test_test_nachohash-tutorial_zerocoin.o `test -f 'test/tutorial_zerocoin.cpp' || echo '$(srcdir)/'`test/tutorial_zerocoin.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-tutorial_zerocoin.Tpo test/$(DEPDIR)/test_test_nachohash-tutorial_zerocoin.Po
+#	$(AM_V_CXX)source='test/tutorial_zerocoin.cpp' object='test/test_test_nachohash-tutorial_zerocoin.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-tutorial_zerocoin.o `test -f 'test/tutorial_zerocoin.cpp' || echo '$(srcdir)/'`test/tutorial_zerocoin.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-tutorial_zerocoin.o `test -f 'test/tutorial_zerocoin.cpp' || echo '$(srcdir)/'`test/tutorial_zerocoin.cpp
 
-test/test_test_nullex-tutorial_zerocoin.obj: test/tutorial_zerocoin.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-tutorial_zerocoin.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-tutorial_zerocoin.Tpo -c -o test/test_test_nullex-tutorial_zerocoin.obj `if test -f 'test/tutorial_zerocoin.cpp'; then $(CYGPATH_W) 'test/tutorial_zerocoin.cpp'; else $(CYGPATH_W) '$(srcdir)/test/tutorial_zerocoin.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-tutorial_zerocoin.Tpo test/$(DEPDIR)/test_test_nullex-tutorial_zerocoin.Po
-#	$(AM_V_CXX)source='test/tutorial_zerocoin.cpp' object='test/test_test_nullex-tutorial_zerocoin.obj' libtool=no \
+test/test_test_nachohash-tutorial_zerocoin.obj: test/tutorial_zerocoin.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-tutorial_zerocoin.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-tutorial_zerocoin.Tpo -c -o test/test_test_nachohash-tutorial_zerocoin.obj `if test -f 'test/tutorial_zerocoin.cpp'; then $(CYGPATH_W) 'test/tutorial_zerocoin.cpp'; else $(CYGPATH_W) '$(srcdir)/test/tutorial_zerocoin.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-tutorial_zerocoin.Tpo test/$(DEPDIR)/test_test_nachohash-tutorial_zerocoin.Po
+#	$(AM_V_CXX)source='test/tutorial_zerocoin.cpp' object='test/test_test_nachohash-tutorial_zerocoin.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-tutorial_zerocoin.obj `if test -f 'test/tutorial_zerocoin.cpp'; then $(CYGPATH_W) 'test/tutorial_zerocoin.cpp'; else $(CYGPATH_W) '$(srcdir)/test/tutorial_zerocoin.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-tutorial_zerocoin.obj `if test -f 'test/tutorial_zerocoin.cpp'; then $(CYGPATH_W) 'test/tutorial_zerocoin.cpp'; else $(CYGPATH_W) '$(srcdir)/test/tutorial_zerocoin.cpp'; fi`
 
-test/test_test_nullex-libzerocoin_tests.o: test/libzerocoin_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-libzerocoin_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-libzerocoin_tests.Tpo -c -o test/test_test_nullex-libzerocoin_tests.o `test -f 'test/libzerocoin_tests.cpp' || echo '$(srcdir)/'`test/libzerocoin_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-libzerocoin_tests.Tpo test/$(DEPDIR)/test_test_nullex-libzerocoin_tests.Po
-#	$(AM_V_CXX)source='test/libzerocoin_tests.cpp' object='test/test_test_nullex-libzerocoin_tests.o' libtool=no \
+test/test_test_nachohash-libzerocoin_tests.o: test/libzerocoin_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-libzerocoin_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-libzerocoin_tests.Tpo -c -o test/test_test_nachohash-libzerocoin_tests.o `test -f 'test/libzerocoin_tests.cpp' || echo '$(srcdir)/'`test/libzerocoin_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-libzerocoin_tests.Tpo test/$(DEPDIR)/test_test_nachohash-libzerocoin_tests.Po
+#	$(AM_V_CXX)source='test/libzerocoin_tests.cpp' object='test/test_test_nachohash-libzerocoin_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-libzerocoin_tests.o `test -f 'test/libzerocoin_tests.cpp' || echo '$(srcdir)/'`test/libzerocoin_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-libzerocoin_tests.o `test -f 'test/libzerocoin_tests.cpp' || echo '$(srcdir)/'`test/libzerocoin_tests.cpp
 
-test/test_test_nullex-libzerocoin_tests.obj: test/libzerocoin_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-libzerocoin_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-libzerocoin_tests.Tpo -c -o test/test_test_nullex-libzerocoin_tests.obj `if test -f 'test/libzerocoin_tests.cpp'; then $(CYGPATH_W) 'test/libzerocoin_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/libzerocoin_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-libzerocoin_tests.Tpo test/$(DEPDIR)/test_test_nullex-libzerocoin_tests.Po
-#	$(AM_V_CXX)source='test/libzerocoin_tests.cpp' object='test/test_test_nullex-libzerocoin_tests.obj' libtool=no \
+test/test_test_nachohash-libzerocoin_tests.obj: test/libzerocoin_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-libzerocoin_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-libzerocoin_tests.Tpo -c -o test/test_test_nachohash-libzerocoin_tests.obj `if test -f 'test/libzerocoin_tests.cpp'; then $(CYGPATH_W) 'test/libzerocoin_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/libzerocoin_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-libzerocoin_tests.Tpo test/$(DEPDIR)/test_test_nachohash-libzerocoin_tests.Po
+#	$(AM_V_CXX)source='test/libzerocoin_tests.cpp' object='test/test_test_nachohash-libzerocoin_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-libzerocoin_tests.obj `if test -f 'test/libzerocoin_tests.cpp'; then $(CYGPATH_W) 'test/libzerocoin_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/libzerocoin_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-libzerocoin_tests.obj `if test -f 'test/libzerocoin_tests.cpp'; then $(CYGPATH_W) 'test/libzerocoin_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/libzerocoin_tests.cpp'; fi`
 
-test/test_test_nullex-allocator_tests.o: test/allocator_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-allocator_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-allocator_tests.Tpo -c -o test/test_test_nullex-allocator_tests.o `test -f 'test/allocator_tests.cpp' || echo '$(srcdir)/'`test/allocator_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-allocator_tests.Tpo test/$(DEPDIR)/test_test_nullex-allocator_tests.Po
-#	$(AM_V_CXX)source='test/allocator_tests.cpp' object='test/test_test_nullex-allocator_tests.o' libtool=no \
+test/test_test_nachohash-allocator_tests.o: test/allocator_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-allocator_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-allocator_tests.Tpo -c -o test/test_test_nachohash-allocator_tests.o `test -f 'test/allocator_tests.cpp' || echo '$(srcdir)/'`test/allocator_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-allocator_tests.Tpo test/$(DEPDIR)/test_test_nachohash-allocator_tests.Po
+#	$(AM_V_CXX)source='test/allocator_tests.cpp' object='test/test_test_nachohash-allocator_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-allocator_tests.o `test -f 'test/allocator_tests.cpp' || echo '$(srcdir)/'`test/allocator_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-allocator_tests.o `test -f 'test/allocator_tests.cpp' || echo '$(srcdir)/'`test/allocator_tests.cpp
 
-test/test_test_nullex-allocator_tests.obj: test/allocator_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-allocator_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-allocator_tests.Tpo -c -o test/test_test_nullex-allocator_tests.obj `if test -f 'test/allocator_tests.cpp'; then $(CYGPATH_W) 'test/allocator_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/allocator_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-allocator_tests.Tpo test/$(DEPDIR)/test_test_nullex-allocator_tests.Po
-#	$(AM_V_CXX)source='test/allocator_tests.cpp' object='test/test_test_nullex-allocator_tests.obj' libtool=no \
+test/test_test_nachohash-allocator_tests.obj: test/allocator_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-allocator_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-allocator_tests.Tpo -c -o test/test_test_nachohash-allocator_tests.obj `if test -f 'test/allocator_tests.cpp'; then $(CYGPATH_W) 'test/allocator_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/allocator_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-allocator_tests.Tpo test/$(DEPDIR)/test_test_nachohash-allocator_tests.Po
+#	$(AM_V_CXX)source='test/allocator_tests.cpp' object='test/test_test_nachohash-allocator_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-allocator_tests.obj `if test -f 'test/allocator_tests.cpp'; then $(CYGPATH_W) 'test/allocator_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/allocator_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-allocator_tests.obj `if test -f 'test/allocator_tests.cpp'; then $(CYGPATH_W) 'test/allocator_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/allocator_tests.cpp'; fi`
 
-test/test_test_nullex-base32_tests.o: test/base32_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-base32_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-base32_tests.Tpo -c -o test/test_test_nullex-base32_tests.o `test -f 'test/base32_tests.cpp' || echo '$(srcdir)/'`test/base32_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-base32_tests.Tpo test/$(DEPDIR)/test_test_nullex-base32_tests.Po
-#	$(AM_V_CXX)source='test/base32_tests.cpp' object='test/test_test_nullex-base32_tests.o' libtool=no \
+test/test_test_nachohash-base32_tests.o: test/base32_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-base32_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-base32_tests.Tpo -c -o test/test_test_nachohash-base32_tests.o `test -f 'test/base32_tests.cpp' || echo '$(srcdir)/'`test/base32_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-base32_tests.Tpo test/$(DEPDIR)/test_test_nachohash-base32_tests.Po
+#	$(AM_V_CXX)source='test/base32_tests.cpp' object='test/test_test_nachohash-base32_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-base32_tests.o `test -f 'test/base32_tests.cpp' || echo '$(srcdir)/'`test/base32_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-base32_tests.o `test -f 'test/base32_tests.cpp' || echo '$(srcdir)/'`test/base32_tests.cpp
 
-test/test_test_nullex-base32_tests.obj: test/base32_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-base32_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-base32_tests.Tpo -c -o test/test_test_nullex-base32_tests.obj `if test -f 'test/base32_tests.cpp'; then $(CYGPATH_W) 'test/base32_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base32_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-base32_tests.Tpo test/$(DEPDIR)/test_test_nullex-base32_tests.Po
-#	$(AM_V_CXX)source='test/base32_tests.cpp' object='test/test_test_nullex-base32_tests.obj' libtool=no \
+test/test_test_nachohash-base32_tests.obj: test/base32_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-base32_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-base32_tests.Tpo -c -o test/test_test_nachohash-base32_tests.obj `if test -f 'test/base32_tests.cpp'; then $(CYGPATH_W) 'test/base32_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base32_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-base32_tests.Tpo test/$(DEPDIR)/test_test_nachohash-base32_tests.Po
+#	$(AM_V_CXX)source='test/base32_tests.cpp' object='test/test_test_nachohash-base32_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-base32_tests.obj `if test -f 'test/base32_tests.cpp'; then $(CYGPATH_W) 'test/base32_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base32_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-base32_tests.obj `if test -f 'test/base32_tests.cpp'; then $(CYGPATH_W) 'test/base32_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base32_tests.cpp'; fi`
 
-test/test_test_nullex-base58_tests.o: test/base58_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-base58_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-base58_tests.Tpo -c -o test/test_test_nullex-base58_tests.o `test -f 'test/base58_tests.cpp' || echo '$(srcdir)/'`test/base58_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-base58_tests.Tpo test/$(DEPDIR)/test_test_nullex-base58_tests.Po
-#	$(AM_V_CXX)source='test/base58_tests.cpp' object='test/test_test_nullex-base58_tests.o' libtool=no \
+test/test_test_nachohash-base58_tests.o: test/base58_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-base58_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-base58_tests.Tpo -c -o test/test_test_nachohash-base58_tests.o `test -f 'test/base58_tests.cpp' || echo '$(srcdir)/'`test/base58_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-base58_tests.Tpo test/$(DEPDIR)/test_test_nachohash-base58_tests.Po
+#	$(AM_V_CXX)source='test/base58_tests.cpp' object='test/test_test_nachohash-base58_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-base58_tests.o `test -f 'test/base58_tests.cpp' || echo '$(srcdir)/'`test/base58_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-base58_tests.o `test -f 'test/base58_tests.cpp' || echo '$(srcdir)/'`test/base58_tests.cpp
 
-test/test_test_nullex-base58_tests.obj: test/base58_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-base58_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-base58_tests.Tpo -c -o test/test_test_nullex-base58_tests.obj `if test -f 'test/base58_tests.cpp'; then $(CYGPATH_W) 'test/base58_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base58_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-base58_tests.Tpo test/$(DEPDIR)/test_test_nullex-base58_tests.Po
-#	$(AM_V_CXX)source='test/base58_tests.cpp' object='test/test_test_nullex-base58_tests.obj' libtool=no \
+test/test_test_nachohash-base58_tests.obj: test/base58_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-base58_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-base58_tests.Tpo -c -o test/test_test_nachohash-base58_tests.obj `if test -f 'test/base58_tests.cpp'; then $(CYGPATH_W) 'test/base58_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base58_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-base58_tests.Tpo test/$(DEPDIR)/test_test_nachohash-base58_tests.Po
+#	$(AM_V_CXX)source='test/base58_tests.cpp' object='test/test_test_nachohash-base58_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-base58_tests.obj `if test -f 'test/base58_tests.cpp'; then $(CYGPATH_W) 'test/base58_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base58_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-base58_tests.obj `if test -f 'test/base58_tests.cpp'; then $(CYGPATH_W) 'test/base58_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base58_tests.cpp'; fi`
 
-test/test_test_nullex-base64_tests.o: test/base64_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-base64_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-base64_tests.Tpo -c -o test/test_test_nullex-base64_tests.o `test -f 'test/base64_tests.cpp' || echo '$(srcdir)/'`test/base64_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-base64_tests.Tpo test/$(DEPDIR)/test_test_nullex-base64_tests.Po
-#	$(AM_V_CXX)source='test/base64_tests.cpp' object='test/test_test_nullex-base64_tests.o' libtool=no \
+test/test_test_nachohash-base64_tests.o: test/base64_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-base64_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-base64_tests.Tpo -c -o test/test_test_nachohash-base64_tests.o `test -f 'test/base64_tests.cpp' || echo '$(srcdir)/'`test/base64_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-base64_tests.Tpo test/$(DEPDIR)/test_test_nachohash-base64_tests.Po
+#	$(AM_V_CXX)source='test/base64_tests.cpp' object='test/test_test_nachohash-base64_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-base64_tests.o `test -f 'test/base64_tests.cpp' || echo '$(srcdir)/'`test/base64_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-base64_tests.o `test -f 'test/base64_tests.cpp' || echo '$(srcdir)/'`test/base64_tests.cpp
 
-test/test_test_nullex-base64_tests.obj: test/base64_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-base64_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-base64_tests.Tpo -c -o test/test_test_nullex-base64_tests.obj `if test -f 'test/base64_tests.cpp'; then $(CYGPATH_W) 'test/base64_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base64_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-base64_tests.Tpo test/$(DEPDIR)/test_test_nullex-base64_tests.Po
-#	$(AM_V_CXX)source='test/base64_tests.cpp' object='test/test_test_nullex-base64_tests.obj' libtool=no \
+test/test_test_nachohash-base64_tests.obj: test/base64_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-base64_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-base64_tests.Tpo -c -o test/test_test_nachohash-base64_tests.obj `if test -f 'test/base64_tests.cpp'; then $(CYGPATH_W) 'test/base64_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base64_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-base64_tests.Tpo test/$(DEPDIR)/test_test_nachohash-base64_tests.Po
+#	$(AM_V_CXX)source='test/base64_tests.cpp' object='test/test_test_nachohash-base64_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-base64_tests.obj `if test -f 'test/base64_tests.cpp'; then $(CYGPATH_W) 'test/base64_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base64_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-base64_tests.obj `if test -f 'test/base64_tests.cpp'; then $(CYGPATH_W) 'test/base64_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base64_tests.cpp'; fi`
 
-test/test_test_nullex-checkblock_tests.o: test/checkblock_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-checkblock_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-checkblock_tests.Tpo -c -o test/test_test_nullex-checkblock_tests.o `test -f 'test/checkblock_tests.cpp' || echo '$(srcdir)/'`test/checkblock_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-checkblock_tests.Tpo test/$(DEPDIR)/test_test_nullex-checkblock_tests.Po
-#	$(AM_V_CXX)source='test/checkblock_tests.cpp' object='test/test_test_nullex-checkblock_tests.o' libtool=no \
+test/test_test_nachohash-checkblock_tests.o: test/checkblock_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-checkblock_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-checkblock_tests.Tpo -c -o test/test_test_nachohash-checkblock_tests.o `test -f 'test/checkblock_tests.cpp' || echo '$(srcdir)/'`test/checkblock_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-checkblock_tests.Tpo test/$(DEPDIR)/test_test_nachohash-checkblock_tests.Po
+#	$(AM_V_CXX)source='test/checkblock_tests.cpp' object='test/test_test_nachohash-checkblock_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-checkblock_tests.o `test -f 'test/checkblock_tests.cpp' || echo '$(srcdir)/'`test/checkblock_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-checkblock_tests.o `test -f 'test/checkblock_tests.cpp' || echo '$(srcdir)/'`test/checkblock_tests.cpp
 
-test/test_test_nullex-checkblock_tests.obj: test/checkblock_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-checkblock_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-checkblock_tests.Tpo -c -o test/test_test_nullex-checkblock_tests.obj `if test -f 'test/checkblock_tests.cpp'; then $(CYGPATH_W) 'test/checkblock_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/checkblock_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-checkblock_tests.Tpo test/$(DEPDIR)/test_test_nullex-checkblock_tests.Po
-#	$(AM_V_CXX)source='test/checkblock_tests.cpp' object='test/test_test_nullex-checkblock_tests.obj' libtool=no \
+test/test_test_nachohash-checkblock_tests.obj: test/checkblock_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-checkblock_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-checkblock_tests.Tpo -c -o test/test_test_nachohash-checkblock_tests.obj `if test -f 'test/checkblock_tests.cpp'; then $(CYGPATH_W) 'test/checkblock_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/checkblock_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-checkblock_tests.Tpo test/$(DEPDIR)/test_test_nachohash-checkblock_tests.Po
+#	$(AM_V_CXX)source='test/checkblock_tests.cpp' object='test/test_test_nachohash-checkblock_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-checkblock_tests.obj `if test -f 'test/checkblock_tests.cpp'; then $(CYGPATH_W) 'test/checkblock_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/checkblock_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-checkblock_tests.obj `if test -f 'test/checkblock_tests.cpp'; then $(CYGPATH_W) 'test/checkblock_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/checkblock_tests.cpp'; fi`
 
-test/test_test_nullex-Checkpoints_tests.o: test/Checkpoints_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-Checkpoints_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-Checkpoints_tests.Tpo -c -o test/test_test_nullex-Checkpoints_tests.o `test -f 'test/Checkpoints_tests.cpp' || echo '$(srcdir)/'`test/Checkpoints_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-Checkpoints_tests.Tpo test/$(DEPDIR)/test_test_nullex-Checkpoints_tests.Po
-#	$(AM_V_CXX)source='test/Checkpoints_tests.cpp' object='test/test_test_nullex-Checkpoints_tests.o' libtool=no \
+test/test_test_nachohash-Checkpoints_tests.o: test/Checkpoints_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-Checkpoints_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-Checkpoints_tests.Tpo -c -o test/test_test_nachohash-Checkpoints_tests.o `test -f 'test/Checkpoints_tests.cpp' || echo '$(srcdir)/'`test/Checkpoints_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-Checkpoints_tests.Tpo test/$(DEPDIR)/test_test_nachohash-Checkpoints_tests.Po
+#	$(AM_V_CXX)source='test/Checkpoints_tests.cpp' object='test/test_test_nachohash-Checkpoints_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-Checkpoints_tests.o `test -f 'test/Checkpoints_tests.cpp' || echo '$(srcdir)/'`test/Checkpoints_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-Checkpoints_tests.o `test -f 'test/Checkpoints_tests.cpp' || echo '$(srcdir)/'`test/Checkpoints_tests.cpp
 
-test/test_test_nullex-Checkpoints_tests.obj: test/Checkpoints_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-Checkpoints_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-Checkpoints_tests.Tpo -c -o test/test_test_nullex-Checkpoints_tests.obj `if test -f 'test/Checkpoints_tests.cpp'; then $(CYGPATH_W) 'test/Checkpoints_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/Checkpoints_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-Checkpoints_tests.Tpo test/$(DEPDIR)/test_test_nullex-Checkpoints_tests.Po
-#	$(AM_V_CXX)source='test/Checkpoints_tests.cpp' object='test/test_test_nullex-Checkpoints_tests.obj' libtool=no \
+test/test_test_nachohash-Checkpoints_tests.obj: test/Checkpoints_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-Checkpoints_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-Checkpoints_tests.Tpo -c -o test/test_test_nachohash-Checkpoints_tests.obj `if test -f 'test/Checkpoints_tests.cpp'; then $(CYGPATH_W) 'test/Checkpoints_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/Checkpoints_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-Checkpoints_tests.Tpo test/$(DEPDIR)/test_test_nachohash-Checkpoints_tests.Po
+#	$(AM_V_CXX)source='test/Checkpoints_tests.cpp' object='test/test_test_nachohash-Checkpoints_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-Checkpoints_tests.obj `if test -f 'test/Checkpoints_tests.cpp'; then $(CYGPATH_W) 'test/Checkpoints_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/Checkpoints_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-Checkpoints_tests.obj `if test -f 'test/Checkpoints_tests.cpp'; then $(CYGPATH_W) 'test/Checkpoints_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/Checkpoints_tests.cpp'; fi`
 
-test/test_test_nullex-coins_tests.o: test/coins_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-coins_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-coins_tests.Tpo -c -o test/test_test_nullex-coins_tests.o `test -f 'test/coins_tests.cpp' || echo '$(srcdir)/'`test/coins_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-coins_tests.Tpo test/$(DEPDIR)/test_test_nullex-coins_tests.Po
-#	$(AM_V_CXX)source='test/coins_tests.cpp' object='test/test_test_nullex-coins_tests.o' libtool=no \
+test/test_test_nachohash-coins_tests.o: test/coins_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-coins_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-coins_tests.Tpo -c -o test/test_test_nachohash-coins_tests.o `test -f 'test/coins_tests.cpp' || echo '$(srcdir)/'`test/coins_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-coins_tests.Tpo test/$(DEPDIR)/test_test_nachohash-coins_tests.Po
+#	$(AM_V_CXX)source='test/coins_tests.cpp' object='test/test_test_nachohash-coins_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-coins_tests.o `test -f 'test/coins_tests.cpp' || echo '$(srcdir)/'`test/coins_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-coins_tests.o `test -f 'test/coins_tests.cpp' || echo '$(srcdir)/'`test/coins_tests.cpp
 
-test/test_test_nullex-coins_tests.obj: test/coins_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-coins_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-coins_tests.Tpo -c -o test/test_test_nullex-coins_tests.obj `if test -f 'test/coins_tests.cpp'; then $(CYGPATH_W) 'test/coins_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/coins_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-coins_tests.Tpo test/$(DEPDIR)/test_test_nullex-coins_tests.Po
-#	$(AM_V_CXX)source='test/coins_tests.cpp' object='test/test_test_nullex-coins_tests.obj' libtool=no \
+test/test_test_nachohash-coins_tests.obj: test/coins_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-coins_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-coins_tests.Tpo -c -o test/test_test_nachohash-coins_tests.obj `if test -f 'test/coins_tests.cpp'; then $(CYGPATH_W) 'test/coins_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/coins_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-coins_tests.Tpo test/$(DEPDIR)/test_test_nachohash-coins_tests.Po
+#	$(AM_V_CXX)source='test/coins_tests.cpp' object='test/test_test_nachohash-coins_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-coins_tests.obj `if test -f 'test/coins_tests.cpp'; then $(CYGPATH_W) 'test/coins_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/coins_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-coins_tests.obj `if test -f 'test/coins_tests.cpp'; then $(CYGPATH_W) 'test/coins_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/coins_tests.cpp'; fi`
 
-test/test_test_nullex-compress_tests.o: test/compress_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-compress_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-compress_tests.Tpo -c -o test/test_test_nullex-compress_tests.o `test -f 'test/compress_tests.cpp' || echo '$(srcdir)/'`test/compress_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-compress_tests.Tpo test/$(DEPDIR)/test_test_nullex-compress_tests.Po
-#	$(AM_V_CXX)source='test/compress_tests.cpp' object='test/test_test_nullex-compress_tests.o' libtool=no \
+test/test_test_nachohash-compress_tests.o: test/compress_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-compress_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-compress_tests.Tpo -c -o test/test_test_nachohash-compress_tests.o `test -f 'test/compress_tests.cpp' || echo '$(srcdir)/'`test/compress_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-compress_tests.Tpo test/$(DEPDIR)/test_test_nachohash-compress_tests.Po
+#	$(AM_V_CXX)source='test/compress_tests.cpp' object='test/test_test_nachohash-compress_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-compress_tests.o `test -f 'test/compress_tests.cpp' || echo '$(srcdir)/'`test/compress_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-compress_tests.o `test -f 'test/compress_tests.cpp' || echo '$(srcdir)/'`test/compress_tests.cpp
 
-test/test_test_nullex-compress_tests.obj: test/compress_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-compress_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-compress_tests.Tpo -c -o test/test_test_nullex-compress_tests.obj `if test -f 'test/compress_tests.cpp'; then $(CYGPATH_W) 'test/compress_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/compress_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-compress_tests.Tpo test/$(DEPDIR)/test_test_nullex-compress_tests.Po
-#	$(AM_V_CXX)source='test/compress_tests.cpp' object='test/test_test_nullex-compress_tests.obj' libtool=no \
+test/test_test_nachohash-compress_tests.obj: test/compress_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-compress_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-compress_tests.Tpo -c -o test/test_test_nachohash-compress_tests.obj `if test -f 'test/compress_tests.cpp'; then $(CYGPATH_W) 'test/compress_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/compress_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-compress_tests.Tpo test/$(DEPDIR)/test_test_nachohash-compress_tests.Po
+#	$(AM_V_CXX)source='test/compress_tests.cpp' object='test/test_test_nachohash-compress_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-compress_tests.obj `if test -f 'test/compress_tests.cpp'; then $(CYGPATH_W) 'test/compress_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/compress_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-compress_tests.obj `if test -f 'test/compress_tests.cpp'; then $(CYGPATH_W) 'test/compress_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/compress_tests.cpp'; fi`
 
-test/test_test_nullex-crypto_tests.o: test/crypto_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-crypto_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-crypto_tests.Tpo -c -o test/test_test_nullex-crypto_tests.o `test -f 'test/crypto_tests.cpp' || echo '$(srcdir)/'`test/crypto_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-crypto_tests.Tpo test/$(DEPDIR)/test_test_nullex-crypto_tests.Po
-#	$(AM_V_CXX)source='test/crypto_tests.cpp' object='test/test_test_nullex-crypto_tests.o' libtool=no \
+test/test_test_nachohash-crypto_tests.o: test/crypto_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-crypto_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-crypto_tests.Tpo -c -o test/test_test_nachohash-crypto_tests.o `test -f 'test/crypto_tests.cpp' || echo '$(srcdir)/'`test/crypto_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-crypto_tests.Tpo test/$(DEPDIR)/test_test_nachohash-crypto_tests.Po
+#	$(AM_V_CXX)source='test/crypto_tests.cpp' object='test/test_test_nachohash-crypto_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-crypto_tests.o `test -f 'test/crypto_tests.cpp' || echo '$(srcdir)/'`test/crypto_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-crypto_tests.o `test -f 'test/crypto_tests.cpp' || echo '$(srcdir)/'`test/crypto_tests.cpp
 
-test/test_test_nullex-crypto_tests.obj: test/crypto_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-crypto_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-crypto_tests.Tpo -c -o test/test_test_nullex-crypto_tests.obj `if test -f 'test/crypto_tests.cpp'; then $(CYGPATH_W) 'test/crypto_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/crypto_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-crypto_tests.Tpo test/$(DEPDIR)/test_test_nullex-crypto_tests.Po
-#	$(AM_V_CXX)source='test/crypto_tests.cpp' object='test/test_test_nullex-crypto_tests.obj' libtool=no \
+test/test_test_nachohash-crypto_tests.obj: test/crypto_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-crypto_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-crypto_tests.Tpo -c -o test/test_test_nachohash-crypto_tests.obj `if test -f 'test/crypto_tests.cpp'; then $(CYGPATH_W) 'test/crypto_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/crypto_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-crypto_tests.Tpo test/$(DEPDIR)/test_test_nachohash-crypto_tests.Po
+#	$(AM_V_CXX)source='test/crypto_tests.cpp' object='test/test_test_nachohash-crypto_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-crypto_tests.obj `if test -f 'test/crypto_tests.cpp'; then $(CYGPATH_W) 'test/crypto_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/crypto_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-crypto_tests.obj `if test -f 'test/crypto_tests.cpp'; then $(CYGPATH_W) 'test/crypto_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/crypto_tests.cpp'; fi`
 
-test/test_test_nullex-DoS_tests.o: test/DoS_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-DoS_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-DoS_tests.Tpo -c -o test/test_test_nullex-DoS_tests.o `test -f 'test/DoS_tests.cpp' || echo '$(srcdir)/'`test/DoS_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-DoS_tests.Tpo test/$(DEPDIR)/test_test_nullex-DoS_tests.Po
-#	$(AM_V_CXX)source='test/DoS_tests.cpp' object='test/test_test_nullex-DoS_tests.o' libtool=no \
+test/test_test_nachohash-DoS_tests.o: test/DoS_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-DoS_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-DoS_tests.Tpo -c -o test/test_test_nachohash-DoS_tests.o `test -f 'test/DoS_tests.cpp' || echo '$(srcdir)/'`test/DoS_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-DoS_tests.Tpo test/$(DEPDIR)/test_test_nachohash-DoS_tests.Po
+#	$(AM_V_CXX)source='test/DoS_tests.cpp' object='test/test_test_nachohash-DoS_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-DoS_tests.o `test -f 'test/DoS_tests.cpp' || echo '$(srcdir)/'`test/DoS_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-DoS_tests.o `test -f 'test/DoS_tests.cpp' || echo '$(srcdir)/'`test/DoS_tests.cpp
 
-test/test_test_nullex-DoS_tests.obj: test/DoS_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-DoS_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-DoS_tests.Tpo -c -o test/test_test_nullex-DoS_tests.obj `if test -f 'test/DoS_tests.cpp'; then $(CYGPATH_W) 'test/DoS_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/DoS_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-DoS_tests.Tpo test/$(DEPDIR)/test_test_nullex-DoS_tests.Po
-#	$(AM_V_CXX)source='test/DoS_tests.cpp' object='test/test_test_nullex-DoS_tests.obj' libtool=no \
+test/test_test_nachohash-DoS_tests.obj: test/DoS_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-DoS_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-DoS_tests.Tpo -c -o test/test_test_nachohash-DoS_tests.obj `if test -f 'test/DoS_tests.cpp'; then $(CYGPATH_W) 'test/DoS_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/DoS_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-DoS_tests.Tpo test/$(DEPDIR)/test_test_nachohash-DoS_tests.Po
+#	$(AM_V_CXX)source='test/DoS_tests.cpp' object='test/test_test_nachohash-DoS_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-DoS_tests.obj `if test -f 'test/DoS_tests.cpp'; then $(CYGPATH_W) 'test/DoS_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/DoS_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-DoS_tests.obj `if test -f 'test/DoS_tests.cpp'; then $(CYGPATH_W) 'test/DoS_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/DoS_tests.cpp'; fi`
 
-test/test_test_nullex-getarg_tests.o: test/getarg_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-getarg_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-getarg_tests.Tpo -c -o test/test_test_nullex-getarg_tests.o `test -f 'test/getarg_tests.cpp' || echo '$(srcdir)/'`test/getarg_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-getarg_tests.Tpo test/$(DEPDIR)/test_test_nullex-getarg_tests.Po
-#	$(AM_V_CXX)source='test/getarg_tests.cpp' object='test/test_test_nullex-getarg_tests.o' libtool=no \
+test/test_test_nachohash-getarg_tests.o: test/getarg_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-getarg_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-getarg_tests.Tpo -c -o test/test_test_nachohash-getarg_tests.o `test -f 'test/getarg_tests.cpp' || echo '$(srcdir)/'`test/getarg_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-getarg_tests.Tpo test/$(DEPDIR)/test_test_nachohash-getarg_tests.Po
+#	$(AM_V_CXX)source='test/getarg_tests.cpp' object='test/test_test_nachohash-getarg_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-getarg_tests.o `test -f 'test/getarg_tests.cpp' || echo '$(srcdir)/'`test/getarg_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-getarg_tests.o `test -f 'test/getarg_tests.cpp' || echo '$(srcdir)/'`test/getarg_tests.cpp
 
-test/test_test_nullex-getarg_tests.obj: test/getarg_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-getarg_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-getarg_tests.Tpo -c -o test/test_test_nullex-getarg_tests.obj `if test -f 'test/getarg_tests.cpp'; then $(CYGPATH_W) 'test/getarg_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/getarg_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-getarg_tests.Tpo test/$(DEPDIR)/test_test_nullex-getarg_tests.Po
-#	$(AM_V_CXX)source='test/getarg_tests.cpp' object='test/test_test_nullex-getarg_tests.obj' libtool=no \
+test/test_test_nachohash-getarg_tests.obj: test/getarg_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-getarg_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-getarg_tests.Tpo -c -o test/test_test_nachohash-getarg_tests.obj `if test -f 'test/getarg_tests.cpp'; then $(CYGPATH_W) 'test/getarg_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/getarg_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-getarg_tests.Tpo test/$(DEPDIR)/test_test_nachohash-getarg_tests.Po
+#	$(AM_V_CXX)source='test/getarg_tests.cpp' object='test/test_test_nachohash-getarg_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-getarg_tests.obj `if test -f 'test/getarg_tests.cpp'; then $(CYGPATH_W) 'test/getarg_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/getarg_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-getarg_tests.obj `if test -f 'test/getarg_tests.cpp'; then $(CYGPATH_W) 'test/getarg_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/getarg_tests.cpp'; fi`
 
-test/test_test_nullex-hash_tests.o: test/hash_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-hash_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-hash_tests.Tpo -c -o test/test_test_nullex-hash_tests.o `test -f 'test/hash_tests.cpp' || echo '$(srcdir)/'`test/hash_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-hash_tests.Tpo test/$(DEPDIR)/test_test_nullex-hash_tests.Po
-#	$(AM_V_CXX)source='test/hash_tests.cpp' object='test/test_test_nullex-hash_tests.o' libtool=no \
+test/test_test_nachohash-hash_tests.o: test/hash_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-hash_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-hash_tests.Tpo -c -o test/test_test_nachohash-hash_tests.o `test -f 'test/hash_tests.cpp' || echo '$(srcdir)/'`test/hash_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-hash_tests.Tpo test/$(DEPDIR)/test_test_nachohash-hash_tests.Po
+#	$(AM_V_CXX)source='test/hash_tests.cpp' object='test/test_test_nachohash-hash_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-hash_tests.o `test -f 'test/hash_tests.cpp' || echo '$(srcdir)/'`test/hash_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-hash_tests.o `test -f 'test/hash_tests.cpp' || echo '$(srcdir)/'`test/hash_tests.cpp
 
-test/test_test_nullex-hash_tests.obj: test/hash_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-hash_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-hash_tests.Tpo -c -o test/test_test_nullex-hash_tests.obj `if test -f 'test/hash_tests.cpp'; then $(CYGPATH_W) 'test/hash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/hash_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-hash_tests.Tpo test/$(DEPDIR)/test_test_nullex-hash_tests.Po
-#	$(AM_V_CXX)source='test/hash_tests.cpp' object='test/test_test_nullex-hash_tests.obj' libtool=no \
+test/test_test_nachohash-hash_tests.obj: test/hash_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-hash_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-hash_tests.Tpo -c -o test/test_test_nachohash-hash_tests.obj `if test -f 'test/hash_tests.cpp'; then $(CYGPATH_W) 'test/hash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/hash_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-hash_tests.Tpo test/$(DEPDIR)/test_test_nachohash-hash_tests.Po
+#	$(AM_V_CXX)source='test/hash_tests.cpp' object='test/test_test_nachohash-hash_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-hash_tests.obj `if test -f 'test/hash_tests.cpp'; then $(CYGPATH_W) 'test/hash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/hash_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-hash_tests.obj `if test -f 'test/hash_tests.cpp'; then $(CYGPATH_W) 'test/hash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/hash_tests.cpp'; fi`
 
-test/test_test_nullex-key_tests.o: test/key_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-key_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-key_tests.Tpo -c -o test/test_test_nullex-key_tests.o `test -f 'test/key_tests.cpp' || echo '$(srcdir)/'`test/key_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-key_tests.Tpo test/$(DEPDIR)/test_test_nullex-key_tests.Po
-#	$(AM_V_CXX)source='test/key_tests.cpp' object='test/test_test_nullex-key_tests.o' libtool=no \
+test/test_test_nachohash-key_tests.o: test/key_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-key_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-key_tests.Tpo -c -o test/test_test_nachohash-key_tests.o `test -f 'test/key_tests.cpp' || echo '$(srcdir)/'`test/key_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-key_tests.Tpo test/$(DEPDIR)/test_test_nachohash-key_tests.Po
+#	$(AM_V_CXX)source='test/key_tests.cpp' object='test/test_test_nachohash-key_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-key_tests.o `test -f 'test/key_tests.cpp' || echo '$(srcdir)/'`test/key_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-key_tests.o `test -f 'test/key_tests.cpp' || echo '$(srcdir)/'`test/key_tests.cpp
 
-test/test_test_nullex-key_tests.obj: test/key_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-key_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-key_tests.Tpo -c -o test/test_test_nullex-key_tests.obj `if test -f 'test/key_tests.cpp'; then $(CYGPATH_W) 'test/key_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/key_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-key_tests.Tpo test/$(DEPDIR)/test_test_nullex-key_tests.Po
-#	$(AM_V_CXX)source='test/key_tests.cpp' object='test/test_test_nullex-key_tests.obj' libtool=no \
+test/test_test_nachohash-key_tests.obj: test/key_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-key_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-key_tests.Tpo -c -o test/test_test_nachohash-key_tests.obj `if test -f 'test/key_tests.cpp'; then $(CYGPATH_W) 'test/key_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/key_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-key_tests.Tpo test/$(DEPDIR)/test_test_nachohash-key_tests.Po
+#	$(AM_V_CXX)source='test/key_tests.cpp' object='test/test_test_nachohash-key_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-key_tests.obj `if test -f 'test/key_tests.cpp'; then $(CYGPATH_W) 'test/key_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/key_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-key_tests.obj `if test -f 'test/key_tests.cpp'; then $(CYGPATH_W) 'test/key_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/key_tests.cpp'; fi`
 
-test/test_test_nullex-main_tests.o: test/main_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-main_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-main_tests.Tpo -c -o test/test_test_nullex-main_tests.o `test -f 'test/main_tests.cpp' || echo '$(srcdir)/'`test/main_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-main_tests.Tpo test/$(DEPDIR)/test_test_nullex-main_tests.Po
-#	$(AM_V_CXX)source='test/main_tests.cpp' object='test/test_test_nullex-main_tests.o' libtool=no \
+test/test_test_nachohash-main_tests.o: test/main_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-main_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-main_tests.Tpo -c -o test/test_test_nachohash-main_tests.o `test -f 'test/main_tests.cpp' || echo '$(srcdir)/'`test/main_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-main_tests.Tpo test/$(DEPDIR)/test_test_nachohash-main_tests.Po
+#	$(AM_V_CXX)source='test/main_tests.cpp' object='test/test_test_nachohash-main_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-main_tests.o `test -f 'test/main_tests.cpp' || echo '$(srcdir)/'`test/main_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-main_tests.o `test -f 'test/main_tests.cpp' || echo '$(srcdir)/'`test/main_tests.cpp
 
-test/test_test_nullex-main_tests.obj: test/main_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-main_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-main_tests.Tpo -c -o test/test_test_nullex-main_tests.obj `if test -f 'test/main_tests.cpp'; then $(CYGPATH_W) 'test/main_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/main_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-main_tests.Tpo test/$(DEPDIR)/test_test_nullex-main_tests.Po
-#	$(AM_V_CXX)source='test/main_tests.cpp' object='test/test_test_nullex-main_tests.obj' libtool=no \
+test/test_test_nachohash-main_tests.obj: test/main_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-main_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-main_tests.Tpo -c -o test/test_test_nachohash-main_tests.obj `if test -f 'test/main_tests.cpp'; then $(CYGPATH_W) 'test/main_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/main_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-main_tests.Tpo test/$(DEPDIR)/test_test_nachohash-main_tests.Po
+#	$(AM_V_CXX)source='test/main_tests.cpp' object='test/test_test_nachohash-main_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-main_tests.obj `if test -f 'test/main_tests.cpp'; then $(CYGPATH_W) 'test/main_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/main_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-main_tests.obj `if test -f 'test/main_tests.cpp'; then $(CYGPATH_W) 'test/main_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/main_tests.cpp'; fi`
 
-test/test_test_nullex-mempool_tests.o: test/mempool_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-mempool_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-mempool_tests.Tpo -c -o test/test_test_nullex-mempool_tests.o `test -f 'test/mempool_tests.cpp' || echo '$(srcdir)/'`test/mempool_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-mempool_tests.Tpo test/$(DEPDIR)/test_test_nullex-mempool_tests.Po
-#	$(AM_V_CXX)source='test/mempool_tests.cpp' object='test/test_test_nullex-mempool_tests.o' libtool=no \
+test/test_test_nachohash-mempool_tests.o: test/mempool_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-mempool_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-mempool_tests.Tpo -c -o test/test_test_nachohash-mempool_tests.o `test -f 'test/mempool_tests.cpp' || echo '$(srcdir)/'`test/mempool_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-mempool_tests.Tpo test/$(DEPDIR)/test_test_nachohash-mempool_tests.Po
+#	$(AM_V_CXX)source='test/mempool_tests.cpp' object='test/test_test_nachohash-mempool_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-mempool_tests.o `test -f 'test/mempool_tests.cpp' || echo '$(srcdir)/'`test/mempool_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-mempool_tests.o `test -f 'test/mempool_tests.cpp' || echo '$(srcdir)/'`test/mempool_tests.cpp
 
-test/test_test_nullex-mempool_tests.obj: test/mempool_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-mempool_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-mempool_tests.Tpo -c -o test/test_test_nullex-mempool_tests.obj `if test -f 'test/mempool_tests.cpp'; then $(CYGPATH_W) 'test/mempool_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/mempool_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-mempool_tests.Tpo test/$(DEPDIR)/test_test_nullex-mempool_tests.Po
-#	$(AM_V_CXX)source='test/mempool_tests.cpp' object='test/test_test_nullex-mempool_tests.obj' libtool=no \
+test/test_test_nachohash-mempool_tests.obj: test/mempool_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-mempool_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-mempool_tests.Tpo -c -o test/test_test_nachohash-mempool_tests.obj `if test -f 'test/mempool_tests.cpp'; then $(CYGPATH_W) 'test/mempool_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/mempool_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-mempool_tests.Tpo test/$(DEPDIR)/test_test_nachohash-mempool_tests.Po
+#	$(AM_V_CXX)source='test/mempool_tests.cpp' object='test/test_test_nachohash-mempool_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-mempool_tests.obj `if test -f 'test/mempool_tests.cpp'; then $(CYGPATH_W) 'test/mempool_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/mempool_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-mempool_tests.obj `if test -f 'test/mempool_tests.cpp'; then $(CYGPATH_W) 'test/mempool_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/mempool_tests.cpp'; fi`
 
-test/test_test_nullex-mruset_tests.o: test/mruset_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-mruset_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-mruset_tests.Tpo -c -o test/test_test_nullex-mruset_tests.o `test -f 'test/mruset_tests.cpp' || echo '$(srcdir)/'`test/mruset_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-mruset_tests.Tpo test/$(DEPDIR)/test_test_nullex-mruset_tests.Po
-#	$(AM_V_CXX)source='test/mruset_tests.cpp' object='test/test_test_nullex-mruset_tests.o' libtool=no \
+test/test_test_nachohash-mruset_tests.o: test/mruset_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-mruset_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-mruset_tests.Tpo -c -o test/test_test_nachohash-mruset_tests.o `test -f 'test/mruset_tests.cpp' || echo '$(srcdir)/'`test/mruset_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-mruset_tests.Tpo test/$(DEPDIR)/test_test_nachohash-mruset_tests.Po
+#	$(AM_V_CXX)source='test/mruset_tests.cpp' object='test/test_test_nachohash-mruset_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-mruset_tests.o `test -f 'test/mruset_tests.cpp' || echo '$(srcdir)/'`test/mruset_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-mruset_tests.o `test -f 'test/mruset_tests.cpp' || echo '$(srcdir)/'`test/mruset_tests.cpp
 
-test/test_test_nullex-mruset_tests.obj: test/mruset_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-mruset_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-mruset_tests.Tpo -c -o test/test_test_nullex-mruset_tests.obj `if test -f 'test/mruset_tests.cpp'; then $(CYGPATH_W) 'test/mruset_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/mruset_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-mruset_tests.Tpo test/$(DEPDIR)/test_test_nullex-mruset_tests.Po
-#	$(AM_V_CXX)source='test/mruset_tests.cpp' object='test/test_test_nullex-mruset_tests.obj' libtool=no \
+test/test_test_nachohash-mruset_tests.obj: test/mruset_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-mruset_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-mruset_tests.Tpo -c -o test/test_test_nachohash-mruset_tests.obj `if test -f 'test/mruset_tests.cpp'; then $(CYGPATH_W) 'test/mruset_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/mruset_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-mruset_tests.Tpo test/$(DEPDIR)/test_test_nachohash-mruset_tests.Po
+#	$(AM_V_CXX)source='test/mruset_tests.cpp' object='test/test_test_nachohash-mruset_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-mruset_tests.obj `if test -f 'test/mruset_tests.cpp'; then $(CYGPATH_W) 'test/mruset_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/mruset_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-mruset_tests.obj `if test -f 'test/mruset_tests.cpp'; then $(CYGPATH_W) 'test/mruset_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/mruset_tests.cpp'; fi`
 
-test/test_test_nullex-multisig_tests.o: test/multisig_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-multisig_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-multisig_tests.Tpo -c -o test/test_test_nullex-multisig_tests.o `test -f 'test/multisig_tests.cpp' || echo '$(srcdir)/'`test/multisig_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-multisig_tests.Tpo test/$(DEPDIR)/test_test_nullex-multisig_tests.Po
-#	$(AM_V_CXX)source='test/multisig_tests.cpp' object='test/test_test_nullex-multisig_tests.o' libtool=no \
+test/test_test_nachohash-multisig_tests.o: test/multisig_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-multisig_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-multisig_tests.Tpo -c -o test/test_test_nachohash-multisig_tests.o `test -f 'test/multisig_tests.cpp' || echo '$(srcdir)/'`test/multisig_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-multisig_tests.Tpo test/$(DEPDIR)/test_test_nachohash-multisig_tests.Po
+#	$(AM_V_CXX)source='test/multisig_tests.cpp' object='test/test_test_nachohash-multisig_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-multisig_tests.o `test -f 'test/multisig_tests.cpp' || echo '$(srcdir)/'`test/multisig_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-multisig_tests.o `test -f 'test/multisig_tests.cpp' || echo '$(srcdir)/'`test/multisig_tests.cpp
 
-test/test_test_nullex-multisig_tests.obj: test/multisig_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-multisig_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-multisig_tests.Tpo -c -o test/test_test_nullex-multisig_tests.obj `if test -f 'test/multisig_tests.cpp'; then $(CYGPATH_W) 'test/multisig_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/multisig_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-multisig_tests.Tpo test/$(DEPDIR)/test_test_nullex-multisig_tests.Po
-#	$(AM_V_CXX)source='test/multisig_tests.cpp' object='test/test_test_nullex-multisig_tests.obj' libtool=no \
+test/test_test_nachohash-multisig_tests.obj: test/multisig_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-multisig_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-multisig_tests.Tpo -c -o test/test_test_nachohash-multisig_tests.obj `if test -f 'test/multisig_tests.cpp'; then $(CYGPATH_W) 'test/multisig_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/multisig_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-multisig_tests.Tpo test/$(DEPDIR)/test_test_nachohash-multisig_tests.Po
+#	$(AM_V_CXX)source='test/multisig_tests.cpp' object='test/test_test_nachohash-multisig_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-multisig_tests.obj `if test -f 'test/multisig_tests.cpp'; then $(CYGPATH_W) 'test/multisig_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/multisig_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-multisig_tests.obj `if test -f 'test/multisig_tests.cpp'; then $(CYGPATH_W) 'test/multisig_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/multisig_tests.cpp'; fi`
 
-test/test_test_nullex-netbase_tests.o: test/netbase_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-netbase_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-netbase_tests.Tpo -c -o test/test_test_nullex-netbase_tests.o `test -f 'test/netbase_tests.cpp' || echo '$(srcdir)/'`test/netbase_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-netbase_tests.Tpo test/$(DEPDIR)/test_test_nullex-netbase_tests.Po
-#	$(AM_V_CXX)source='test/netbase_tests.cpp' object='test/test_test_nullex-netbase_tests.o' libtool=no \
+test/test_test_nachohash-netbase_tests.o: test/netbase_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-netbase_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-netbase_tests.Tpo -c -o test/test_test_nachohash-netbase_tests.o `test -f 'test/netbase_tests.cpp' || echo '$(srcdir)/'`test/netbase_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-netbase_tests.Tpo test/$(DEPDIR)/test_test_nachohash-netbase_tests.Po
+#	$(AM_V_CXX)source='test/netbase_tests.cpp' object='test/test_test_nachohash-netbase_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-netbase_tests.o `test -f 'test/netbase_tests.cpp' || echo '$(srcdir)/'`test/netbase_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-netbase_tests.o `test -f 'test/netbase_tests.cpp' || echo '$(srcdir)/'`test/netbase_tests.cpp
 
-test/test_test_nullex-netbase_tests.obj: test/netbase_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-netbase_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-netbase_tests.Tpo -c -o test/test_test_nullex-netbase_tests.obj `if test -f 'test/netbase_tests.cpp'; then $(CYGPATH_W) 'test/netbase_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/netbase_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-netbase_tests.Tpo test/$(DEPDIR)/test_test_nullex-netbase_tests.Po
-#	$(AM_V_CXX)source='test/netbase_tests.cpp' object='test/test_test_nullex-netbase_tests.obj' libtool=no \
+test/test_test_nachohash-netbase_tests.obj: test/netbase_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-netbase_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-netbase_tests.Tpo -c -o test/test_test_nachohash-netbase_tests.obj `if test -f 'test/netbase_tests.cpp'; then $(CYGPATH_W) 'test/netbase_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/netbase_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-netbase_tests.Tpo test/$(DEPDIR)/test_test_nachohash-netbase_tests.Po
+#	$(AM_V_CXX)source='test/netbase_tests.cpp' object='test/test_test_nachohash-netbase_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-netbase_tests.obj `if test -f 'test/netbase_tests.cpp'; then $(CYGPATH_W) 'test/netbase_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/netbase_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-netbase_tests.obj `if test -f 'test/netbase_tests.cpp'; then $(CYGPATH_W) 'test/netbase_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/netbase_tests.cpp'; fi`
 
-test/test_test_nullex-pmt_tests.o: test/pmt_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-pmt_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-pmt_tests.Tpo -c -o test/test_test_nullex-pmt_tests.o `test -f 'test/pmt_tests.cpp' || echo '$(srcdir)/'`test/pmt_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-pmt_tests.Tpo test/$(DEPDIR)/test_test_nullex-pmt_tests.Po
-#	$(AM_V_CXX)source='test/pmt_tests.cpp' object='test/test_test_nullex-pmt_tests.o' libtool=no \
+test/test_test_nachohash-pmt_tests.o: test/pmt_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-pmt_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-pmt_tests.Tpo -c -o test/test_test_nachohash-pmt_tests.o `test -f 'test/pmt_tests.cpp' || echo '$(srcdir)/'`test/pmt_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-pmt_tests.Tpo test/$(DEPDIR)/test_test_nachohash-pmt_tests.Po
+#	$(AM_V_CXX)source='test/pmt_tests.cpp' object='test/test_test_nachohash-pmt_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-pmt_tests.o `test -f 'test/pmt_tests.cpp' || echo '$(srcdir)/'`test/pmt_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-pmt_tests.o `test -f 'test/pmt_tests.cpp' || echo '$(srcdir)/'`test/pmt_tests.cpp
 
-test/test_test_nullex-pmt_tests.obj: test/pmt_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-pmt_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-pmt_tests.Tpo -c -o test/test_test_nullex-pmt_tests.obj `if test -f 'test/pmt_tests.cpp'; then $(CYGPATH_W) 'test/pmt_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/pmt_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-pmt_tests.Tpo test/$(DEPDIR)/test_test_nullex-pmt_tests.Po
-#	$(AM_V_CXX)source='test/pmt_tests.cpp' object='test/test_test_nullex-pmt_tests.obj' libtool=no \
+test/test_test_nachohash-pmt_tests.obj: test/pmt_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-pmt_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-pmt_tests.Tpo -c -o test/test_test_nachohash-pmt_tests.obj `if test -f 'test/pmt_tests.cpp'; then $(CYGPATH_W) 'test/pmt_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/pmt_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-pmt_tests.Tpo test/$(DEPDIR)/test_test_nachohash-pmt_tests.Po
+#	$(AM_V_CXX)source='test/pmt_tests.cpp' object='test/test_test_nachohash-pmt_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-pmt_tests.obj `if test -f 'test/pmt_tests.cpp'; then $(CYGPATH_W) 'test/pmt_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/pmt_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-pmt_tests.obj `if test -f 'test/pmt_tests.cpp'; then $(CYGPATH_W) 'test/pmt_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/pmt_tests.cpp'; fi`
 
-test/test_test_nullex-reverselock_tests.o: test/reverselock_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-reverselock_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-reverselock_tests.Tpo -c -o test/test_test_nullex-reverselock_tests.o `test -f 'test/reverselock_tests.cpp' || echo '$(srcdir)/'`test/reverselock_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-reverselock_tests.Tpo test/$(DEPDIR)/test_test_nullex-reverselock_tests.Po
-#	$(AM_V_CXX)source='test/reverselock_tests.cpp' object='test/test_test_nullex-reverselock_tests.o' libtool=no \
+test/test_test_nachohash-reverselock_tests.o: test/reverselock_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-reverselock_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-reverselock_tests.Tpo -c -o test/test_test_nachohash-reverselock_tests.o `test -f 'test/reverselock_tests.cpp' || echo '$(srcdir)/'`test/reverselock_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-reverselock_tests.Tpo test/$(DEPDIR)/test_test_nachohash-reverselock_tests.Po
+#	$(AM_V_CXX)source='test/reverselock_tests.cpp' object='test/test_test_nachohash-reverselock_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-reverselock_tests.o `test -f 'test/reverselock_tests.cpp' || echo '$(srcdir)/'`test/reverselock_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-reverselock_tests.o `test -f 'test/reverselock_tests.cpp' || echo '$(srcdir)/'`test/reverselock_tests.cpp
 
-test/test_test_nullex-reverselock_tests.obj: test/reverselock_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-reverselock_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-reverselock_tests.Tpo -c -o test/test_test_nullex-reverselock_tests.obj `if test -f 'test/reverselock_tests.cpp'; then $(CYGPATH_W) 'test/reverselock_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/reverselock_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-reverselock_tests.Tpo test/$(DEPDIR)/test_test_nullex-reverselock_tests.Po
-#	$(AM_V_CXX)source='test/reverselock_tests.cpp' object='test/test_test_nullex-reverselock_tests.obj' libtool=no \
+test/test_test_nachohash-reverselock_tests.obj: test/reverselock_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-reverselock_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-reverselock_tests.Tpo -c -o test/test_test_nachohash-reverselock_tests.obj `if test -f 'test/reverselock_tests.cpp'; then $(CYGPATH_W) 'test/reverselock_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/reverselock_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-reverselock_tests.Tpo test/$(DEPDIR)/test_test_nachohash-reverselock_tests.Po
+#	$(AM_V_CXX)source='test/reverselock_tests.cpp' object='test/test_test_nachohash-reverselock_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-reverselock_tests.obj `if test -f 'test/reverselock_tests.cpp'; then $(CYGPATH_W) 'test/reverselock_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/reverselock_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-reverselock_tests.obj `if test -f 'test/reverselock_tests.cpp'; then $(CYGPATH_W) 'test/reverselock_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/reverselock_tests.cpp'; fi`
 
-test/test_test_nullex-rpc_tests.o: test/rpc_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-rpc_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-rpc_tests.Tpo -c -o test/test_test_nullex-rpc_tests.o `test -f 'test/rpc_tests.cpp' || echo '$(srcdir)/'`test/rpc_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-rpc_tests.Tpo test/$(DEPDIR)/test_test_nullex-rpc_tests.Po
-#	$(AM_V_CXX)source='test/rpc_tests.cpp' object='test/test_test_nullex-rpc_tests.o' libtool=no \
+test/test_test_nachohash-rpc_tests.o: test/rpc_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-rpc_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-rpc_tests.Tpo -c -o test/test_test_nachohash-rpc_tests.o `test -f 'test/rpc_tests.cpp' || echo '$(srcdir)/'`test/rpc_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-rpc_tests.Tpo test/$(DEPDIR)/test_test_nachohash-rpc_tests.Po
+#	$(AM_V_CXX)source='test/rpc_tests.cpp' object='test/test_test_nachohash-rpc_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-rpc_tests.o `test -f 'test/rpc_tests.cpp' || echo '$(srcdir)/'`test/rpc_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-rpc_tests.o `test -f 'test/rpc_tests.cpp' || echo '$(srcdir)/'`test/rpc_tests.cpp
 
-test/test_test_nullex-rpc_tests.obj: test/rpc_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-rpc_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-rpc_tests.Tpo -c -o test/test_test_nullex-rpc_tests.obj `if test -f 'test/rpc_tests.cpp'; then $(CYGPATH_W) 'test/rpc_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/rpc_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-rpc_tests.Tpo test/$(DEPDIR)/test_test_nullex-rpc_tests.Po
-#	$(AM_V_CXX)source='test/rpc_tests.cpp' object='test/test_test_nullex-rpc_tests.obj' libtool=no \
+test/test_test_nachohash-rpc_tests.obj: test/rpc_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-rpc_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-rpc_tests.Tpo -c -o test/test_test_nachohash-rpc_tests.obj `if test -f 'test/rpc_tests.cpp'; then $(CYGPATH_W) 'test/rpc_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/rpc_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-rpc_tests.Tpo test/$(DEPDIR)/test_test_nachohash-rpc_tests.Po
+#	$(AM_V_CXX)source='test/rpc_tests.cpp' object='test/test_test_nachohash-rpc_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-rpc_tests.obj `if test -f 'test/rpc_tests.cpp'; then $(CYGPATH_W) 'test/rpc_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/rpc_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-rpc_tests.obj `if test -f 'test/rpc_tests.cpp'; then $(CYGPATH_W) 'test/rpc_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/rpc_tests.cpp'; fi`
 
-test/test_test_nullex-sanity_tests.o: test/sanity_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-sanity_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-sanity_tests.Tpo -c -o test/test_test_nullex-sanity_tests.o `test -f 'test/sanity_tests.cpp' || echo '$(srcdir)/'`test/sanity_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-sanity_tests.Tpo test/$(DEPDIR)/test_test_nullex-sanity_tests.Po
-#	$(AM_V_CXX)source='test/sanity_tests.cpp' object='test/test_test_nullex-sanity_tests.o' libtool=no \
+test/test_test_nachohash-sanity_tests.o: test/sanity_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-sanity_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-sanity_tests.Tpo -c -o test/test_test_nachohash-sanity_tests.o `test -f 'test/sanity_tests.cpp' || echo '$(srcdir)/'`test/sanity_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-sanity_tests.Tpo test/$(DEPDIR)/test_test_nachohash-sanity_tests.Po
+#	$(AM_V_CXX)source='test/sanity_tests.cpp' object='test/test_test_nachohash-sanity_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-sanity_tests.o `test -f 'test/sanity_tests.cpp' || echo '$(srcdir)/'`test/sanity_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-sanity_tests.o `test -f 'test/sanity_tests.cpp' || echo '$(srcdir)/'`test/sanity_tests.cpp
 
-test/test_test_nullex-sanity_tests.obj: test/sanity_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-sanity_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-sanity_tests.Tpo -c -o test/test_test_nullex-sanity_tests.obj `if test -f 'test/sanity_tests.cpp'; then $(CYGPATH_W) 'test/sanity_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sanity_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-sanity_tests.Tpo test/$(DEPDIR)/test_test_nullex-sanity_tests.Po
-#	$(AM_V_CXX)source='test/sanity_tests.cpp' object='test/test_test_nullex-sanity_tests.obj' libtool=no \
+test/test_test_nachohash-sanity_tests.obj: test/sanity_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-sanity_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-sanity_tests.Tpo -c -o test/test_test_nachohash-sanity_tests.obj `if test -f 'test/sanity_tests.cpp'; then $(CYGPATH_W) 'test/sanity_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sanity_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-sanity_tests.Tpo test/$(DEPDIR)/test_test_nachohash-sanity_tests.Po
+#	$(AM_V_CXX)source='test/sanity_tests.cpp' object='test/test_test_nachohash-sanity_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-sanity_tests.obj `if test -f 'test/sanity_tests.cpp'; then $(CYGPATH_W) 'test/sanity_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sanity_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-sanity_tests.obj `if test -f 'test/sanity_tests.cpp'; then $(CYGPATH_W) 'test/sanity_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sanity_tests.cpp'; fi`
 
-test/test_test_nullex-scheduler_tests.o: test/scheduler_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-scheduler_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-scheduler_tests.Tpo -c -o test/test_test_nullex-scheduler_tests.o `test -f 'test/scheduler_tests.cpp' || echo '$(srcdir)/'`test/scheduler_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-scheduler_tests.Tpo test/$(DEPDIR)/test_test_nullex-scheduler_tests.Po
-#	$(AM_V_CXX)source='test/scheduler_tests.cpp' object='test/test_test_nullex-scheduler_tests.o' libtool=no \
+test/test_test_nachohash-scheduler_tests.o: test/scheduler_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-scheduler_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-scheduler_tests.Tpo -c -o test/test_test_nachohash-scheduler_tests.o `test -f 'test/scheduler_tests.cpp' || echo '$(srcdir)/'`test/scheduler_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-scheduler_tests.Tpo test/$(DEPDIR)/test_test_nachohash-scheduler_tests.Po
+#	$(AM_V_CXX)source='test/scheduler_tests.cpp' object='test/test_test_nachohash-scheduler_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-scheduler_tests.o `test -f 'test/scheduler_tests.cpp' || echo '$(srcdir)/'`test/scheduler_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-scheduler_tests.o `test -f 'test/scheduler_tests.cpp' || echo '$(srcdir)/'`test/scheduler_tests.cpp
 
-test/test_test_nullex-scheduler_tests.obj: test/scheduler_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-scheduler_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-scheduler_tests.Tpo -c -o test/test_test_nullex-scheduler_tests.obj `if test -f 'test/scheduler_tests.cpp'; then $(CYGPATH_W) 'test/scheduler_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scheduler_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-scheduler_tests.Tpo test/$(DEPDIR)/test_test_nullex-scheduler_tests.Po
-#	$(AM_V_CXX)source='test/scheduler_tests.cpp' object='test/test_test_nullex-scheduler_tests.obj' libtool=no \
+test/test_test_nachohash-scheduler_tests.obj: test/scheduler_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-scheduler_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-scheduler_tests.Tpo -c -o test/test_test_nachohash-scheduler_tests.obj `if test -f 'test/scheduler_tests.cpp'; then $(CYGPATH_W) 'test/scheduler_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scheduler_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-scheduler_tests.Tpo test/$(DEPDIR)/test_test_nachohash-scheduler_tests.Po
+#	$(AM_V_CXX)source='test/scheduler_tests.cpp' object='test/test_test_nachohash-scheduler_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-scheduler_tests.obj `if test -f 'test/scheduler_tests.cpp'; then $(CYGPATH_W) 'test/scheduler_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scheduler_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-scheduler_tests.obj `if test -f 'test/scheduler_tests.cpp'; then $(CYGPATH_W) 'test/scheduler_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scheduler_tests.cpp'; fi`
 
-test/test_test_nullex-script_P2SH_tests.o: test/script_P2SH_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-script_P2SH_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-script_P2SH_tests.Tpo -c -o test/test_test_nullex-script_P2SH_tests.o `test -f 'test/script_P2SH_tests.cpp' || echo '$(srcdir)/'`test/script_P2SH_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-script_P2SH_tests.Tpo test/$(DEPDIR)/test_test_nullex-script_P2SH_tests.Po
-#	$(AM_V_CXX)source='test/script_P2SH_tests.cpp' object='test/test_test_nullex-script_P2SH_tests.o' libtool=no \
+test/test_test_nachohash-script_P2SH_tests.o: test/script_P2SH_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-script_P2SH_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-script_P2SH_tests.Tpo -c -o test/test_test_nachohash-script_P2SH_tests.o `test -f 'test/script_P2SH_tests.cpp' || echo '$(srcdir)/'`test/script_P2SH_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-script_P2SH_tests.Tpo test/$(DEPDIR)/test_test_nachohash-script_P2SH_tests.Po
+#	$(AM_V_CXX)source='test/script_P2SH_tests.cpp' object='test/test_test_nachohash-script_P2SH_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-script_P2SH_tests.o `test -f 'test/script_P2SH_tests.cpp' || echo '$(srcdir)/'`test/script_P2SH_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-script_P2SH_tests.o `test -f 'test/script_P2SH_tests.cpp' || echo '$(srcdir)/'`test/script_P2SH_tests.cpp
 
-test/test_test_nullex-script_P2SH_tests.obj: test/script_P2SH_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-script_P2SH_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-script_P2SH_tests.Tpo -c -o test/test_test_nullex-script_P2SH_tests.obj `if test -f 'test/script_P2SH_tests.cpp'; then $(CYGPATH_W) 'test/script_P2SH_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_P2SH_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-script_P2SH_tests.Tpo test/$(DEPDIR)/test_test_nullex-script_P2SH_tests.Po
-#	$(AM_V_CXX)source='test/script_P2SH_tests.cpp' object='test/test_test_nullex-script_P2SH_tests.obj' libtool=no \
+test/test_test_nachohash-script_P2SH_tests.obj: test/script_P2SH_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-script_P2SH_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-script_P2SH_tests.Tpo -c -o test/test_test_nachohash-script_P2SH_tests.obj `if test -f 'test/script_P2SH_tests.cpp'; then $(CYGPATH_W) 'test/script_P2SH_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_P2SH_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-script_P2SH_tests.Tpo test/$(DEPDIR)/test_test_nachohash-script_P2SH_tests.Po
+#	$(AM_V_CXX)source='test/script_P2SH_tests.cpp' object='test/test_test_nachohash-script_P2SH_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-script_P2SH_tests.obj `if test -f 'test/script_P2SH_tests.cpp'; then $(CYGPATH_W) 'test/script_P2SH_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_P2SH_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-script_P2SH_tests.obj `if test -f 'test/script_P2SH_tests.cpp'; then $(CYGPATH_W) 'test/script_P2SH_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_P2SH_tests.cpp'; fi`
 
-test/test_test_nullex-script_tests.o: test/script_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-script_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-script_tests.Tpo -c -o test/test_test_nullex-script_tests.o `test -f 'test/script_tests.cpp' || echo '$(srcdir)/'`test/script_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-script_tests.Tpo test/$(DEPDIR)/test_test_nullex-script_tests.Po
-#	$(AM_V_CXX)source='test/script_tests.cpp' object='test/test_test_nullex-script_tests.o' libtool=no \
+test/test_test_nachohash-script_tests.o: test/script_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-script_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-script_tests.Tpo -c -o test/test_test_nachohash-script_tests.o `test -f 'test/script_tests.cpp' || echo '$(srcdir)/'`test/script_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-script_tests.Tpo test/$(DEPDIR)/test_test_nachohash-script_tests.Po
+#	$(AM_V_CXX)source='test/script_tests.cpp' object='test/test_test_nachohash-script_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-script_tests.o `test -f 'test/script_tests.cpp' || echo '$(srcdir)/'`test/script_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-script_tests.o `test -f 'test/script_tests.cpp' || echo '$(srcdir)/'`test/script_tests.cpp
 
-test/test_test_nullex-script_tests.obj: test/script_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-script_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-script_tests.Tpo -c -o test/test_test_nullex-script_tests.obj `if test -f 'test/script_tests.cpp'; then $(CYGPATH_W) 'test/script_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-script_tests.Tpo test/$(DEPDIR)/test_test_nullex-script_tests.Po
-#	$(AM_V_CXX)source='test/script_tests.cpp' object='test/test_test_nullex-script_tests.obj' libtool=no \
+test/test_test_nachohash-script_tests.obj: test/script_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-script_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-script_tests.Tpo -c -o test/test_test_nachohash-script_tests.obj `if test -f 'test/script_tests.cpp'; then $(CYGPATH_W) 'test/script_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-script_tests.Tpo test/$(DEPDIR)/test_test_nachohash-script_tests.Po
+#	$(AM_V_CXX)source='test/script_tests.cpp' object='test/test_test_nachohash-script_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-script_tests.obj `if test -f 'test/script_tests.cpp'; then $(CYGPATH_W) 'test/script_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-script_tests.obj `if test -f 'test/script_tests.cpp'; then $(CYGPATH_W) 'test/script_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_tests.cpp'; fi`
 
-test/test_test_nullex-scriptnum_tests.o: test/scriptnum_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-scriptnum_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-scriptnum_tests.Tpo -c -o test/test_test_nullex-scriptnum_tests.o `test -f 'test/scriptnum_tests.cpp' || echo '$(srcdir)/'`test/scriptnum_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-scriptnum_tests.Tpo test/$(DEPDIR)/test_test_nullex-scriptnum_tests.Po
-#	$(AM_V_CXX)source='test/scriptnum_tests.cpp' object='test/test_test_nullex-scriptnum_tests.o' libtool=no \
+test/test_test_nachohash-scriptnum_tests.o: test/scriptnum_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-scriptnum_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-scriptnum_tests.Tpo -c -o test/test_test_nachohash-scriptnum_tests.o `test -f 'test/scriptnum_tests.cpp' || echo '$(srcdir)/'`test/scriptnum_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-scriptnum_tests.Tpo test/$(DEPDIR)/test_test_nachohash-scriptnum_tests.Po
+#	$(AM_V_CXX)source='test/scriptnum_tests.cpp' object='test/test_test_nachohash-scriptnum_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-scriptnum_tests.o `test -f 'test/scriptnum_tests.cpp' || echo '$(srcdir)/'`test/scriptnum_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-scriptnum_tests.o `test -f 'test/scriptnum_tests.cpp' || echo '$(srcdir)/'`test/scriptnum_tests.cpp
 
-test/test_test_nullex-scriptnum_tests.obj: test/scriptnum_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-scriptnum_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-scriptnum_tests.Tpo -c -o test/test_test_nullex-scriptnum_tests.obj `if test -f 'test/scriptnum_tests.cpp'; then $(CYGPATH_W) 'test/scriptnum_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scriptnum_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-scriptnum_tests.Tpo test/$(DEPDIR)/test_test_nullex-scriptnum_tests.Po
-#	$(AM_V_CXX)source='test/scriptnum_tests.cpp' object='test/test_test_nullex-scriptnum_tests.obj' libtool=no \
+test/test_test_nachohash-scriptnum_tests.obj: test/scriptnum_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-scriptnum_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-scriptnum_tests.Tpo -c -o test/test_test_nachohash-scriptnum_tests.obj `if test -f 'test/scriptnum_tests.cpp'; then $(CYGPATH_W) 'test/scriptnum_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scriptnum_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-scriptnum_tests.Tpo test/$(DEPDIR)/test_test_nachohash-scriptnum_tests.Po
+#	$(AM_V_CXX)source='test/scriptnum_tests.cpp' object='test/test_test_nachohash-scriptnum_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-scriptnum_tests.obj `if test -f 'test/scriptnum_tests.cpp'; then $(CYGPATH_W) 'test/scriptnum_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scriptnum_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-scriptnum_tests.obj `if test -f 'test/scriptnum_tests.cpp'; then $(CYGPATH_W) 'test/scriptnum_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scriptnum_tests.cpp'; fi`
 
-test/test_test_nullex-serialize_tests.o: test/serialize_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-serialize_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-serialize_tests.Tpo -c -o test/test_test_nullex-serialize_tests.o `test -f 'test/serialize_tests.cpp' || echo '$(srcdir)/'`test/serialize_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-serialize_tests.Tpo test/$(DEPDIR)/test_test_nullex-serialize_tests.Po
-#	$(AM_V_CXX)source='test/serialize_tests.cpp' object='test/test_test_nullex-serialize_tests.o' libtool=no \
+test/test_test_nachohash-serialize_tests.o: test/serialize_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-serialize_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-serialize_tests.Tpo -c -o test/test_test_nachohash-serialize_tests.o `test -f 'test/serialize_tests.cpp' || echo '$(srcdir)/'`test/serialize_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-serialize_tests.Tpo test/$(DEPDIR)/test_test_nachohash-serialize_tests.Po
+#	$(AM_V_CXX)source='test/serialize_tests.cpp' object='test/test_test_nachohash-serialize_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-serialize_tests.o `test -f 'test/serialize_tests.cpp' || echo '$(srcdir)/'`test/serialize_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-serialize_tests.o `test -f 'test/serialize_tests.cpp' || echo '$(srcdir)/'`test/serialize_tests.cpp
 
-test/test_test_nullex-serialize_tests.obj: test/serialize_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-serialize_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-serialize_tests.Tpo -c -o test/test_test_nullex-serialize_tests.obj `if test -f 'test/serialize_tests.cpp'; then $(CYGPATH_W) 'test/serialize_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/serialize_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-serialize_tests.Tpo test/$(DEPDIR)/test_test_nullex-serialize_tests.Po
-#	$(AM_V_CXX)source='test/serialize_tests.cpp' object='test/test_test_nullex-serialize_tests.obj' libtool=no \
+test/test_test_nachohash-serialize_tests.obj: test/serialize_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-serialize_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-serialize_tests.Tpo -c -o test/test_test_nachohash-serialize_tests.obj `if test -f 'test/serialize_tests.cpp'; then $(CYGPATH_W) 'test/serialize_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/serialize_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-serialize_tests.Tpo test/$(DEPDIR)/test_test_nachohash-serialize_tests.Po
+#	$(AM_V_CXX)source='test/serialize_tests.cpp' object='test/test_test_nachohash-serialize_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-serialize_tests.obj `if test -f 'test/serialize_tests.cpp'; then $(CYGPATH_W) 'test/serialize_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/serialize_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-serialize_tests.obj `if test -f 'test/serialize_tests.cpp'; then $(CYGPATH_W) 'test/serialize_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/serialize_tests.cpp'; fi`
 
-test/test_test_nullex-sighash_tests.o: test/sighash_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-sighash_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-sighash_tests.Tpo -c -o test/test_test_nullex-sighash_tests.o `test -f 'test/sighash_tests.cpp' || echo '$(srcdir)/'`test/sighash_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-sighash_tests.Tpo test/$(DEPDIR)/test_test_nullex-sighash_tests.Po
-#	$(AM_V_CXX)source='test/sighash_tests.cpp' object='test/test_test_nullex-sighash_tests.o' libtool=no \
+test/test_test_nachohash-sighash_tests.o: test/sighash_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-sighash_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-sighash_tests.Tpo -c -o test/test_test_nachohash-sighash_tests.o `test -f 'test/sighash_tests.cpp' || echo '$(srcdir)/'`test/sighash_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-sighash_tests.Tpo test/$(DEPDIR)/test_test_nachohash-sighash_tests.Po
+#	$(AM_V_CXX)source='test/sighash_tests.cpp' object='test/test_test_nachohash-sighash_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-sighash_tests.o `test -f 'test/sighash_tests.cpp' || echo '$(srcdir)/'`test/sighash_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-sighash_tests.o `test -f 'test/sighash_tests.cpp' || echo '$(srcdir)/'`test/sighash_tests.cpp
 
-test/test_test_nullex-sighash_tests.obj: test/sighash_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-sighash_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-sighash_tests.Tpo -c -o test/test_test_nullex-sighash_tests.obj `if test -f 'test/sighash_tests.cpp'; then $(CYGPATH_W) 'test/sighash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sighash_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-sighash_tests.Tpo test/$(DEPDIR)/test_test_nullex-sighash_tests.Po
-#	$(AM_V_CXX)source='test/sighash_tests.cpp' object='test/test_test_nullex-sighash_tests.obj' libtool=no \
+test/test_test_nachohash-sighash_tests.obj: test/sighash_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-sighash_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-sighash_tests.Tpo -c -o test/test_test_nachohash-sighash_tests.obj `if test -f 'test/sighash_tests.cpp'; then $(CYGPATH_W) 'test/sighash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sighash_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-sighash_tests.Tpo test/$(DEPDIR)/test_test_nachohash-sighash_tests.Po
+#	$(AM_V_CXX)source='test/sighash_tests.cpp' object='test/test_test_nachohash-sighash_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-sighash_tests.obj `if test -f 'test/sighash_tests.cpp'; then $(CYGPATH_W) 'test/sighash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sighash_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-sighash_tests.obj `if test -f 'test/sighash_tests.cpp'; then $(CYGPATH_W) 'test/sighash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sighash_tests.cpp'; fi`
 
-test/test_test_nullex-sigopcount_tests.o: test/sigopcount_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-sigopcount_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-sigopcount_tests.Tpo -c -o test/test_test_nullex-sigopcount_tests.o `test -f 'test/sigopcount_tests.cpp' || echo '$(srcdir)/'`test/sigopcount_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-sigopcount_tests.Tpo test/$(DEPDIR)/test_test_nullex-sigopcount_tests.Po
-#	$(AM_V_CXX)source='test/sigopcount_tests.cpp' object='test/test_test_nullex-sigopcount_tests.o' libtool=no \
+test/test_test_nachohash-sigopcount_tests.o: test/sigopcount_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-sigopcount_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-sigopcount_tests.Tpo -c -o test/test_test_nachohash-sigopcount_tests.o `test -f 'test/sigopcount_tests.cpp' || echo '$(srcdir)/'`test/sigopcount_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-sigopcount_tests.Tpo test/$(DEPDIR)/test_test_nachohash-sigopcount_tests.Po
+#	$(AM_V_CXX)source='test/sigopcount_tests.cpp' object='test/test_test_nachohash-sigopcount_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-sigopcount_tests.o `test -f 'test/sigopcount_tests.cpp' || echo '$(srcdir)/'`test/sigopcount_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-sigopcount_tests.o `test -f 'test/sigopcount_tests.cpp' || echo '$(srcdir)/'`test/sigopcount_tests.cpp
 
-test/test_test_nullex-sigopcount_tests.obj: test/sigopcount_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-sigopcount_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-sigopcount_tests.Tpo -c -o test/test_test_nullex-sigopcount_tests.obj `if test -f 'test/sigopcount_tests.cpp'; then $(CYGPATH_W) 'test/sigopcount_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sigopcount_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-sigopcount_tests.Tpo test/$(DEPDIR)/test_test_nullex-sigopcount_tests.Po
-#	$(AM_V_CXX)source='test/sigopcount_tests.cpp' object='test/test_test_nullex-sigopcount_tests.obj' libtool=no \
+test/test_test_nachohash-sigopcount_tests.obj: test/sigopcount_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-sigopcount_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-sigopcount_tests.Tpo -c -o test/test_test_nachohash-sigopcount_tests.obj `if test -f 'test/sigopcount_tests.cpp'; then $(CYGPATH_W) 'test/sigopcount_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sigopcount_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-sigopcount_tests.Tpo test/$(DEPDIR)/test_test_nachohash-sigopcount_tests.Po
+#	$(AM_V_CXX)source='test/sigopcount_tests.cpp' object='test/test_test_nachohash-sigopcount_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-sigopcount_tests.obj `if test -f 'test/sigopcount_tests.cpp'; then $(CYGPATH_W) 'test/sigopcount_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sigopcount_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-sigopcount_tests.obj `if test -f 'test/sigopcount_tests.cpp'; then $(CYGPATH_W) 'test/sigopcount_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sigopcount_tests.cpp'; fi`
 
-test/test_test_nullex-skiplist_tests.o: test/skiplist_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-skiplist_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-skiplist_tests.Tpo -c -o test/test_test_nullex-skiplist_tests.o `test -f 'test/skiplist_tests.cpp' || echo '$(srcdir)/'`test/skiplist_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-skiplist_tests.Tpo test/$(DEPDIR)/test_test_nullex-skiplist_tests.Po
-#	$(AM_V_CXX)source='test/skiplist_tests.cpp' object='test/test_test_nullex-skiplist_tests.o' libtool=no \
+test/test_test_nachohash-skiplist_tests.o: test/skiplist_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-skiplist_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-skiplist_tests.Tpo -c -o test/test_test_nachohash-skiplist_tests.o `test -f 'test/skiplist_tests.cpp' || echo '$(srcdir)/'`test/skiplist_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-skiplist_tests.Tpo test/$(DEPDIR)/test_test_nachohash-skiplist_tests.Po
+#	$(AM_V_CXX)source='test/skiplist_tests.cpp' object='test/test_test_nachohash-skiplist_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-skiplist_tests.o `test -f 'test/skiplist_tests.cpp' || echo '$(srcdir)/'`test/skiplist_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-skiplist_tests.o `test -f 'test/skiplist_tests.cpp' || echo '$(srcdir)/'`test/skiplist_tests.cpp
 
-test/test_test_nullex-skiplist_tests.obj: test/skiplist_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-skiplist_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-skiplist_tests.Tpo -c -o test/test_test_nullex-skiplist_tests.obj `if test -f 'test/skiplist_tests.cpp'; then $(CYGPATH_W) 'test/skiplist_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/skiplist_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-skiplist_tests.Tpo test/$(DEPDIR)/test_test_nullex-skiplist_tests.Po
-#	$(AM_V_CXX)source='test/skiplist_tests.cpp' object='test/test_test_nullex-skiplist_tests.obj' libtool=no \
+test/test_test_nachohash-skiplist_tests.obj: test/skiplist_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-skiplist_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-skiplist_tests.Tpo -c -o test/test_test_nachohash-skiplist_tests.obj `if test -f 'test/skiplist_tests.cpp'; then $(CYGPATH_W) 'test/skiplist_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/skiplist_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-skiplist_tests.Tpo test/$(DEPDIR)/test_test_nachohash-skiplist_tests.Po
+#	$(AM_V_CXX)source='test/skiplist_tests.cpp' object='test/test_test_nachohash-skiplist_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-skiplist_tests.obj `if test -f 'test/skiplist_tests.cpp'; then $(CYGPATH_W) 'test/skiplist_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/skiplist_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-skiplist_tests.obj `if test -f 'test/skiplist_tests.cpp'; then $(CYGPATH_W) 'test/skiplist_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/skiplist_tests.cpp'; fi`
 
-test/test_test_nullex-test_nullex.o: test/test_nullex.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-test_nullex.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-test_nullex.Tpo -c -o test/test_test_nullex-test_nullex.o `test -f 'test/test_nullex.cpp' || echo '$(srcdir)/'`test/test_nullex.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-test_nullex.Tpo test/$(DEPDIR)/test_test_nullex-test_nullex.Po
-#	$(AM_V_CXX)source='test/test_nullex.cpp' object='test/test_test_nullex-test_nullex.o' libtool=no \
+test/test_test_nachohash-test_nachohash.o: test/test_nachohash.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-test_nachohash.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-test_nachohash.Tpo -c -o test/test_test_nachohash-test_nachohash.o `test -f 'test/test_nachohash.cpp' || echo '$(srcdir)/'`test/test_nachohash.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-test_nachohash.Tpo test/$(DEPDIR)/test_test_nachohash-test_nachohash.Po
+#	$(AM_V_CXX)source='test/test_nachohash.cpp' object='test/test_test_nachohash-test_nachohash.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-test_nullex.o `test -f 'test/test_nullex.cpp' || echo '$(srcdir)/'`test/test_nullex.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-test_nachohash.o `test -f 'test/test_nachohash.cpp' || echo '$(srcdir)/'`test/test_nachohash.cpp
 
-test/test_test_nullex-test_nullex.obj: test/test_nullex.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-test_nullex.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-test_nullex.Tpo -c -o test/test_test_nullex-test_nullex.obj `if test -f 'test/test_nullex.cpp'; then $(CYGPATH_W) 'test/test_nullex.cpp'; else $(CYGPATH_W) '$(srcdir)/test/test_nullex.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-test_nullex.Tpo test/$(DEPDIR)/test_test_nullex-test_nullex.Po
-#	$(AM_V_CXX)source='test/test_nullex.cpp' object='test/test_test_nullex-test_nullex.obj' libtool=no \
+test/test_test_nachohash-test_nachohash.obj: test/test_nachohash.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-test_nachohash.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-test_nachohash.Tpo -c -o test/test_test_nachohash-test_nachohash.obj `if test -f 'test/test_nachohash.cpp'; then $(CYGPATH_W) 'test/test_nachohash.cpp'; else $(CYGPATH_W) '$(srcdir)/test/test_nachohash.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-test_nachohash.Tpo test/$(DEPDIR)/test_test_nachohash-test_nachohash.Po
+#	$(AM_V_CXX)source='test/test_nachohash.cpp' object='test/test_test_nachohash-test_nachohash.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-test_nullex.obj `if test -f 'test/test_nullex.cpp'; then $(CYGPATH_W) 'test/test_nullex.cpp'; else $(CYGPATH_W) '$(srcdir)/test/test_nullex.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-test_nachohash.obj `if test -f 'test/test_nachohash.cpp'; then $(CYGPATH_W) 'test/test_nachohash.cpp'; else $(CYGPATH_W) '$(srcdir)/test/test_nachohash.cpp'; fi`
 
-test/test_test_nullex-timedata_tests.o: test/timedata_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-timedata_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-timedata_tests.Tpo -c -o test/test_test_nullex-timedata_tests.o `test -f 'test/timedata_tests.cpp' || echo '$(srcdir)/'`test/timedata_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-timedata_tests.Tpo test/$(DEPDIR)/test_test_nullex-timedata_tests.Po
-#	$(AM_V_CXX)source='test/timedata_tests.cpp' object='test/test_test_nullex-timedata_tests.o' libtool=no \
+test/test_test_nachohash-timedata_tests.o: test/timedata_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-timedata_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-timedata_tests.Tpo -c -o test/test_test_nachohash-timedata_tests.o `test -f 'test/timedata_tests.cpp' || echo '$(srcdir)/'`test/timedata_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-timedata_tests.Tpo test/$(DEPDIR)/test_test_nachohash-timedata_tests.Po
+#	$(AM_V_CXX)source='test/timedata_tests.cpp' object='test/test_test_nachohash-timedata_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-timedata_tests.o `test -f 'test/timedata_tests.cpp' || echo '$(srcdir)/'`test/timedata_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-timedata_tests.o `test -f 'test/timedata_tests.cpp' || echo '$(srcdir)/'`test/timedata_tests.cpp
 
-test/test_test_nullex-timedata_tests.obj: test/timedata_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-timedata_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-timedata_tests.Tpo -c -o test/test_test_nullex-timedata_tests.obj `if test -f 'test/timedata_tests.cpp'; then $(CYGPATH_W) 'test/timedata_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/timedata_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-timedata_tests.Tpo test/$(DEPDIR)/test_test_nullex-timedata_tests.Po
-#	$(AM_V_CXX)source='test/timedata_tests.cpp' object='test/test_test_nullex-timedata_tests.obj' libtool=no \
+test/test_test_nachohash-timedata_tests.obj: test/timedata_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-timedata_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-timedata_tests.Tpo -c -o test/test_test_nachohash-timedata_tests.obj `if test -f 'test/timedata_tests.cpp'; then $(CYGPATH_W) 'test/timedata_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/timedata_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-timedata_tests.Tpo test/$(DEPDIR)/test_test_nachohash-timedata_tests.Po
+#	$(AM_V_CXX)source='test/timedata_tests.cpp' object='test/test_test_nachohash-timedata_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-timedata_tests.obj `if test -f 'test/timedata_tests.cpp'; then $(CYGPATH_W) 'test/timedata_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/timedata_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-timedata_tests.obj `if test -f 'test/timedata_tests.cpp'; then $(CYGPATH_W) 'test/timedata_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/timedata_tests.cpp'; fi`
 
-test/test_test_nullex-torcontrol_tests.o: test/torcontrol_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-torcontrol_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-torcontrol_tests.Tpo -c -o test/test_test_nullex-torcontrol_tests.o `test -f 'test/torcontrol_tests.cpp' || echo '$(srcdir)/'`test/torcontrol_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-torcontrol_tests.Tpo test/$(DEPDIR)/test_test_nullex-torcontrol_tests.Po
-#	$(AM_V_CXX)source='test/torcontrol_tests.cpp' object='test/test_test_nullex-torcontrol_tests.o' libtool=no \
+test/test_test_nachohash-torcontrol_tests.o: test/torcontrol_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-torcontrol_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-torcontrol_tests.Tpo -c -o test/test_test_nachohash-torcontrol_tests.o `test -f 'test/torcontrol_tests.cpp' || echo '$(srcdir)/'`test/torcontrol_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-torcontrol_tests.Tpo test/$(DEPDIR)/test_test_nachohash-torcontrol_tests.Po
+#	$(AM_V_CXX)source='test/torcontrol_tests.cpp' object='test/test_test_nachohash-torcontrol_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-torcontrol_tests.o `test -f 'test/torcontrol_tests.cpp' || echo '$(srcdir)/'`test/torcontrol_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-torcontrol_tests.o `test -f 'test/torcontrol_tests.cpp' || echo '$(srcdir)/'`test/torcontrol_tests.cpp
 
-test/test_test_nullex-torcontrol_tests.obj: test/torcontrol_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-torcontrol_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-torcontrol_tests.Tpo -c -o test/test_test_nullex-torcontrol_tests.obj `if test -f 'test/torcontrol_tests.cpp'; then $(CYGPATH_W) 'test/torcontrol_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/torcontrol_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-torcontrol_tests.Tpo test/$(DEPDIR)/test_test_nullex-torcontrol_tests.Po
-#	$(AM_V_CXX)source='test/torcontrol_tests.cpp' object='test/test_test_nullex-torcontrol_tests.obj' libtool=no \
+test/test_test_nachohash-torcontrol_tests.obj: test/torcontrol_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-torcontrol_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-torcontrol_tests.Tpo -c -o test/test_test_nachohash-torcontrol_tests.obj `if test -f 'test/torcontrol_tests.cpp'; then $(CYGPATH_W) 'test/torcontrol_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/torcontrol_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-torcontrol_tests.Tpo test/$(DEPDIR)/test_test_nachohash-torcontrol_tests.Po
+#	$(AM_V_CXX)source='test/torcontrol_tests.cpp' object='test/test_test_nachohash-torcontrol_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-torcontrol_tests.obj `if test -f 'test/torcontrol_tests.cpp'; then $(CYGPATH_W) 'test/torcontrol_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/torcontrol_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-torcontrol_tests.obj `if test -f 'test/torcontrol_tests.cpp'; then $(CYGPATH_W) 'test/torcontrol_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/torcontrol_tests.cpp'; fi`
 
-test/test_test_nullex-transaction_tests.o: test/transaction_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-transaction_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-transaction_tests.Tpo -c -o test/test_test_nullex-transaction_tests.o `test -f 'test/transaction_tests.cpp' || echo '$(srcdir)/'`test/transaction_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-transaction_tests.Tpo test/$(DEPDIR)/test_test_nullex-transaction_tests.Po
-#	$(AM_V_CXX)source='test/transaction_tests.cpp' object='test/test_test_nullex-transaction_tests.o' libtool=no \
+test/test_test_nachohash-transaction_tests.o: test/transaction_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-transaction_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-transaction_tests.Tpo -c -o test/test_test_nachohash-transaction_tests.o `test -f 'test/transaction_tests.cpp' || echo '$(srcdir)/'`test/transaction_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-transaction_tests.Tpo test/$(DEPDIR)/test_test_nachohash-transaction_tests.Po
+#	$(AM_V_CXX)source='test/transaction_tests.cpp' object='test/test_test_nachohash-transaction_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-transaction_tests.o `test -f 'test/transaction_tests.cpp' || echo '$(srcdir)/'`test/transaction_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-transaction_tests.o `test -f 'test/transaction_tests.cpp' || echo '$(srcdir)/'`test/transaction_tests.cpp
 
-test/test_test_nullex-transaction_tests.obj: test/transaction_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-transaction_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-transaction_tests.Tpo -c -o test/test_test_nullex-transaction_tests.obj `if test -f 'test/transaction_tests.cpp'; then $(CYGPATH_W) 'test/transaction_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/transaction_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-transaction_tests.Tpo test/$(DEPDIR)/test_test_nullex-transaction_tests.Po
-#	$(AM_V_CXX)source='test/transaction_tests.cpp' object='test/test_test_nullex-transaction_tests.obj' libtool=no \
+test/test_test_nachohash-transaction_tests.obj: test/transaction_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-transaction_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-transaction_tests.Tpo -c -o test/test_test_nachohash-transaction_tests.obj `if test -f 'test/transaction_tests.cpp'; then $(CYGPATH_W) 'test/transaction_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/transaction_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-transaction_tests.Tpo test/$(DEPDIR)/test_test_nachohash-transaction_tests.Po
+#	$(AM_V_CXX)source='test/transaction_tests.cpp' object='test/test_test_nachohash-transaction_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-transaction_tests.obj `if test -f 'test/transaction_tests.cpp'; then $(CYGPATH_W) 'test/transaction_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/transaction_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-transaction_tests.obj `if test -f 'test/transaction_tests.cpp'; then $(CYGPATH_W) 'test/transaction_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/transaction_tests.cpp'; fi`
 
-test/test_test_nullex-uint256_tests.o: test/uint256_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-uint256_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-uint256_tests.Tpo -c -o test/test_test_nullex-uint256_tests.o `test -f 'test/uint256_tests.cpp' || echo '$(srcdir)/'`test/uint256_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-uint256_tests.Tpo test/$(DEPDIR)/test_test_nullex-uint256_tests.Po
-#	$(AM_V_CXX)source='test/uint256_tests.cpp' object='test/test_test_nullex-uint256_tests.o' libtool=no \
+test/test_test_nachohash-uint256_tests.o: test/uint256_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-uint256_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-uint256_tests.Tpo -c -o test/test_test_nachohash-uint256_tests.o `test -f 'test/uint256_tests.cpp' || echo '$(srcdir)/'`test/uint256_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-uint256_tests.Tpo test/$(DEPDIR)/test_test_nachohash-uint256_tests.Po
+#	$(AM_V_CXX)source='test/uint256_tests.cpp' object='test/test_test_nachohash-uint256_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-uint256_tests.o `test -f 'test/uint256_tests.cpp' || echo '$(srcdir)/'`test/uint256_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-uint256_tests.o `test -f 'test/uint256_tests.cpp' || echo '$(srcdir)/'`test/uint256_tests.cpp
 
-test/test_test_nullex-uint256_tests.obj: test/uint256_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-uint256_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-uint256_tests.Tpo -c -o test/test_test_nullex-uint256_tests.obj `if test -f 'test/uint256_tests.cpp'; then $(CYGPATH_W) 'test/uint256_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/uint256_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-uint256_tests.Tpo test/$(DEPDIR)/test_test_nullex-uint256_tests.Po
-#	$(AM_V_CXX)source='test/uint256_tests.cpp' object='test/test_test_nullex-uint256_tests.obj' libtool=no \
+test/test_test_nachohash-uint256_tests.obj: test/uint256_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-uint256_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-uint256_tests.Tpo -c -o test/test_test_nachohash-uint256_tests.obj `if test -f 'test/uint256_tests.cpp'; then $(CYGPATH_W) 'test/uint256_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/uint256_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-uint256_tests.Tpo test/$(DEPDIR)/test_test_nachohash-uint256_tests.Po
+#	$(AM_V_CXX)source='test/uint256_tests.cpp' object='test/test_test_nachohash-uint256_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-uint256_tests.obj `if test -f 'test/uint256_tests.cpp'; then $(CYGPATH_W) 'test/uint256_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/uint256_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-uint256_tests.obj `if test -f 'test/uint256_tests.cpp'; then $(CYGPATH_W) 'test/uint256_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/uint256_tests.cpp'; fi`
 
-test/test_test_nullex-univalue_tests.o: test/univalue_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-univalue_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-univalue_tests.Tpo -c -o test/test_test_nullex-univalue_tests.o `test -f 'test/univalue_tests.cpp' || echo '$(srcdir)/'`test/univalue_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-univalue_tests.Tpo test/$(DEPDIR)/test_test_nullex-univalue_tests.Po
-#	$(AM_V_CXX)source='test/univalue_tests.cpp' object='test/test_test_nullex-univalue_tests.o' libtool=no \
+test/test_test_nachohash-univalue_tests.o: test/univalue_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-univalue_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-univalue_tests.Tpo -c -o test/test_test_nachohash-univalue_tests.o `test -f 'test/univalue_tests.cpp' || echo '$(srcdir)/'`test/univalue_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-univalue_tests.Tpo test/$(DEPDIR)/test_test_nachohash-univalue_tests.Po
+#	$(AM_V_CXX)source='test/univalue_tests.cpp' object='test/test_test_nachohash-univalue_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-univalue_tests.o `test -f 'test/univalue_tests.cpp' || echo '$(srcdir)/'`test/univalue_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-univalue_tests.o `test -f 'test/univalue_tests.cpp' || echo '$(srcdir)/'`test/univalue_tests.cpp
 
-test/test_test_nullex-univalue_tests.obj: test/univalue_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-univalue_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-univalue_tests.Tpo -c -o test/test_test_nullex-univalue_tests.obj `if test -f 'test/univalue_tests.cpp'; then $(CYGPATH_W) 'test/univalue_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/univalue_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-univalue_tests.Tpo test/$(DEPDIR)/test_test_nullex-univalue_tests.Po
-#	$(AM_V_CXX)source='test/univalue_tests.cpp' object='test/test_test_nullex-univalue_tests.obj' libtool=no \
+test/test_test_nachohash-univalue_tests.obj: test/univalue_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-univalue_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-univalue_tests.Tpo -c -o test/test_test_nachohash-univalue_tests.obj `if test -f 'test/univalue_tests.cpp'; then $(CYGPATH_W) 'test/univalue_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/univalue_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-univalue_tests.Tpo test/$(DEPDIR)/test_test_nachohash-univalue_tests.Po
+#	$(AM_V_CXX)source='test/univalue_tests.cpp' object='test/test_test_nachohash-univalue_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-univalue_tests.obj `if test -f 'test/univalue_tests.cpp'; then $(CYGPATH_W) 'test/univalue_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/univalue_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-univalue_tests.obj `if test -f 'test/univalue_tests.cpp'; then $(CYGPATH_W) 'test/univalue_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/univalue_tests.cpp'; fi`
 
-test/test_test_nullex-util_tests.o: test/util_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-util_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-util_tests.Tpo -c -o test/test_test_nullex-util_tests.o `test -f 'test/util_tests.cpp' || echo '$(srcdir)/'`test/util_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-util_tests.Tpo test/$(DEPDIR)/test_test_nullex-util_tests.Po
-#	$(AM_V_CXX)source='test/util_tests.cpp' object='test/test_test_nullex-util_tests.o' libtool=no \
+test/test_test_nachohash-util_tests.o: test/util_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-util_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-util_tests.Tpo -c -o test/test_test_nachohash-util_tests.o `test -f 'test/util_tests.cpp' || echo '$(srcdir)/'`test/util_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-util_tests.Tpo test/$(DEPDIR)/test_test_nachohash-util_tests.Po
+#	$(AM_V_CXX)source='test/util_tests.cpp' object='test/test_test_nachohash-util_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-util_tests.o `test -f 'test/util_tests.cpp' || echo '$(srcdir)/'`test/util_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-util_tests.o `test -f 'test/util_tests.cpp' || echo '$(srcdir)/'`test/util_tests.cpp
 
-test/test_test_nullex-util_tests.obj: test/util_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-util_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-util_tests.Tpo -c -o test/test_test_nullex-util_tests.obj `if test -f 'test/util_tests.cpp'; then $(CYGPATH_W) 'test/util_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/util_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-util_tests.Tpo test/$(DEPDIR)/test_test_nullex-util_tests.Po
-#	$(AM_V_CXX)source='test/util_tests.cpp' object='test/test_test_nullex-util_tests.obj' libtool=no \
+test/test_test_nachohash-util_tests.obj: test/util_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-util_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-util_tests.Tpo -c -o test/test_test_nachohash-util_tests.obj `if test -f 'test/util_tests.cpp'; then $(CYGPATH_W) 'test/util_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/util_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-util_tests.Tpo test/$(DEPDIR)/test_test_nachohash-util_tests.Po
+#	$(AM_V_CXX)source='test/util_tests.cpp' object='test/test_test_nachohash-util_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-util_tests.obj `if test -f 'test/util_tests.cpp'; then $(CYGPATH_W) 'test/util_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/util_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-util_tests.obj `if test -f 'test/util_tests.cpp'; then $(CYGPATH_W) 'test/util_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/util_tests.cpp'; fi`
 
-test/test_test_nullex-accounting_tests.o: test/accounting_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-accounting_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-accounting_tests.Tpo -c -o test/test_test_nullex-accounting_tests.o `test -f 'test/accounting_tests.cpp' || echo '$(srcdir)/'`test/accounting_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-accounting_tests.Tpo test/$(DEPDIR)/test_test_nullex-accounting_tests.Po
-#	$(AM_V_CXX)source='test/accounting_tests.cpp' object='test/test_test_nullex-accounting_tests.o' libtool=no \
+test/test_test_nachohash-accounting_tests.o: test/accounting_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-accounting_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-accounting_tests.Tpo -c -o test/test_test_nachohash-accounting_tests.o `test -f 'test/accounting_tests.cpp' || echo '$(srcdir)/'`test/accounting_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-accounting_tests.Tpo test/$(DEPDIR)/test_test_nachohash-accounting_tests.Po
+#	$(AM_V_CXX)source='test/accounting_tests.cpp' object='test/test_test_nachohash-accounting_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-accounting_tests.o `test -f 'test/accounting_tests.cpp' || echo '$(srcdir)/'`test/accounting_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-accounting_tests.o `test -f 'test/accounting_tests.cpp' || echo '$(srcdir)/'`test/accounting_tests.cpp
 
-test/test_test_nullex-accounting_tests.obj: test/accounting_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-accounting_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-accounting_tests.Tpo -c -o test/test_test_nullex-accounting_tests.obj `if test -f 'test/accounting_tests.cpp'; then $(CYGPATH_W) 'test/accounting_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/accounting_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-accounting_tests.Tpo test/$(DEPDIR)/test_test_nullex-accounting_tests.Po
-#	$(AM_V_CXX)source='test/accounting_tests.cpp' object='test/test_test_nullex-accounting_tests.obj' libtool=no \
+test/test_test_nachohash-accounting_tests.obj: test/accounting_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-accounting_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-accounting_tests.Tpo -c -o test/test_test_nachohash-accounting_tests.obj `if test -f 'test/accounting_tests.cpp'; then $(CYGPATH_W) 'test/accounting_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/accounting_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-accounting_tests.Tpo test/$(DEPDIR)/test_test_nachohash-accounting_tests.Po
+#	$(AM_V_CXX)source='test/accounting_tests.cpp' object='test/test_test_nachohash-accounting_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-accounting_tests.obj `if test -f 'test/accounting_tests.cpp'; then $(CYGPATH_W) 'test/accounting_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/accounting_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-accounting_tests.obj `if test -f 'test/accounting_tests.cpp'; then $(CYGPATH_W) 'test/accounting_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/accounting_tests.cpp'; fi`
 
-test/test_test_nullex-wallet_tests.o: test/wallet_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-wallet_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-wallet_tests.Tpo -c -o test/test_test_nullex-wallet_tests.o `test -f 'test/wallet_tests.cpp' || echo '$(srcdir)/'`test/wallet_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-wallet_tests.Tpo test/$(DEPDIR)/test_test_nullex-wallet_tests.Po
-#	$(AM_V_CXX)source='test/wallet_tests.cpp' object='test/test_test_nullex-wallet_tests.o' libtool=no \
+test/test_test_nachohash-wallet_tests.o: test/wallet_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-wallet_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-wallet_tests.Tpo -c -o test/test_test_nachohash-wallet_tests.o `test -f 'test/wallet_tests.cpp' || echo '$(srcdir)/'`test/wallet_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-wallet_tests.Tpo test/$(DEPDIR)/test_test_nachohash-wallet_tests.Po
+#	$(AM_V_CXX)source='test/wallet_tests.cpp' object='test/test_test_nachohash-wallet_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-wallet_tests.o `test -f 'test/wallet_tests.cpp' || echo '$(srcdir)/'`test/wallet_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-wallet_tests.o `test -f 'test/wallet_tests.cpp' || echo '$(srcdir)/'`test/wallet_tests.cpp
 
-test/test_test_nullex-wallet_tests.obj: test/wallet_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-wallet_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-wallet_tests.Tpo -c -o test/test_test_nullex-wallet_tests.obj `if test -f 'test/wallet_tests.cpp'; then $(CYGPATH_W) 'test/wallet_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/wallet_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-wallet_tests.Tpo test/$(DEPDIR)/test_test_nullex-wallet_tests.Po
-#	$(AM_V_CXX)source='test/wallet_tests.cpp' object='test/test_test_nullex-wallet_tests.obj' libtool=no \
+test/test_test_nachohash-wallet_tests.obj: test/wallet_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-wallet_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-wallet_tests.Tpo -c -o test/test_test_nachohash-wallet_tests.obj `if test -f 'test/wallet_tests.cpp'; then $(CYGPATH_W) 'test/wallet_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/wallet_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-wallet_tests.Tpo test/$(DEPDIR)/test_test_nachohash-wallet_tests.Po
+#	$(AM_V_CXX)source='test/wallet_tests.cpp' object='test/test_test_nachohash-wallet_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-wallet_tests.obj `if test -f 'test/wallet_tests.cpp'; then $(CYGPATH_W) 'test/wallet_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/wallet_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-wallet_tests.obj `if test -f 'test/wallet_tests.cpp'; then $(CYGPATH_W) 'test/wallet_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/wallet_tests.cpp'; fi`
 
-test/test_test_nullex-rpc_wallet_tests.o: test/rpc_wallet_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-rpc_wallet_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-rpc_wallet_tests.Tpo -c -o test/test_test_nullex-rpc_wallet_tests.o `test -f 'test/rpc_wallet_tests.cpp' || echo '$(srcdir)/'`test/rpc_wallet_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-rpc_wallet_tests.Tpo test/$(DEPDIR)/test_test_nullex-rpc_wallet_tests.Po
-#	$(AM_V_CXX)source='test/rpc_wallet_tests.cpp' object='test/test_test_nullex-rpc_wallet_tests.o' libtool=no \
+test/test_test_nachohash-rpc_wallet_tests.o: test/rpc_wallet_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-rpc_wallet_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-rpc_wallet_tests.Tpo -c -o test/test_test_nachohash-rpc_wallet_tests.o `test -f 'test/rpc_wallet_tests.cpp' || echo '$(srcdir)/'`test/rpc_wallet_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-rpc_wallet_tests.Tpo test/$(DEPDIR)/test_test_nachohash-rpc_wallet_tests.Po
+#	$(AM_V_CXX)source='test/rpc_wallet_tests.cpp' object='test/test_test_nachohash-rpc_wallet_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-rpc_wallet_tests.o `test -f 'test/rpc_wallet_tests.cpp' || echo '$(srcdir)/'`test/rpc_wallet_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-rpc_wallet_tests.o `test -f 'test/rpc_wallet_tests.cpp' || echo '$(srcdir)/'`test/rpc_wallet_tests.cpp
 
-test/test_test_nullex-rpc_wallet_tests.obj: test/rpc_wallet_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-rpc_wallet_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-rpc_wallet_tests.Tpo -c -o test/test_test_nullex-rpc_wallet_tests.obj `if test -f 'test/rpc_wallet_tests.cpp'; then $(CYGPATH_W) 'test/rpc_wallet_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/rpc_wallet_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-rpc_wallet_tests.Tpo test/$(DEPDIR)/test_test_nullex-rpc_wallet_tests.Po
-#	$(AM_V_CXX)source='test/rpc_wallet_tests.cpp' object='test/test_test_nullex-rpc_wallet_tests.obj' libtool=no \
+test/test_test_nachohash-rpc_wallet_tests.obj: test/rpc_wallet_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-rpc_wallet_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-rpc_wallet_tests.Tpo -c -o test/test_test_nachohash-rpc_wallet_tests.obj `if test -f 'test/rpc_wallet_tests.cpp'; then $(CYGPATH_W) 'test/rpc_wallet_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/rpc_wallet_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-rpc_wallet_tests.Tpo test/$(DEPDIR)/test_test_nachohash-rpc_wallet_tests.Po
+#	$(AM_V_CXX)source='test/rpc_wallet_tests.cpp' object='test/test_test_nachohash-rpc_wallet_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-rpc_wallet_tests.obj `if test -f 'test/rpc_wallet_tests.cpp'; then $(CYGPATH_W) 'test/rpc_wallet_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/rpc_wallet_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-rpc_wallet_tests.obj `if test -f 'test/rpc_wallet_tests.cpp'; then $(CYGPATH_W) 'test/rpc_wallet_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/rpc_wallet_tests.cpp'; fi`
 
-test/test_test_nullex-miner_tests.o: test/miner_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-miner_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nullex-miner_tests.Tpo -c -o test/test_test_nullex-miner_tests.o `test -f 'test/miner_tests.cpp' || echo '$(srcdir)/'`test/miner_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-miner_tests.Tpo test/$(DEPDIR)/test_test_nullex-miner_tests.Po
-#	$(AM_V_CXX)source='test/miner_tests.cpp' object='test/test_test_nullex-miner_tests.o' libtool=no \
+test/test_test_nachohash-miner_tests.o: test/miner_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-miner_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-miner_tests.Tpo -c -o test/test_test_nachohash-miner_tests.o `test -f 'test/miner_tests.cpp' || echo '$(srcdir)/'`test/miner_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-miner_tests.Tpo test/$(DEPDIR)/test_test_nachohash-miner_tests.Po
+#	$(AM_V_CXX)source='test/miner_tests.cpp' object='test/test_test_nachohash-miner_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-miner_tests.o `test -f 'test/miner_tests.cpp' || echo '$(srcdir)/'`test/miner_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-miner_tests.o `test -f 'test/miner_tests.cpp' || echo '$(srcdir)/'`test/miner_tests.cpp
 
-test/test_test_nullex-miner_tests.obj: test/miner_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nullex-miner_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nullex-miner_tests.Tpo -c -o test/test_test_nullex-miner_tests.obj `if test -f 'test/miner_tests.cpp'; then $(CYGPATH_W) 'test/miner_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/miner_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nullex-miner_tests.Tpo test/$(DEPDIR)/test_test_nullex-miner_tests.Po
-#	$(AM_V_CXX)source='test/miner_tests.cpp' object='test/test_test_nullex-miner_tests.obj' libtool=no \
+test/test_test_nachohash-miner_tests.obj: test/miner_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_nachohash-miner_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_nachohash-miner_tests.Tpo -c -o test/test_test_nachohash-miner_tests.obj `if test -f 'test/miner_tests.cpp'; then $(CYGPATH_W) 'test/miner_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/miner_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_nachohash-miner_tests.Tpo test/$(DEPDIR)/test_test_nachohash-miner_tests.Po
+#	$(AM_V_CXX)source='test/miner_tests.cpp' object='test/test_test_nachohash-miner_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nullex_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nullex-miner_tests.obj `if test -f 'test/miner_tests.cpp'; then $(CYGPATH_W) 'test/miner_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/miner_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_nachohash_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_nachohash-miner_tests.obj `if test -f 'test/miner_tests.cpp'; then $(CYGPATH_W) 'test/miner_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/miner_tests.cpp'; fi`
 
 .cpp.o:
 	$(AM_V_CXX)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
@@ -7609,33 +7620,33 @@ test/test_test_nullex-miner_tests.obj: test/miner_tests.cpp
 #	DEPDIR=$(DEPDIR) $(OBJCXXDEPMODE) $(depcomp) \
 #	$(AM_V_OBJCXX_no)$(LTOBJCXXCOMPILE) -c -o $@ $<
 
-qt/qt_nullex_qt-macdockiconhandler.o: qt/macdockiconhandler.mm
-	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_nullex_qt-macdockiconhandler.o -MD -MP -MF qt/$(DEPDIR)/qt_nullex_qt-macdockiconhandler.Tpo -c -o qt/qt_nullex_qt-macdockiconhandler.o `test -f 'qt/macdockiconhandler.mm' || echo '$(srcdir)/'`qt/macdockiconhandler.mm
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_nullex_qt-macdockiconhandler.Tpo qt/$(DEPDIR)/qt_nullex_qt-macdockiconhandler.Po
-#	$(AM_V_OBJCXX)source='qt/macdockiconhandler.mm' object='qt/qt_nullex_qt-macdockiconhandler.o' libtool=no \
+qt/qt_nachohash_qt-macdockiconhandler.o: qt/macdockiconhandler.mm
+	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_nachohash_qt-macdockiconhandler.o -MD -MP -MF qt/$(DEPDIR)/qt_nachohash_qt-macdockiconhandler.Tpo -c -o qt/qt_nachohash_qt-macdockiconhandler.o `test -f 'qt/macdockiconhandler.mm' || echo '$(srcdir)/'`qt/macdockiconhandler.mm
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_nachohash_qt-macdockiconhandler.Tpo qt/$(DEPDIR)/qt_nachohash_qt-macdockiconhandler.Po
+#	$(AM_V_OBJCXX)source='qt/macdockiconhandler.mm' object='qt/qt_nachohash_qt-macdockiconhandler.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(OBJCXXDEPMODE) $(depcomp) \
-#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_nullex_qt-macdockiconhandler.o `test -f 'qt/macdockiconhandler.mm' || echo '$(srcdir)/'`qt/macdockiconhandler.mm
+#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_nachohash_qt-macdockiconhandler.o `test -f 'qt/macdockiconhandler.mm' || echo '$(srcdir)/'`qt/macdockiconhandler.mm
 
-qt/qt_nullex_qt-macdockiconhandler.obj: qt/macdockiconhandler.mm
-	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_nullex_qt-macdockiconhandler.obj -MD -MP -MF qt/$(DEPDIR)/qt_nullex_qt-macdockiconhandler.Tpo -c -o qt/qt_nullex_qt-macdockiconhandler.obj `if test -f 'qt/macdockiconhandler.mm'; then $(CYGPATH_W) 'qt/macdockiconhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macdockiconhandler.mm'; fi`
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_nullex_qt-macdockiconhandler.Tpo qt/$(DEPDIR)/qt_nullex_qt-macdockiconhandler.Po
-#	$(AM_V_OBJCXX)source='qt/macdockiconhandler.mm' object='qt/qt_nullex_qt-macdockiconhandler.obj' libtool=no \
+qt/qt_nachohash_qt-macdockiconhandler.obj: qt/macdockiconhandler.mm
+	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_nachohash_qt-macdockiconhandler.obj -MD -MP -MF qt/$(DEPDIR)/qt_nachohash_qt-macdockiconhandler.Tpo -c -o qt/qt_nachohash_qt-macdockiconhandler.obj `if test -f 'qt/macdockiconhandler.mm'; then $(CYGPATH_W) 'qt/macdockiconhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macdockiconhandler.mm'; fi`
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_nachohash_qt-macdockiconhandler.Tpo qt/$(DEPDIR)/qt_nachohash_qt-macdockiconhandler.Po
+#	$(AM_V_OBJCXX)source='qt/macdockiconhandler.mm' object='qt/qt_nachohash_qt-macdockiconhandler.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(OBJCXXDEPMODE) $(depcomp) \
-#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_nullex_qt-macdockiconhandler.obj `if test -f 'qt/macdockiconhandler.mm'; then $(CYGPATH_W) 'qt/macdockiconhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macdockiconhandler.mm'; fi`
+#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_nachohash_qt-macdockiconhandler.obj `if test -f 'qt/macdockiconhandler.mm'; then $(CYGPATH_W) 'qt/macdockiconhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macdockiconhandler.mm'; fi`
 
-qt/qt_nullex_qt-macnotificationhandler.o: qt/macnotificationhandler.mm
-	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_nullex_qt-macnotificationhandler.o -MD -MP -MF qt/$(DEPDIR)/qt_nullex_qt-macnotificationhandler.Tpo -c -o qt/qt_nullex_qt-macnotificationhandler.o `test -f 'qt/macnotificationhandler.mm' || echo '$(srcdir)/'`qt/macnotificationhandler.mm
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_nullex_qt-macnotificationhandler.Tpo qt/$(DEPDIR)/qt_nullex_qt-macnotificationhandler.Po
-#	$(AM_V_OBJCXX)source='qt/macnotificationhandler.mm' object='qt/qt_nullex_qt-macnotificationhandler.o' libtool=no \
+qt/qt_nachohash_qt-macnotificationhandler.o: qt/macnotificationhandler.mm
+	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_nachohash_qt-macnotificationhandler.o -MD -MP -MF qt/$(DEPDIR)/qt_nachohash_qt-macnotificationhandler.Tpo -c -o qt/qt_nachohash_qt-macnotificationhandler.o `test -f 'qt/macnotificationhandler.mm' || echo '$(srcdir)/'`qt/macnotificationhandler.mm
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_nachohash_qt-macnotificationhandler.Tpo qt/$(DEPDIR)/qt_nachohash_qt-macnotificationhandler.Po
+#	$(AM_V_OBJCXX)source='qt/macnotificationhandler.mm' object='qt/qt_nachohash_qt-macnotificationhandler.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(OBJCXXDEPMODE) $(depcomp) \
-#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_nullex_qt-macnotificationhandler.o `test -f 'qt/macnotificationhandler.mm' || echo '$(srcdir)/'`qt/macnotificationhandler.mm
+#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_nachohash_qt-macnotificationhandler.o `test -f 'qt/macnotificationhandler.mm' || echo '$(srcdir)/'`qt/macnotificationhandler.mm
 
-qt/qt_nullex_qt-macnotificationhandler.obj: qt/macnotificationhandler.mm
-	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_nullex_qt-macnotificationhandler.obj -MD -MP -MF qt/$(DEPDIR)/qt_nullex_qt-macnotificationhandler.Tpo -c -o qt/qt_nullex_qt-macnotificationhandler.obj `if test -f 'qt/macnotificationhandler.mm'; then $(CYGPATH_W) 'qt/macnotificationhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macnotificationhandler.mm'; fi`
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_nullex_qt-macnotificationhandler.Tpo qt/$(DEPDIR)/qt_nullex_qt-macnotificationhandler.Po
-#	$(AM_V_OBJCXX)source='qt/macnotificationhandler.mm' object='qt/qt_nullex_qt-macnotificationhandler.obj' libtool=no \
+qt/qt_nachohash_qt-macnotificationhandler.obj: qt/macnotificationhandler.mm
+	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_nachohash_qt-macnotificationhandler.obj -MD -MP -MF qt/$(DEPDIR)/qt_nachohash_qt-macnotificationhandler.Tpo -c -o qt/qt_nachohash_qt-macnotificationhandler.obj `if test -f 'qt/macnotificationhandler.mm'; then $(CYGPATH_W) 'qt/macnotificationhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macnotificationhandler.mm'; fi`
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_nachohash_qt-macnotificationhandler.Tpo qt/$(DEPDIR)/qt_nachohash_qt-macnotificationhandler.Po
+#	$(AM_V_OBJCXX)source='qt/macnotificationhandler.mm' object='qt/qt_nachohash_qt-macnotificationhandler.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(OBJCXXDEPMODE) $(depcomp) \
-#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_nullex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_nullex_qt-macnotificationhandler.obj `if test -f 'qt/macnotificationhandler.mm'; then $(CYGPATH_W) 'qt/macnotificationhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macnotificationhandler.mm'; fi`
+#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_nachohash_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_nachohash_qt-macnotificationhandler.obj `if test -f 'qt/macnotificationhandler.mm'; then $(CYGPATH_W) 'qt/macnotificationhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macnotificationhandler.mm'; fi`
 
 mostlyclean-libtool:
 	-rm -f *.lo
@@ -7911,9 +7922,9 @@ recheck: all
 	        am__force_recheck=am--force-recheck \
 	        TEST_LOGS="$$log_list"; \
 	exit $$?
-test/test_nullex.log: test/test_nullex$(EXEEXT)
-	@p='test/test_nullex$(EXEEXT)'; \
-	b='test/test_nullex'; \
+test/test_nachohash.log: test/test_nachohash$(EXEEXT)
+	@p='test/test_nachohash$(EXEEXT)'; \
+	b='test/test_nachohash'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
@@ -7925,9 +7936,9 @@ test/bitcoin-util-test.py.log: test/bitcoin-util-test.py
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
 	"$$tst" $(AM_TESTS_FD_REDIRECT)
-qt/test/test_nullex-qt.log: qt/test/test_nullex-qt$(EXEEXT)
-	@p='qt/test/test_nullex-qt$(EXEEXT)'; \
-	b='qt/test/test_nullex-qt'; \
+qt/test/test_nachohash-qt.log: qt/test/test_nachohash-qt$(EXEEXT)
+	@p='qt/test/test_nachohash-qt$(EXEEXT)'; \
+	b='qt/test/test_nachohash-qt'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
@@ -8207,13 +8218,13 @@ clean-local:
 
 #$(BITCOIN_TESTS): $(GENERATED_TEST_FILES)
 
-#nullex_test: $(TEST_BINARY)
+#nachohash_test: $(TEST_BINARY)
 
-#nullex_test_check: $(TEST_BINARY) FORCE
+#nachohash_test_check: $(TEST_BINARY) FORCE
 #	$(MAKE) check-TESTS TESTS=$^
 
-#nullex_test_clean : FORCE
-#	rm -f $(CLEAN_BITCOIN_TEST) $(test_test_nullex_OBJECTS) $(TEST_BINARY)
+#nachohash_test_clean : FORCE
+#	rm -f $(CLEAN_BITCOIN_TEST) $(test_test_nachohash_OBJECTS) $(TEST_BINARY)
 
 #check-local:
 #	$(AM_V_at)$(MAKE) $(AM_MAKEFLAGS) -C secp256k1 check
@@ -8238,7 +8249,7 @@ clean-local:
 # Most files will depend on the forms and moc files as includes. Generate them
 # before anything else.
 $(QT_MOC): $(QT_FORMS_H)
-$(qt_libbitcoinqt_a_OBJECTS) $(qt_nullex_qt_OBJECTS) : | $(QT_MOC)
+$(qt_libbitcoinqt_a_OBJECTS) $(qt_nachohash_qt_OBJECTS) : | $(QT_MOC)
 
 #Generating these with a half-written protobuf header leads to wacky results.
 #This makes sure it's done.
@@ -8247,29 +8258,29 @@ $(QT_MOC_CPP): $(PROTOBUF_H)
 
 .SECONDARY: $(QT_QM)
 
-qt/nullexstrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_wallet_a_SOURCES) $(libbitcoin_common_a_SOURCES)
+qt/nachohashstrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_wallet_a_SOURCES) $(libbitcoin_common_a_SOURCES)
 	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
 	$(AM_V_GEN) cd $(srcdir); XGETTEXT=$(XGETTEXT) $(PYTHON) ../share/qt/extract_strings_qt.py $^
 
-translate: qt/nullexstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
+translate: qt/nachohashstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
 	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts qt/locale/nullex_en.ts
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts qt/locale/nachohash_en.ts
 
 $(QT_QRC_LOCALE_CPP): $(QT_QRC_LOCALE) $(QT_QM)
 	@test -f $(RCC)
 	@test -f $(@D)/$(<F) || cp -f $< $(@D)
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name nullex_locale $(@D)/$(<F) | \
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name nachohash_locale $(@D)/$(<F) | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
 $(QT_QRC_CPP): $(QT_QRC) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_CSS) $(RES_MOVIES) $(PROTOBUF_H)
 	@test -f $(RCC)
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name nullex $< | \
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name nachohash $< | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
-nullex_qt_clean: FORCE
-	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_nullex_qt_OBJECTS) qt/nullex-qt$(EXEEXT) $(LIBBITCOINQT)
+nachohash_qt_clean: FORCE
+	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_nachohash_qt_OBJECTS) qt/nachohash-qt$(EXEEXT) $(LIBBITCOINQT)
 
-nullex_qt : qt/nullex-qt$(EXEEXT)
+nachohash_qt : qt/nachohash-qt$(EXEEXT)
 
 ui_%.h: %.ui
 	@test -f $(UIC)
@@ -8289,13 +8300,13 @@ moc_%.cpp: %.h
 	@$(MKDIR_P) $(@D)
 	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LRELEASE) -silent $< -qm $@
 
-#test_nullex_qt : qt/test/test_nullex-qt$(EXEEXT)
+#test_nachohash_qt : qt/test/test_nachohash-qt$(EXEEXT)
 
-#test_nullex_qt_check : qt/test/test_nullex-qt$(EXEEXT) FORCE
+#test_nachohash_qt_check : qt/test/test_nachohash-qt$(EXEEXT) FORCE
 #	$(MAKE) check-TESTS TESTS=$^
 
-#test_nullex_qt_clean: FORCE
-#	rm -f $(CLEAN_BITCOIN_QT_TEST) $(qt_test_test_nullex_qt_OBJECTS)
+#test_nachohash_qt_clean: FORCE
+#	rm -f $(CLEAN_BITCOIN_QT_TEST) $(qt_test_test_nachohash_qt_OBJECTS)
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
