@@ -136,9 +136,8 @@ public:
         //ipv4
 
         vSeeds.push_back(CDNSSeedData("DNSseeder1", "140.82.3.242"));
-        vSeeds.push_back(CDNSSeedData("DNSseeder2", "164.132.182.17"));
-        vSeeds.push_back(CDNSSeedData("DNSseeder3", "164.132.212.114"));
-        vSeeds.push_back(CDNSSeedData("DNSseeder", "144.202.4.72"));
+        vSeeds.push_back(CDNSSeedData("Block Explorer", "96.30.195.229"));
+     
 
         //ipv6
         
