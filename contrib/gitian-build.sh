@@ -9,8 +9,8 @@ projectName="nachohash"				# The name of the wallet or project
 mainSuite="trusty"				# All wallets use the same build model except for AArch64
 aarchSuite="xenial"				# The AArch64 wallet uses this model
 walletOutputDirectory="NAHA-binaries"		# The directory where finished wallets will be stored
-githubUsername="white92d15b7"			# The username of the repo for the wallet project. Ie: repo username = devrandom from https://github.com/devrandom/gitian-builder
-githubRepo="NAHA"				# The name of the repo for the wallet project. Ie: repo name = gitian-builder from https://github.com/devrandom/gitian-builder
+githubUsername="Bigfootzz"			# The username of the repo for the wallet project. Ie: repo username = devrandom from https://github.com/devrandom/gitian-builder
+githubRepo="NachoHash"				# The name of the repo for the wallet project. Ie: repo name = gitian-builder from https://github.com/devrandom/gitian-builder
 githubDetachedSigsRepo="nachohash-detached-sigs"	# The name of the repo for the detached signatures.
 osxSDKtarballFilename="MacOSX10.11.sdk.tar.gz"	# The name of the Mac OSX SDK tarball file
 
