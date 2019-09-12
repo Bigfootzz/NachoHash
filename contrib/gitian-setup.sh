@@ -27,7 +27,7 @@ CURRENT_USER="$(whoami)"
 # Ensure that root user can call the setup_lxc function
 export -f setup_lxc
 # Download the build script
-wget -q "https://raw.githubusercontent.com/white92d15b7/NAHA/master/contrib/gitian-build.sh"
+wget -q "https://raw.githubusercontent.com/Bigfootzz/NachoHash/master/contrib/gitian-build.sh"
 # Mark the build script as executable
 chmod +x gitian-build.sh
 # Install dependencies and generate reboot script as the root user
