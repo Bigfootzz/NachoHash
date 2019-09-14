@@ -17,7 +17,7 @@ osxSDKtarballFilename="MacOSX10.11.sdk.tar.gz"	# The name of the Mac OSX SDK tar
 # What to do
 sign=false
 verify=false
-build=true
+build=false
 
 # Systems to build
 linux=true
